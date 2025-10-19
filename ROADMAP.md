@@ -54,6 +54,7 @@
 1. **Streamline contributor workflow**
    - Keep `CONTRIBUTING.md` focused on running `npm install`, `npm run verify`, and the DTIF CLI commands; reference troubleshooting steps via official docs when necessary.
    - Provide guidance on refreshing diff baselines and audit outputs when token changes are intentional.
+   - Maintain GitHub Actions workflow `.github/workflows/ci.yml` so every push and pull request runs the verify, validate, build, diff, and audit scripts with Node.js 22.20.0.
 2. **Release checklist**
    - Before tagging a release, rerun `npm run verify`, `npm run dtif:build`, `npm run dtif:diff`, and `npm run dtif:audit`; confirm artefacts are updated and pass CI gates.
    - Track remaining enhancements (additional components, platform exports, automation) in GitHub issues rather than expanding this roadmap to preserve the minimal scope.

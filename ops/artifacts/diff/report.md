@@ -3,8 +3,8 @@
 ## Executive summary
 - Recommended version bump: **Patch**
 - Compared: ops/artifacts/diff/baseline.dtif.json → tokens/index.dtif.json
-- Started: 2025-10-19 07:06 UTC
-- Duration: 1.0s
+- Started: 2025-10-19 07:14 UTC
+- Duration: 572ms
 - Impact: 0 breaking · 8 non-breaking
 - Changes: 0 added · 8 changed · 0 removed · 0 renamed
 - Tokens analysed: 8 previous → 8 next

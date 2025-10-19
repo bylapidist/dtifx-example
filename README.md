@@ -18,6 +18,10 @@ This repository demonstrates a streamlined, production-ready DTIFx Toolkit setup
 
 Refer to the DTIFx documentation at https://dtifx.lapidist.net/ and the design-lint guidance at https://design-lint.lapidist.net/ for full CLI usage details.
 
+## Continuous Integration
+
+- GitHub Actions workflow `.github/workflows/ci.yml` installs dependencies with `npm ci` on Node.js 22.20.0 and runs `npm run verify`, `npm run dtif:validate`, `npm run dtif:build`, `npm run dtif:diff`, and `npm run dtif:audit` on every push and pull request.
+
 ## Contributing and Support
 
 - Review `CONTRIBUTING.md` for workflow expectations aligned with this minimal stack.

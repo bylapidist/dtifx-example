@@ -1,29 +1,29 @@
 {
-  "generatedAt": "2025-10-19T00:21:32.290Z",
+  "generatedAt": "2025-10-19T15:36:22.426Z",
   "stats": {
     "documents": 4,
-    "tokens": 8,
+    "tokens": 12,
     "overrides": 4
   },
   "documents": [
     {
       "path": "tokens/components/button.dtif.json",
-      "hash": "0cbec0e747da20b99fa1ecc8a893d1aa220de3bedea1eaf3d23dbecdaf4c6df7",
-      "description": "Button component token set supporting primary and secondary variants across states."
+      "hash": "34393bf4551fbb093c25583e01c58a80d83a6095f6e75b87ce4a88f2ff480fdd",
+      "description": "Button component tokens for the DTIFx minimal stack example."
     },
     {
       "path": "tokens/foundations.dtif.json",
-      "hash": "7cb6be89da2bc12e386ef293c923735d48f0b0c284875f0a259326b2f5c4dab6",
-      "description": "Foundational design tokens for the DTIFx example application."
+      "hash": "f3864c86c7b8233348cebcf801979008a7a4d452742f984b86fa5f15e5f68b69",
+      "description": "Foundational design tokens for the DTIFx minimal stack example covering color and spacing primitives."
     },
     {
       "path": "tokens/themes/dark.dtif.json",
-      "hash": "c09c37b9bce92d7a71637b7345b9174b1422cc58b0e8fd491938304e6ba3b355",
+      "hash": "fd90ee873e2951f32da6d4ffaf3592566803b86fff67c007e11b18bcc81ba64f",
       "description": "Dark theme overrides ensuring accessible contrast for key primitives."
     },
     {
       "path": "tokens/themes/light.dtif.json",
-      "hash": "cc1c77a03c511f07b530ac4edccb5dbefaa6c4abfd61258a5dabc5e70eed4c14",
+      "hash": "bb76ef1ab5d2ae66297aeb42a6836f746d21b72f8fa4c7c2ff91d8bf19b41cb9",
       "description": "Light theme overrides with high-contrast accessibility adjustments."
     }
   ],
@@ -77,16 +77,48 @@
       "tokenType": "color"
     },
     {
-      "path": "dimension.spacing.lg",
-      "variable": "dimension-spacing-lg",
+      "path": "durations.button",
+      "variable": "durations-button",
+      "source": "tokens/foundations.dtif.json",
+      "value": "120ms",
+      "description": "Primary button background transition duration.",
+      "tokenType": "duration"
+    },
+    {
+      "path": "durationVariables.button",
+      "variable": "durationvariables-button",
+      "source": "tokens/foundations.dtif.json",
+      "value": "120ms",
+      "description": "Primary button transition duration exposed for CSS usage.",
+      "tokenType": "dimension"
+    },
+    {
+      "path": "fontWeights.semibold",
+      "variable": "fontweights-semibold",
+      "source": "tokens/foundations.dtif.json",
+      "value": "600",
+      "description": "Semibold weight for primary button text.",
+      "tokenType": "fontWeight"
+    },
+    {
+      "path": "fontWeightVariables.semibold",
+      "variable": "fontweightvariables-semibold",
+      "source": "tokens/foundations.dtif.json",
+      "value": "600",
+      "description": "Semibold weight exposed as a unitless CSS variable.",
+      "tokenType": "dimension"
+    },
+    {
+      "path": "spacing.lg",
+      "variable": "spacing-lg",
       "source": "tokens/foundations.dtif.json",
       "value": "24px",
       "description": "Large spacing unit for generous component padding.",
       "tokenType": "dimension"
     },
     {
-      "path": "dimension.spacing.md",
-      "variable": "dimension-spacing-md",
+      "path": "spacing.md",
+      "variable": "spacing-md",
       "source": "tokens/foundations.dtif.json",
       "value": "16px",
       "description": "Default medium spacing unit for layout and component padding.",
@@ -95,28 +127,17 @@
   ],
   "overrides": [
     {
-      "token": "components/button.dtif.json#/component/button/background",
+      "token": "tokens/themes/dark.dtif.json#/component/button/background",
       "conditions": {
         "theme": "dark"
       },
       "theme": "dark",
-      "value": "#D6DEECCE",
+      "value": "#D6DEEC",
       "source": "tokens/themes/dark.dtif.json",
       "variable": "component-button-background"
     },
     {
-      "token": "components/button.dtif.json#/component/button/background",
-      "conditions": {
-        "theme": "light",
-        "accessibility": "high-contrast"
-      },
-      "theme": "light",
-      "value": "#073992",
-      "source": "tokens/themes/light.dtif.json",
-      "variable": "component-button-background"
-    },
-    {
-      "token": "components/button.dtif.json#/component/button/text",
+      "token": "tokens/themes/dark.dtif.json#/component/button/text",
       "conditions": {
         "theme": "dark"
       },
@@ -126,7 +147,18 @@
       "variable": "component-button-text"
     },
     {
-      "token": "components/button.dtif.json#/component/button/text",
+      "token": "tokens/themes/light.dtif.json#/component/button/background",
+      "conditions": {
+        "theme": "light",
+        "accessibility": "high-contrast"
+      },
+      "theme": "light",
+      "value": "#073975",
+      "source": "tokens/themes/light.dtif.json",
+      "variable": "component-button-background"
+    },
+    {
+      "token": "tokens/themes/light.dtif.json#/component/button/text",
       "conditions": {
         "theme": "light",
         "accessibility": "high-contrast"

@@ -9,7 +9,7 @@
       "warning": 0,
       "info": 0
     },
-    "tokenCount": 16
+    "tokenCount": 12
   },
   "policies": [
     {
@@ -19,14 +19,14 @@
     }
   ],
   "timings": {
-    "planMs": 15.94899399999997,
+    "planMs": 7.548944000000006,
     "parseMs": 0,
     "resolveMs": 0,
     "transformMs": 0,
     "formatMs": 0,
     "dependencyMs": 0,
-    "totalMs": 15.94899399999997,
-    "auditMs": 7.202476000000047,
-    "totalWithAuditMs": 23.151470000000018
+    "totalMs": 7.548944000000006,
+    "auditMs": 5.856728999999973,
+    "totalWithAuditMs": 13.405672999999979
   }
 }

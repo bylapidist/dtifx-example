@@ -5,8 +5,6 @@
   --tokens-components-button-dtif-json-component-button-text: oklch(1.0000 0.0000 89.8756);
   --tokens-foundations-dtif-json-color-background: oklch(1.0000 0.0000 89.8756);
   --tokens-foundations-dtif-json-color-brand: oklch(0.4782 0.1470 254.5941);
-  --tokens-foundations-dtif-json-duration-variables-button: 120ms;
-  --tokens-foundations-dtif-json-font-weight-variables-semibold: 600;
   --tokens-foundations-dtif-json-spacing-lg: 24px;
   --tokens-foundations-dtif-json-spacing-md: 16px;
   --tokens-index-dtif-json-color-background: oklch(1.0000 0.0000 89.8756);
@@ -15,8 +13,6 @@
   --tokens-index-dtif-json-component-button-background-hover: oklch(0.4409 0.1339 254.3327);
   --tokens-index-dtif-json-component-button-padding: 16px;
   --tokens-index-dtif-json-component-button-text: oklch(1.0000 0.0000 89.8756);
-  --tokens-index-dtif-json-duration-variables-button: 120ms;
-  --tokens-index-dtif-json-font-weight-variables-semibold: 600;
   --tokens-index-dtif-json-spacing-lg: 24px;
   --tokens-index-dtif-json-spacing-md: 16px;
 }

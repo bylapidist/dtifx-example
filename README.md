@@ -1,29 +1,40 @@
 # DTIFx Minimal Stack Example
 
-This repository demonstrates a streamlined, production-ready DTIFx Toolkit setup focused on token authoring, validation, build, diff, and audit workflows with minimal glue code.
+This repository demonstrates a canonical, production-ready setup of the DTIFx Toolkit paired with design-lint for validating CSS and React usage against the published token catalogue.
 
-- Roadmap: `ROADMAP.md` captures the phased delivery plan tailored to this slim implementation.
-- Tokens: `tokens/` hosts the canonical DTIF documents (`foundations.dtif.json`, `components/*.dtif.json`, `themes/*.dtif.json`) alongside the consolidated `index.dtif.json` consumed by the DTIF CLI.
-- Sample UI usage: `src/components/` contains the minimal React component and CSS checked by design-lint to demonstrate token consumption.
-- Artefacts: `ops/artifacts/` stores build outputs, diff evidence, validation logs, and audit reports created by the official tooling.
+## Repository layout
 
-## Getting Started
+- Tokens: `tokens/` stores the DTIF documents (`foundations.dtif.json`, `components/*.dtif.json`, `themes/*.dtif.json`, `index.dtif.json`) that feed the CLI.
+- Sample UI usage: `src/components/` contains a React example and stylesheet checked by design-lint to illustrate consuming the generated tokens.
+- Artefacts: `ops/artifacts/` captures outputs from DTIF build, diff, audit, and validation commands committed for review.
+- Tooling config: `build/`, `audit/`, `design-lint.config.cjs`, and `eslint.config.js` configure the official CLI workflows without custom wrappers.
+
+## Prerequisites
 
 1. Install Node.js 22.20.0 (`nvm use`).
-2. Run `npm install` to fetch the DTIFx CLI, design-lint, and formatting dependencies.
-3. Validate the DTIF sources with `npm run dtif:validate`; any schema errors will stop the workflow.
-4. Execute `npm run dtif:build` to generate CSS and JSON outputs under `ops/artifacts/build/`.
-5. Capture or refresh the baseline registry with `npm run dtif:diff` after reviewing the generated build output.
-6. Evaluate governance policies using `npm run dtif:audit`; the helper script shells out to the DTIF CLI, filters runtime logs, and writes JSON/Markdown reports into `ops/artifacts/audit/`.
-7. Run `npm run verify` to execute ESLint and lint both the CSS and React example sources via `design-lint lint "src/**/*.{css,js,jsx,ts,tsx}"`, ensuring UI usage stays aligned with the token catalogue.
+2. Run `npm install` to fetch the DTIFx CLI, design-lint, and linting dependencies.
 
-Refer to the DTIFx documentation at https://dtifx.lapidist.net/ and the design-lint guidance at https://design-lint.lapidist.net/ for full CLI usage details.
+## Core commands
 
-## Continuous Integration
+- `npm run dtif:validate`: Runs `dtifx build validate` against `build/dtif-build.config.mjs` to ensure all DTIF sources compile.
+- `npm run dtif:build`: Executes `dtifx build generate` and writes CSS/JSON outputs to `ops/artifacts/build/`.
+- `npm run dtif:diff`: Compares `tokens/index.dtif.json` to the committed baseline via `dtifx diff compare`, emitting JSON and Markdown evidence.
+- `npm run dtif:audit`: Calls the DTIF CLI to evaluate governance policies defined in `audit/dtif-audit.config.mjs`, committing reports under `ops/artifacts/audit/`.
+- `npm run design-lint`: Invokes `design-lint lint "src/**/*.{css,js,jsx,ts,tsx}" --config design-lint.config.cjs` to verify the example UI honours the canonical tokens.
+- `npm run verify`: Convenience script that runs ESLint followed by the design-lint command.
+
+Commit refreshed artefacts after DTIF sources change so reviewers can diff the generated evidence alongside code changes.
+
+## Continuous integration
 
 - GitHub Actions workflow `.github/workflows/ci.yml` installs dependencies with `npm ci` on Node.js 22.20.0 and runs `npm run verify`, `npm run dtif:validate`, `npm run dtif:build`, `npm run dtif:diff`, and `npm run dtif:audit` on every push and pull request.
 
-## Contributing and Support
+## Reference documentation
+
+- DTIFx Toolkit: https://dtifx.lapidist.net/
+- design-lint: https://design-lint.lapidist.net/
+
+## Contributing and support
 
 - Review `CONTRIBUTING.md` for workflow expectations aligned with this minimal stack.
 - See `SECURITY.md` for vulnerability disclosure and hardening guidelines.

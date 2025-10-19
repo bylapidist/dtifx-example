@@ -16,8 +16,11 @@
         "$description": "Default primary button background colour.",
         "$value": {
           "colorSpace": "srgb",
-          "components": [0.054901960784313725, 0.3607843137254902, 0.6784313725490196],
-          "hex": "#0E5CAD"
+          "components": [
+            0.054901960784313725,
+            0.3607843137254902,
+            0.6784313725490196
+          ]
         },
         "$extensions": {
           "lapidist.governance": {
@@ -27,7 +30,9 @@
           },
           "lapidist.accessibility": {
             "contrastTarget": "AA",
-            "usage": ["button.primary.default"]
+            "usage": [
+              "button.primary.default"
+            ]
           }
         }
       },
@@ -36,8 +41,11 @@
         "$description": "Hover state background colour with elevated contrast.",
         "$value": {
           "colorSpace": "srgb",
-          "components": [0.047058823529411764, 0.3215686274509804, 0.6039215686274509],
-          "hex": "#0C529A"
+          "components": [
+            0.047058823529411764,
+            0.3215686274509804,
+            0.6039215686274509
+          ]
         },
         "$extensions": {
           "lapidist.governance": {
@@ -47,7 +55,9 @@
           },
           "lapidist.accessibility": {
             "contrastTarget": "AAA",
-            "usage": ["button.primary.hover"]
+            "usage": [
+              "button.primary.hover"
+            ]
           }
         }
       },
@@ -56,8 +66,11 @@
         "$description": "Primary button label colour ensuring contrast on brand backgrounds.",
         "$value": {
           "colorSpace": "srgb",
-          "components": [1, 1, 1],
-          "hex": "#FFFFFF"
+          "components": [
+            1,
+            1,
+            1
+          ]
         },
         "$extensions": {
           "lapidist.governance": {
@@ -67,7 +80,9 @@
           },
           "lapidist.accessibility": {
             "contrastTarget": "AA",
-            "usage": ["button.primary.text"]
+            "usage": [
+              "button.primary.text"
+            ]
           }
         }
       },
@@ -87,7 +102,9 @@
           },
           "lapidist.accessibility": {
             "touchTarget": "Supports minimum 44px hit area when combined with layout spacing",
-            "usage": ["button.primary.padding"]
+            "usage": [
+              "button.primary.padding"
+            ]
           }
         }
       }

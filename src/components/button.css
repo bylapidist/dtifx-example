@@ -1,3 +1,5 @@
+@import '../../ops/artifacts/build/tokens.css';
+
 :root {
   color-scheme: light;
 }
@@ -6,17 +8,23 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
-  padding: 16px 24px;
-  font-weight: 600;
+  gap: var(--tokens-foundations-dtif-json-spacing-md);
+  padding-block: var(--tokens-components-button-dtif-json-component-button-padding);
+  padding-inline: var(--tokens-foundations-dtif-json-spacing-lg);
+  font-weight: var(--tokens-foundations-dtif-json-font-weight-variables-semibold);
   border: none;
   cursor: pointer;
-  background-color: #0E5CAD;
-  color: #FFFFFF;
-  transition: background-color 120ms ease-in-out;
+  background-color: var(--tokens-components-button-dtif-json-component-button-background);
+  color: var(--tokens-components-button-dtif-json-component-button-text);
+  transition: background-color var(--tokens-foundations-dtif-json-duration-variables-button) ease-in-out;
 }
 
 .button-primary:hover,
 .button-primary:focus-visible {
-  background-color: #0C529A;
+  background-color: var(--tokens-components-button-dtif-json-component-button-background-hover);
+}
+
+.button-primary--emphasize {
+  padding-block: var(--tokens-components-button-dtif-json-component-button-padding);
+  padding-inline: var(--tokens-foundations-dtif-json-spacing-lg);
 }

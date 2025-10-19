@@ -28,7 +28,7 @@
    - Author the canonical sources in `tokens/foundations.dtif.json`, `tokens/components/*.dtif.json`, and `tokens/themes/*.dtif.json`, keeping metadata and governance annotations aligned to the DTIF specification.
    - Maintain `tokens/index.dtif.json` as the consolidated bundle consumed by the CLI, updating its `$extensions.lapidist.catalog.sources` to reference the canonical files whenever new documents are introduced.
 2. **Enforce authoring quality**
-   - Run `npm run design-lint` so the CLI inspects every DTIF document via the `design-lint lint "tokens/**/*.dtif.json"` command, keeping the minimal rule set aligned with the DTIF authoring model.
+   - Run `npm run design-lint` so the CLI inspects the CSS and React example sources via `design-lint lint "src/**/*.{css,js,jsx,ts,tsx}"`, validating real usage against the DTIF token catalogue.
    - Use `npm run dtif:validate` to confirm schema compliance before committing updates; capture validation logs under `ops/artifacts/validate/`.
 
 ## Phase 2 – Build Pipeline

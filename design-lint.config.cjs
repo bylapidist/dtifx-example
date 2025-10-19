@@ -1,7 +1,7 @@
 const tokens = require('./tokens/index.dtif.json');
 
 module.exports = {
-  patterns: ['tokens/**/*.dtif.json'],
+  patterns: ['src/**/*.{css,js,jsx,ts,tsx}'],
   ignoreFiles: ['ops/artifacts/**'],
   tokens: {
     default: tokens,

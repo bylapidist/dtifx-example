@@ -1,0 +1,22 @@
+:root {
+  color-scheme: light;
+}
+
+.button-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 16px 24px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  background-color: #0E5CAD;
+  color: #FFFFFF;
+  transition: background-color 120ms ease-in-out;
+}
+
+.button-primary:hover,
+.button-primary:focus-visible {
+  background-color: #0C529A;
+}

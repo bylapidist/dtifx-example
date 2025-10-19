@@ -4,7 +4,7 @@
 
 - Keep pull requests tightly scoped and describe which DTIF documents or UI assets changed.
 - Run `npm install` followed by `npm run verify` before opening a pull request so ESLint and the CSS/React `design-lint lint "src/**/*.{css,js,jsx,ts,tsx}"` both succeed.
-- Include the results of `npm run dtif:build`, `npm run dtif:diff`, and `npm run dtif:audit` in your PR description when tokens change so reviewers can inspect artefacts under `ops/artifacts/`; the audit script already captures sanitized JSON and Markdown output from the CLI.
+- Include the results of `npm run dtif:build`, `npm run dtif:diff`, and `npm run dtif:audit` in your PR description when tokens change so reviewers can inspect artefacts under `ops/artifacts/`; the audit command emits sanitized JSON and Markdown output via the CLI reporters.
 - The GitHub Actions workflow `.github/workflows/ci.yml` runs the verify, validate, build, diff, and audit commands on every push and pull request; ensure your branch passes the pipeline before requesting review.
 
 ## Development environment

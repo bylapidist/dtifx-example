@@ -19,7 +19,7 @@ This repository demonstrates a canonical, production-ready setup of the DTIFx To
 - `npm run dtif:validate`: Runs `dtifx build validate` against `build/dtif-build.config.mjs` to ensure all DTIF sources compile.
 - `npm run dtif:build`: Executes `dtifx build generate` and writes CSS/JSON outputs to `ops/artifacts/build/`.
 - `npm run dtif:diff`: Compares `tokens/index.dtif.json` to the committed baseline via `dtifx diff compare`, emitting JSON and Markdown evidence.
-- `npm run dtif:audit`: Calls the DTIF CLI to evaluate governance policies defined in `audit/dtif-audit.config.mjs`, committing reports under `ops/artifacts/audit/`.
+- `npm run dtif:audit`: Runs `dtifx audit run --reporter json --reporter markdown --config audit/dtif-audit.config.mjs --out-dir ops/artifacts/audit` to evaluate governance policies and commit JSON/Markdown evidence.
 - `npm run design-lint`: Invokes `design-lint lint "src/**/*.{css,js,jsx,ts,tsx}" --config design-lint.config.cjs` to verify the example UI honours the canonical tokens.
 - `npm run verify`: Convenience script that runs ESLint followed by the design-lint command.
 

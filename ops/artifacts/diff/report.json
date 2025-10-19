@@ -1,42 +1,28 @@
 {
   "reportSchemaVersion": 3,
-  "generatedAt": "2025-10-19T15:17:43.648Z",
+  "generatedAt": "2025-10-19T16:40:07.872Z",
   "run": {
-    "previous": "ops/artifacts/diff/baseline.dtif.json (normalized)",
-    "next": "tokens/index.dtif.json",
-    "startedAt": "2025-10-19T15:17:42.866Z",
-    "durationMs": 776.024812
+    "previous": "ops/artifacts/diff/baseline.dtif.json",
+    "next": "tokens/catalog.json",
+    "startedAt": "2025-10-19T16:40:07.449Z",
+    "durationMs": 419.766237
   },
   "summary": {
     "totalPrevious": 12,
     "totalNext": 12,
-    "added": 0,
-    "removed": 0,
+    "added": 4,
+    "removed": 4,
     "renamed": 0,
-    "changed": 12,
+    "changed": 8,
     "unchanged": 0,
-    "breaking": 0,
+    "breaking": 4,
     "nonBreaking": 12,
     "valueChanged": 0,
-    "metadataChanged": 12,
-    "recommendedBump": "patch",
+    "metadataChanged": 8,
+    "recommendedBump": "major",
     "types": [
       {
         "type": "color",
-        "totalPrevious": 5,
-        "totalNext": 5,
-        "added": 0,
-        "removed": 0,
-        "renamed": 0,
-        "changed": 0,
-        "unchanged": 5,
-        "breaking": 0,
-        "nonBreaking": 0,
-        "valueChanged": 0,
-        "metadataChanged": 0
-      },
-      {
-        "type": "dimension",
         "totalPrevious": 5,
         "totalNext": 5,
         "added": 0,
@@ -50,18 +36,32 @@
         "metadataChanged": 5
       },
       {
+        "type": "dimension",
+        "totalPrevious": 5,
+        "totalNext": 5,
+        "added": 3,
+        "removed": 3,
+        "renamed": 0,
+        "changed": 2,
+        "unchanged": 0,
+        "breaking": 3,
+        "nonBreaking": 5,
+        "valueChanged": 0,
+        "metadataChanged": 2
+      },
+      {
         "type": "duration",
         "totalPrevious": 1,
         "totalNext": 1,
-        "added": 0,
-        "removed": 0,
+        "added": 1,
+        "removed": 1,
         "renamed": 0,
-        "changed": 1,
+        "changed": 0,
         "unchanged": 0,
-        "breaking": 0,
+        "breaking": 1,
         "nonBreaking": 1,
         "valueChanged": 0,
-        "metadataChanged": 1
+        "metadataChanged": 0
       },
       {
         "type": "fontweight",
@@ -80,184 +80,170 @@
     ],
     "groups": [
       {
-        "group": "color",
+        "group": "clr",
         "totalPrevious": 2,
         "totalNext": 2,
         "added": 0,
         "removed": 0,
         "renamed": 0,
-        "changed": 0,
-        "unchanged": 2,
+        "changed": 2,
+        "unchanged": 0,
         "breaking": 0,
-        "nonBreaking": 0,
+        "nonBreaking": 2,
         "valueChanged": 0,
-        "metadataChanged": 0
+        "metadataChanged": 2
       },
       {
-        "group": "component",
+        "group": "cmp",
         "totalPrevious": 4,
         "totalNext": 4,
         "added": 0,
         "removed": 0,
         "renamed": 0,
-        "changed": 0,
-        "unchanged": 4,
+        "changed": 4,
+        "unchanged": 0,
         "breaking": 0,
-        "nonBreaking": 0,
+        "nonBreaking": 4,
         "valueChanged": 0,
-        "metadataChanged": 0
+        "metadataChanged": 4
       },
       {
-        "group": "component/button",
+        "group": "cmp/btn",
         "totalPrevious": 4,
         "totalNext": 4,
         "added": 0,
         "removed": 0,
         "renamed": 0,
-        "changed": 0,
-        "unchanged": 4,
+        "changed": 4,
+        "unchanged": 0,
         "breaking": 0,
-        "nonBreaking": 0,
+        "nonBreaking": 4,
         "valueChanged": 0,
-        "metadataChanged": 0
+        "metadataChanged": 4
       },
       {
         "group": "durations",
-        "totalPrevious": 1,
+        "totalPrevious": 0,
         "totalNext": 1,
-        "added": 0,
+        "added": 1,
         "removed": 0,
         "renamed": 0,
         "changed": 0,
-        "unchanged": 1,
+        "unchanged": 0,
         "breaking": 0,
+        "nonBreaking": 1,
+        "valueChanged": 0,
+        "metadataChanged": 0
+      },
+      {
+        "group": "durationvars",
+        "totalPrevious": 0,
+        "totalNext": 1,
+        "added": 1,
+        "removed": 0,
+        "renamed": 0,
+        "changed": 0,
+        "unchanged": 0,
+        "breaking": 0,
+        "nonBreaking": 1,
+        "valueChanged": 0,
+        "metadataChanged": 0
+      },
+      {
+        "group": "motion",
+        "totalPrevious": 1,
+        "totalNext": 0,
+        "added": 0,
+        "removed": 1,
+        "renamed": 0,
+        "changed": 0,
+        "unchanged": 0,
+        "breaking": 1,
         "nonBreaking": 0,
         "valueChanged": 0,
         "metadataChanged": 0
       },
       {
-        "group": "durationvariables",
+        "group": "motionvar",
         "totalPrevious": 1,
-        "totalNext": 1,
+        "totalNext": 0,
         "added": 0,
-        "removed": 0,
+        "removed": 1,
         "renamed": 0,
         "changed": 0,
-        "unchanged": 1,
-        "breaking": 0,
+        "unchanged": 0,
+        "breaking": 1,
         "nonBreaking": 0,
         "valueChanged": 0,
         "metadataChanged": 0
       },
       {
-        "group": "fontweights",
-        "totalPrevious": 1,
-        "totalNext": 1,
+        "group": "space",
+        "totalPrevious": 2,
+        "totalNext": 0,
         "added": 0,
-        "removed": 0,
+        "removed": 2,
         "renamed": 0,
         "changed": 0,
-        "unchanged": 1,
-        "breaking": 0,
+        "unchanged": 0,
+        "breaking": 2,
         "nonBreaking": 0,
         "valueChanged": 0,
         "metadataChanged": 0
-      },
-      {
-        "group": "fontweightvariables",
-        "totalPrevious": 1,
-        "totalNext": 1,
-        "added": 0,
-        "removed": 0,
-        "renamed": 0,
-        "changed": 0,
-        "unchanged": 1,
-        "breaking": 0,
-        "nonBreaking": 0,
-        "valueChanged": 0,
-        "metadataChanged": 0
-      },
-      {
-        "group": "durations",
-        "totalPrevious": 1,
-        "totalNext": 1,
-        "added": 0,
-        "removed": 0,
-        "renamed": 0,
-        "changed": 1,
-        "unchanged": 0,
-        "breaking": 0,
-        "nonBreaking": 1,
-        "valueChanged": 0,
-        "metadataChanged": 1
-      },
-      {
-        "group": "durationvariables",
-        "totalPrevious": 1,
-        "totalNext": 1,
-        "added": 0,
-        "removed": 0,
-        "renamed": 0,
-        "changed": 1,
-        "unchanged": 0,
-        "breaking": 0,
-        "nonBreaking": 1,
-        "valueChanged": 0,
-        "metadataChanged": 1
-      },
-      {
-        "group": "fontweights",
-        "totalPrevious": 1,
-        "totalNext": 1,
-        "added": 0,
-        "removed": 0,
-        "renamed": 0,
-        "changed": 1,
-        "unchanged": 0,
-        "breaking": 0,
-        "nonBreaking": 1,
-        "valueChanged": 0,
-        "metadataChanged": 1
-      },
-      {
-        "group": "fontweightvariables",
-        "totalPrevious": 1,
-        "totalNext": 1,
-        "added": 0,
-        "removed": 0,
-        "renamed": 0,
-        "changed": 1,
-        "unchanged": 0,
-        "breaking": 0,
-        "nonBreaking": 1,
-        "valueChanged": 0,
-        "metadataChanged": 1
       },
       {
         "group": "spacing",
-        "totalPrevious": 2,
+        "totalPrevious": 0,
         "totalNext": 2,
-        "added": 0,
+        "added": 2,
         "removed": 0,
         "renamed": 0,
         "changed": 0,
-        "unchanged": 2,
+        "unchanged": 0,
         "breaking": 0,
-        "nonBreaking": 0,
+        "nonBreaking": 2,
         "valueChanged": 0,
         "metadataChanged": 0
+      },
+      {
+        "group": "weight",
+        "totalPrevious": 1,
+        "totalNext": 1,
+        "added": 0,
+        "removed": 0,
+        "renamed": 0,
+        "changed": 1,
+        "unchanged": 0,
+        "breaking": 0,
+        "nonBreaking": 1,
+        "valueChanged": 0,
+        "metadataChanged": 1
+      },
+      {
+        "group": "weightvar",
+        "totalPrevious": 1,
+        "totalNext": 1,
+        "added": 0,
+        "removed": 0,
+        "renamed": 0,
+        "changed": 1,
+        "unchanged": 0,
+        "breaking": 0,
+        "nonBreaking": 1,
+        "valueChanged": 0,
+        "metadataChanged": 1
       }
     ]
   },
   "insights": {
     "impact": {
-      "breaking": 0,
+      "breaking": 4,
       "nonBreaking": 12
     },
     "operations": {
-      "added": 0,
-      "changed": 12,
-      "removed": 0,
+      "added": 4,
+      "changed": 8,
+      "removed": 4,
       "renamed": 0
     },
     "totals": {
@@ -266,26 +252,26 @@
     },
     "changeMix": {
       "valueChanged": 0,
-      "metadataChanged": 12
+      "metadataChanged": 8
     },
     "typeHotspots": [
+      {
+        "label": "dimension",
+        "changes": 8,
+        "breaking": 3,
+        "nonBreaking": 5
+      },
+      {
+        "label": "duration",
+        "changes": 2,
+        "breaking": 1,
+        "nonBreaking": 1
+      },
       {
         "label": "color",
         "changes": 5,
         "breaking": 0,
         "nonBreaking": 5
-      },
-      {
-        "label": "dimension",
-        "changes": 5,
-        "breaking": 0,
-        "nonBreaking": 5
-      },
-      {
-        "label": "duration",
-        "changes": 1,
-        "breaking": 0,
-        "nonBreaking": 1
       },
       {
         "label": "fontweight",
@@ -296,19 +282,37 @@
     ],
     "groupHotspots": [
       {
-        "label": "component",
+        "label": "space",
+        "changes": 2,
+        "breaking": 2,
+        "nonBreaking": 0
+      },
+      {
+        "label": "motion",
+        "changes": 1,
+        "breaking": 1,
+        "nonBreaking": 0
+      },
+      {
+        "label": "motionvar",
+        "changes": 1,
+        "breaking": 1,
+        "nonBreaking": 0
+      },
+      {
+        "label": "cmp",
         "changes": 4,
         "breaking": 0,
         "nonBreaking": 4
       },
       {
-        "label": "component/button",
+        "label": "cmp/btn",
         "changes": 4,
         "breaking": 0,
         "nonBreaking": 4
       },
       {
-        "label": "color",
+        "label": "clr",
         "changes": 2,
         "breaking": 0,
         "nonBreaking": 2
@@ -326,19 +330,19 @@
         "nonBreaking": 1
       },
       {
-        "label": "durationvariables",
+        "label": "durationvars",
         "changes": 1,
         "breaking": 0,
         "nonBreaking": 1
       },
       {
-        "label": "fontweights",
+        "label": "weight",
         "changes": 1,
         "breaking": 0,
         "nonBreaking": 1
       },
       {
-        "label": "fontweightvariables",
+        "label": "weightvar",
         "changes": 1,
         "breaking": 0,
         "nonBreaking": 1
@@ -346,413 +350,81 @@
     ],
     "topRisks": [
       {
-        "kind": "changed",
-        "impact": "non-breaking",
-        "labelPath": "#/color/background",
-        "typeLabel": "color",
-        "title": "Metadata updated",
-        "why": "Changed fields: references and resolution path",
-        "impactSummary": "Non-breaking update: confirm expected outcomes and visuals.",
-        "nextStep": "Spot-check #/color/background in consuming products.",
-        "score": 112,
+        "kind": "removed",
+        "impact": "breaking",
+        "labelPath": "#/motion/btn",
+        "typeLabel": "duration",
+        "title": "Token removed",
+        "why": "Deletes duration token",
+        "impactSummary": "Breaking removal: existing references will fail.",
+        "nextStep": "Audit consumers of #/motion/btn and migrate to replacements.",
+        "score": 1,
         "tokens": {
-          "previous": "#/color/background",
-          "next": "#/color/background"
-        },
-        "changedFields": [
-          "references",
-          "resolutionPath"
-        ]
+          "previous": "#/motion/btn"
+        }
       },
       {
-        "kind": "changed",
-        "impact": "non-breaking",
-        "labelPath": "#/color/brand",
-        "typeLabel": "color",
-        "title": "Metadata updated",
-        "why": "Changed fields: references and resolution path",
-        "impactSummary": "Non-breaking update: confirm expected outcomes and visuals.",
-        "nextStep": "Spot-check #/color/brand in consuming products.",
-        "score": 112,
-        "tokens": {
-          "previous": "#/color/brand",
-          "next": "#/color/brand"
-        },
-        "changedFields": [
-          "references",
-          "resolutionPath"
-        ]
-      },
-      {
-        "kind": "changed",
-        "impact": "non-breaking",
-        "labelPath": "#/component/button/background",
-        "typeLabel": "color",
-        "title": "Metadata updated",
-        "why": "Changed fields: references and resolution path",
-        "impactSummary": "Non-breaking update: confirm expected outcomes and visuals.",
-        "nextStep": "Spot-check #/component/button/background in consuming products.",
-        "score": 112,
-        "tokens": {
-          "previous": "#/component/button/background",
-          "next": "#/component/button/background"
-        },
-        "changedFields": [
-          "references",
-          "resolutionPath"
-        ]
-      },
-      {
-        "kind": "changed",
-        "impact": "non-breaking",
-        "labelPath": "#/component/button/background-hover",
-        "typeLabel": "color",
-        "title": "Metadata updated",
-        "why": "Changed fields: references and resolution path",
-        "impactSummary": "Non-breaking update: confirm expected outcomes and visuals.",
-        "nextStep": "Spot-check #/component/button/background-hover in consuming products.",
-        "score": 112,
-        "tokens": {
-          "previous": "#/component/button/background-hover",
-          "next": "#/component/button/background-hover"
-        },
-        "changedFields": [
-          "references",
-          "resolutionPath"
-        ]
-      },
-      {
-        "kind": "changed",
-        "impact": "non-breaking",
-        "labelPath": "#/component/button/padding",
+        "kind": "removed",
+        "impact": "breaking",
+        "labelPath": "#/motionVar/btn",
         "typeLabel": "dimension",
-        "title": "Metadata updated",
-        "why": "Changed fields: references and resolution path",
-        "impactSummary": "Non-breaking update: confirm expected outcomes and visuals.",
-        "nextStep": "Spot-check #/component/button/padding in consuming products.",
-        "score": 112,
+        "title": "Token removed",
+        "why": "Deletes dimension token",
+        "impactSummary": "Breaking removal: existing references will fail.",
+        "nextStep": "Audit consumers of #/motionVar/btn and migrate to replacements.",
+        "score": 1,
         "tokens": {
-          "previous": "#/component/button/padding",
-          "next": "#/component/button/padding"
-        },
-        "changedFields": [
-          "references",
-          "resolutionPath"
-        ]
+          "previous": "#/motionVar/btn"
+        }
+      },
+      {
+        "kind": "removed",
+        "impact": "breaking",
+        "labelPath": "#/space/lg",
+        "typeLabel": "dimension",
+        "title": "Token removed",
+        "why": "Deletes dimension token",
+        "impactSummary": "Breaking removal: existing references will fail.",
+        "nextStep": "Audit consumers of #/space/lg and migrate to replacements.",
+        "score": 1,
+        "tokens": {
+          "previous": "#/space/lg"
+        }
+      },
+      {
+        "kind": "removed",
+        "impact": "breaking",
+        "labelPath": "#/space/md",
+        "typeLabel": "dimension",
+        "title": "Token removed",
+        "why": "Deletes dimension token",
+        "impactSummary": "Breaking removal: existing references will fail.",
+        "nextStep": "Audit consumers of #/space/md and migrate to replacements.",
+        "score": 1,
+        "tokens": {
+          "previous": "#/space/md"
+        }
+      },
+      {
+        "kind": "added",
+        "impact": "non-breaking",
+        "labelPath": "#/durations/btn",
+        "typeLabel": "duration",
+        "title": "Token added",
+        "why": "Introduces new duration token",
+        "impactSummary": "Non-breaking addition: publicise availability to adopters.",
+        "nextStep": "Plan adoption for #/durations/btn across consuming teams.",
+        "score": 103,
+        "tokens": {
+          "next": "#/durations/btn"
+        }
       }
     ]
   },
   "changes": [
     {
-      "kind": "changed",
-      "token": "#/color/brand",
-      "changes": [
-        "references",
-        "resolutionPath"
-      ],
-      "previous": {
-        "id": "#/color/brand",
-        "path": [
-          "color",
-          "brand"
-        ],
-        "extensions": {
-          "lapidist.governance": {
-            "owner": "Design Foundations Guild",
-            "reviewCadence": "quarterly",
-            "sla": "5 business days"
-          },
-          "lapidist.accessibility": {
-            "contrastTarget": "AA",
-            "usage": [
-              "button.primary",
-              "link.default"
-            ]
-          }
-        },
-        "source": {
-          "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json",
-          "line": 17,
-          "column": 14
-        },
-        "references": [
-          {
-            "pointer": "#/color/brand/$value",
-            "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
-          }
-        ],
-        "resolutionPath": [
-          {
-            "pointer": "#/color/brand",
-            "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
-          }
-        ],
-        "appliedAliases": [],
-        "type": "color",
-        "value": {
-          "colorSpace": "srgb",
-          "components": [
-            0.054901960784313725,
-            0.3607843137254902,
-            0.6784313725490196
-          ]
-        },
-        "raw": {
-          "colorSpace": "srgb",
-          "components": [
-            0.054901960784313725,
-            0.3607843137254902,
-            0.6784313725490196
-          ]
-        },
-        "description": "Primary brand colour ensuring AA contrast on light backgrounds."
-      },
-      "next": {
-        "id": "#/color/brand",
-        "path": [
-          "color",
-          "brand"
-        ],
-        "extensions": {
-          "lapidist.governance": {
-            "owner": "Design Foundations Guild",
-            "reviewCadence": "quarterly",
-            "sla": "5 business days"
-          },
-          "lapidist.accessibility": {
-            "contrastTarget": "AA",
-            "usage": [
-              "button.primary",
-              "link.default"
-            ]
-          }
-        },
-        "source": {
-          "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json",
-          "line": 17,
-          "column": 14
-        },
-        "references": [
-          {
-            "pointer": "#/color/brand/$value",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
-          }
-        ],
-        "resolutionPath": [
-          {
-            "pointer": "#/color/brand",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
-          }
-        ],
-        "appliedAliases": [],
-        "type": "color",
-        "value": {
-          "colorSpace": "srgb",
-          "components": [
-            0.054901960784313725,
-            0.3607843137254902,
-            0.6784313725490196
-          ]
-        },
-        "raw": {
-          "colorSpace": "srgb",
-          "components": [
-            0.054901960784313725,
-            0.3607843137254902,
-            0.6784313725490196
-          ]
-        },
-        "description": "Primary brand colour ensuring AA contrast on light backgrounds."
-      },
-      "impact": "non-breaking"
-    },
-    {
-      "kind": "changed",
-      "token": "#/color/background",
-      "changes": [
-        "references",
-        "resolutionPath"
-      ],
-      "previous": {
-        "id": "#/color/background",
-        "path": [
-          "color",
-          "background"
-        ],
-        "extensions": {
-          "lapidist.governance": {
-            "owner": "Design Foundations Guild",
-            "reviewCadence": "quarterly",
-            "sla": "5 business days"
-          },
-          "lapidist.context": {
-            "surface": "canvas",
-            "theme": "light"
-          },
-          "lapidist.accessibility": {
-            "contrastTarget": "AA",
-            "usage": [
-              "surface.background.light"
-            ]
-          }
-        },
-        "source": {
-          "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json",
-          "line": 43,
-          "column": 19
-        },
-        "references": [
-          {
-            "pointer": "#/color/background/$value",
-            "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
-          }
-        ],
-        "resolutionPath": [
-          {
-            "pointer": "#/color/background",
-            "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
-          }
-        ],
-        "appliedAliases": [],
-        "type": "color",
-        "value": {
-          "colorSpace": "srgb",
-          "components": [
-            1,
-            1,
-            1
-          ]
-        },
-        "raw": {
-          "colorSpace": "srgb",
-          "components": [
-            1,
-            1,
-            1
-          ]
-        },
-        "description": "Base background colour for light theme contexts."
-      },
-      "next": {
-        "id": "#/color/background",
-        "path": [
-          "color",
-          "background"
-        ],
-        "extensions": {
-          "lapidist.governance": {
-            "owner": "Design Foundations Guild",
-            "reviewCadence": "quarterly",
-            "sla": "5 business days"
-          },
-          "lapidist.context": {
-            "surface": "canvas",
-            "theme": "light"
-          },
-          "lapidist.accessibility": {
-            "contrastTarget": "AA",
-            "usage": [
-              "surface.background.light"
-            ]
-          }
-        },
-        "source": {
-          "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json",
-          "line": 43,
-          "column": 19
-        },
-        "references": [
-          {
-            "pointer": "#/color/background/$value",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
-          }
-        ],
-        "resolutionPath": [
-          {
-            "pointer": "#/color/background",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
-          }
-        ],
-        "appliedAliases": [],
-        "type": "color",
-        "value": {
-          "colorSpace": "srgb",
-          "components": [
-            1,
-            1,
-            1
-          ]
-        },
-        "raw": {
-          "colorSpace": "srgb",
-          "components": [
-            1,
-            1,
-            1
-          ]
-        },
-        "description": "Base background colour for light theme contexts."
-      },
-      "impact": "non-breaking"
-    },
-    {
-      "kind": "changed",
+      "kind": "added",
       "token": "#/spacing/md",
-      "changes": [
-        "references",
-        "resolutionPath"
-      ],
-      "previous": {
-        "id": "#/spacing/md",
-        "path": [
-          "spacing",
-          "md"
-        ],
-        "extensions": {
-          "lapidist.governance": {
-            "owner": "Design Foundations Guild",
-            "reviewCadence": "quarterly",
-            "sla": "5 business days"
-          },
-          "lapidist.accessibility": {
-            "touchTarget": "Ensures minimum primary control padding",
-            "usage": [
-              "spacing.md",
-              "button.primary.padding"
-            ]
-          }
-        },
-        "source": {
-          "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json",
-          "line": 75,
-          "column": 11
-        },
-        "references": [
-          {
-            "pointer": "#/spacing/md/$value",
-            "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
-          }
-        ],
-        "resolutionPath": [
-          {
-            "pointer": "#/spacing/md",
-            "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
-          }
-        ],
-        "appliedAliases": [],
-        "type": "dimension",
-        "value": {
-          "dimensionType": "length",
-          "value": 16,
-          "unit": "px"
-        },
-        "raw": {
-          "dimensionType": "length",
-          "value": 16,
-          "unit": "px"
-        },
-        "description": "Default medium spacing unit for layout and component padding."
-      },
       "next": {
         "id": "#/spacing/md",
         "path": [
@@ -769,25 +441,25 @@
             "touchTarget": "Ensures minimum primary control padding",
             "usage": [
               "spacing.md",
-              "button.primary.padding"
+              "btn.primary.pad"
             ]
           }
         },
         "source": {
-          "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json",
-          "line": 75,
+          "uri": "file:///workspace/dtifx-example/tokens/catalog.json",
+          "line": 289,
           "column": 11
         },
         "references": [
           {
             "pointer": "#/spacing/md/$value",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
           }
         ],
         "resolutionPath": [
           {
             "pointer": "#/spacing/md",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
           }
         ],
         "appliedAliases": [],
@@ -807,63 +479,8 @@
       "impact": "non-breaking"
     },
     {
-      "kind": "changed",
+      "kind": "added",
       "token": "#/spacing/lg",
-      "changes": [
-        "references",
-        "resolutionPath"
-      ],
-      "previous": {
-        "id": "#/spacing/lg",
-        "path": [
-          "spacing",
-          "lg"
-        ],
-        "extensions": {
-          "lapidist.governance": {
-            "owner": "Design Foundations Guild",
-            "reviewCadence": "quarterly",
-            "sla": "5 business days"
-          },
-          "lapidist.accessibility": {
-            "touchTarget": "Supports elevated hit area targets for large components",
-            "usage": [
-              "spacing.lg",
-              "button.primary.padding"
-            ]
-          }
-        },
-        "source": {
-          "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json",
-          "line": 98,
-          "column": 11
-        },
-        "references": [
-          {
-            "pointer": "#/spacing/lg/$value",
-            "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
-          }
-        ],
-        "resolutionPath": [
-          {
-            "pointer": "#/spacing/lg",
-            "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
-          }
-        ],
-        "appliedAliases": [],
-        "type": "dimension",
-        "value": {
-          "dimensionType": "length",
-          "value": 24,
-          "unit": "px"
-        },
-        "raw": {
-          "dimensionType": "length",
-          "value": 24,
-          "unit": "px"
-        },
-        "description": "Large spacing unit for generous component padding."
-      },
       "next": {
         "id": "#/spacing/lg",
         "path": [
@@ -880,25 +497,25 @@
             "touchTarget": "Supports elevated hit area targets for large components",
             "usage": [
               "spacing.lg",
-              "button.primary.padding"
+              "btn.primary.pad"
             ]
           }
         },
         "source": {
-          "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json",
-          "line": 98,
+          "uri": "file:///workspace/dtifx-example/tokens/catalog.json",
+          "line": 312,
           "column": 11
         },
         "references": [
           {
             "pointer": "#/spacing/lg/$value",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
           }
         ],
         "resolutionPath": [
           {
             "pointer": "#/spacing/lg",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
           }
         ],
         "appliedAliases": [],
@@ -918,219 +535,13 @@
       "impact": "non-breaking"
     },
     {
-      "kind": "changed",
-      "token": "#/fontWeights/semibold",
-      "changes": [
-        "references",
-        "resolutionPath"
-      ],
-      "previous": {
-        "id": "#/fontWeights/semibold",
-        "path": [
-          "fontWeights",
-          "semibold"
-        ],
-        "extensions": {
-          "lapidist.governance": {
-            "owner": "Design Foundations Guild",
-            "reviewCadence": "quarterly",
-            "sla": "5 business days"
-          },
-          "lapidist.accessibility": {
-            "usage": [
-              "fontWeights.semibold",
-              "button.primary.fontWeight"
-            ]
-          }
-        },
-        "source": {
-          "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json",
-          "line": 124,
-          "column": 17
-        },
-        "references": [
-          {
-            "pointer": "#/fontWeights/semibold/$value",
-            "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
-          }
-        ],
-        "resolutionPath": [
-          {
-            "pointer": "#/fontWeights/semibold",
-            "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
-          }
-        ],
-        "appliedAliases": [],
-        "type": "fontWeight",
-        "value": 600,
-        "raw": 600,
-        "description": "Semibold weight for primary button text."
-      },
+      "kind": "added",
+      "token": "#/durations/btn",
       "next": {
-        "id": "#/fontWeights/semibold",
-        "path": [
-          "fontWeights",
-          "semibold"
-        ],
-        "extensions": {
-          "lapidist.governance": {
-            "owner": "Design Foundations Guild",
-            "reviewCadence": "quarterly",
-            "sla": "5 business days"
-          },
-          "lapidist.accessibility": {
-            "usage": [
-              "fontWeights.semibold",
-              "button.primary.fontWeight"
-            ]
-          }
-        },
-        "source": {
-          "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json",
-          "line": 124,
-          "column": 17
-        },
-        "references": [
-          {
-            "pointer": "#/fontWeights/semibold/$value",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
-          }
-        ],
-        "resolutionPath": [
-          {
-            "pointer": "#/fontWeights/semibold",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
-          }
-        ],
-        "appliedAliases": [],
-        "type": "fontWeight",
-        "value": 600,
-        "raw": 600,
-        "description": "Semibold weight for primary button text."
-      },
-      "impact": "non-breaking"
-    },
-    {
-      "kind": "changed",
-      "token": "#/fontWeightVariables/semibold",
-      "changes": [
-        "references",
-        "resolutionPath"
-      ],
-      "previous": {
-        "id": "#/fontWeightVariables/semibold",
-        "path": [
-          "fontWeightVariables",
-          "semibold"
-        ],
-        "extensions": {
-          "lapidist.governance": {
-            "owner": "Design Foundations Guild",
-            "reviewCadence": "quarterly",
-            "sla": "5 business days"
-          },
-          "lapidist.accessibility": {
-            "usage": [
-              "fontWeightVariables.semibold",
-              "button.primary.fontWeight"
-            ]
-          }
-        },
-        "source": {
-          "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json",
-          "line": 145,
-          "column": 17
-        },
-        "references": [
-          {
-            "pointer": "#/fontWeightVariables/semibold/$value",
-            "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
-          }
-        ],
-        "resolutionPath": [
-          {
-            "pointer": "#/fontWeightVariables/semibold",
-            "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
-          }
-        ],
-        "appliedAliases": [],
-        "type": "dimension",
-        "value": {
-          "dimensionType": "custom",
-          "value": 600,
-          "unit": "scalar.unitless"
-        },
-        "raw": {
-          "dimensionType": "custom",
-          "value": 600,
-          "unit": "scalar.unitless"
-        },
-        "description": "Semibold weight exposed as a unitless CSS variable."
-      },
-      "next": {
-        "id": "#/fontWeightVariables/semibold",
-        "path": [
-          "fontWeightVariables",
-          "semibold"
-        ],
-        "extensions": {
-          "lapidist.governance": {
-            "owner": "Design Foundations Guild",
-            "reviewCadence": "quarterly",
-            "sla": "5 business days"
-          },
-          "lapidist.accessibility": {
-            "usage": [
-              "fontWeightVariables.semibold",
-              "button.primary.fontWeight"
-            ]
-          }
-        },
-        "source": {
-          "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json",
-          "line": 145,
-          "column": 17
-        },
-        "references": [
-          {
-            "pointer": "#/fontWeightVariables/semibold/$value",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
-          }
-        ],
-        "resolutionPath": [
-          {
-            "pointer": "#/fontWeightVariables/semibold",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
-          }
-        ],
-        "appliedAliases": [],
-        "type": "dimension",
-        "value": {
-          "dimensionType": "custom",
-          "value": 600,
-          "unit": "scalar.unitless"
-        },
-        "raw": {
-          "dimensionType": "custom",
-          "value": 600,
-          "unit": "scalar.unitless"
-        },
-        "description": "Semibold weight exposed as a unitless CSS variable."
-      },
-      "impact": "non-breaking"
-    },
-    {
-      "kind": "changed",
-      "token": "#/durations/button",
-      "changes": [
-        "references",
-        "resolutionPath"
-      ],
-      "previous": {
-        "id": "#/durations/button",
+        "id": "#/durations/btn",
         "path": [
           "durations",
-          "button"
+          "btn"
         ],
         "extensions": {
           "lapidist.governance": {
@@ -1140,76 +551,26 @@
           },
           "lapidist.accessibility": {
             "usage": [
-              "durations.button",
-              "button.primary.transition"
+              "durations.btn",
+              "btn.primary.motion"
             ]
           }
         },
         "source": {
-          "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json",
-          "line": 170,
-          "column": 15
+          "uri": "file:///workspace/dtifx-example/tokens/catalog.json",
+          "line": 338,
+          "column": 12
         },
         "references": [
           {
-            "pointer": "#/durations/button/$value",
-            "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
+            "pointer": "#/durations/btn/$value",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
           }
         ],
         "resolutionPath": [
           {
-            "pointer": "#/durations/button",
-            "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
-          }
-        ],
-        "appliedAliases": [],
-        "type": "duration",
-        "value": {
-          "durationType": "css.transition-duration",
-          "value": 120,
-          "unit": "ms"
-        },
-        "raw": {
-          "durationType": "css.transition-duration",
-          "value": 120,
-          "unit": "ms"
-        },
-        "description": "Primary button background transition duration."
-      },
-      "next": {
-        "id": "#/durations/button",
-        "path": [
-          "durations",
-          "button"
-        ],
-        "extensions": {
-          "lapidist.governance": {
-            "owner": "Design Foundations Guild",
-            "reviewCadence": "quarterly",
-            "sla": "5 business days"
-          },
-          "lapidist.accessibility": {
-            "usage": [
-              "durations.button",
-              "button.primary.transition"
-            ]
-          }
-        },
-        "source": {
-          "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json",
-          "line": 170,
-          "column": 15
-        },
-        "references": [
-          {
-            "pointer": "#/durations/button/$value",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
-          }
-        ],
-        "resolutionPath": [
-          {
-            "pointer": "#/durations/button",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
+            "pointer": "#/durations/btn",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
           }
         ],
         "appliedAliases": [],
@@ -1229,67 +590,13 @@
       "impact": "non-breaking"
     },
     {
-      "kind": "changed",
-      "token": "#/durationVariables/button",
-      "changes": [
-        "references",
-        "resolutionPath"
-      ],
-      "previous": {
-        "id": "#/durationVariables/button",
-        "path": [
-          "durationVariables",
-          "button"
-        ],
-        "extensions": {
-          "lapidist.governance": {
-            "owner": "Design Foundations Guild",
-            "reviewCadence": "quarterly",
-            "sla": "5 business days"
-          },
-          "lapidist.accessibility": {
-            "usage": [
-              "durationVariables.button",
-              "button.primary.transition"
-            ]
-          }
-        },
-        "source": {
-          "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json",
-          "line": 195,
-          "column": 15
-        },
-        "references": [
-          {
-            "pointer": "#/durationVariables/button/$value",
-            "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
-          }
-        ],
-        "resolutionPath": [
-          {
-            "pointer": "#/durationVariables/button",
-            "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
-          }
-        ],
-        "appliedAliases": [],
-        "type": "dimension",
-        "value": {
-          "dimensionType": "custom",
-          "value": 120,
-          "unit": "duration.ms"
-        },
-        "raw": {
-          "dimensionType": "custom",
-          "value": 120,
-          "unit": "duration.ms"
-        },
-        "description": "Primary button transition duration exposed for CSS usage."
-      },
+      "kind": "added",
+      "token": "#/durationVars/btn",
       "next": {
-        "id": "#/durationVariables/button",
+        "id": "#/durationVars/btn",
         "path": [
-          "durationVariables",
-          "button"
+          "durationVars",
+          "btn"
         ],
         "extensions": {
           "lapidist.governance": {
@@ -1299,26 +606,26 @@
           },
           "lapidist.accessibility": {
             "usage": [
-              "durationVariables.button",
-              "button.primary.transition"
+              "durationVars.btn",
+              "btn.primary.motion"
             ]
           }
         },
         "source": {
-          "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json",
-          "line": 195,
-          "column": 15
+          "uri": "file:///workspace/dtifx-example/tokens/catalog.json",
+          "line": 363,
+          "column": 12
         },
         "references": [
           {
-            "pointer": "#/durationVariables/button/$value",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
+            "pointer": "#/durationVars/btn/$value",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
           }
         ],
         "resolutionPath": [
           {
-            "pointer": "#/durationVariables/button",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
+            "pointer": "#/durationVars/btn",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
           }
         ],
         "appliedAliases": [],
@@ -1338,18 +645,694 @@
       "impact": "non-breaking"
     },
     {
+      "kind": "removed",
+      "token": "#/space/md",
+      "previous": {
+        "id": "#/space/md",
+        "path": [
+          "space",
+          "md"
+        ],
+        "extensions": {
+          "lapidist.governance": {
+            "owner": "Design Foundations Guild",
+            "reviewCadence": "quarterly",
+            "sla": "5 business days"
+          },
+          "lapidist.accessibility": {
+            "touchTarget": "Ensures minimum primary control padding",
+            "usage": [
+              "space.md",
+              "btn.primary.pad"
+            ]
+          }
+        },
+        "source": {
+          "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json",
+          "line": 75,
+          "column": 11
+        },
+        "references": [
+          {
+            "pointer": "#/space/md/$value",
+            "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
+          }
+        ],
+        "resolutionPath": [
+          {
+            "pointer": "#/space/md",
+            "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
+          }
+        ],
+        "appliedAliases": [],
+        "type": "dimension",
+        "value": {
+          "dimensionType": "length",
+          "value": 16,
+          "unit": "px"
+        },
+        "raw": {
+          "dimensionType": "length",
+          "value": 16,
+          "unit": "px"
+        },
+        "description": "Default medium spacing unit for layout and component padding."
+      },
+      "impact": "breaking"
+    },
+    {
+      "kind": "removed",
+      "token": "#/space/lg",
+      "previous": {
+        "id": "#/space/lg",
+        "path": [
+          "space",
+          "lg"
+        ],
+        "extensions": {
+          "lapidist.governance": {
+            "owner": "Design Foundations Guild",
+            "reviewCadence": "quarterly",
+            "sla": "5 business days"
+          },
+          "lapidist.accessibility": {
+            "touchTarget": "Supports elevated hit area targets for large components",
+            "usage": [
+              "space.lg",
+              "btn.primary.pad"
+            ]
+          }
+        },
+        "source": {
+          "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json",
+          "line": 98,
+          "column": 11
+        },
+        "references": [
+          {
+            "pointer": "#/space/lg/$value",
+            "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
+          }
+        ],
+        "resolutionPath": [
+          {
+            "pointer": "#/space/lg",
+            "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
+          }
+        ],
+        "appliedAliases": [],
+        "type": "dimension",
+        "value": {
+          "dimensionType": "length",
+          "value": 24,
+          "unit": "px"
+        },
+        "raw": {
+          "dimensionType": "length",
+          "value": 24,
+          "unit": "px"
+        },
+        "description": "Large spacing unit for generous component padding."
+      },
+      "impact": "breaking"
+    },
+    {
+      "kind": "removed",
+      "token": "#/motion/btn",
+      "previous": {
+        "id": "#/motion/btn",
+        "path": [
+          "motion",
+          "btn"
+        ],
+        "extensions": {
+          "lapidist.governance": {
+            "owner": "Design Foundations Guild",
+            "reviewCadence": "quarterly",
+            "sla": "5 business days"
+          },
+          "lapidist.accessibility": {
+            "usage": [
+              "motion.btn",
+              "btn.primary.motion"
+            ]
+          }
+        },
+        "source": {
+          "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json",
+          "line": 170,
+          "column": 12
+        },
+        "references": [
+          {
+            "pointer": "#/motion/btn/$value",
+            "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
+          }
+        ],
+        "resolutionPath": [
+          {
+            "pointer": "#/motion/btn",
+            "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
+          }
+        ],
+        "appliedAliases": [],
+        "type": "duration",
+        "value": {
+          "durationType": "css.transition-duration",
+          "value": 120,
+          "unit": "ms"
+        },
+        "raw": {
+          "durationType": "css.transition-duration",
+          "value": 120,
+          "unit": "ms"
+        },
+        "description": "Primary button background transition duration."
+      },
+      "impact": "breaking"
+    },
+    {
+      "kind": "removed",
+      "token": "#/motionVar/btn",
+      "previous": {
+        "id": "#/motionVar/btn",
+        "path": [
+          "motionVar",
+          "btn"
+        ],
+        "extensions": {
+          "lapidist.governance": {
+            "owner": "Design Foundations Guild",
+            "reviewCadence": "quarterly",
+            "sla": "5 business days"
+          },
+          "lapidist.accessibility": {
+            "usage": [
+              "motionVar.btn",
+              "btn.primary.motion"
+            ]
+          }
+        },
+        "source": {
+          "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json",
+          "line": 195,
+          "column": 12
+        },
+        "references": [
+          {
+            "pointer": "#/motionVar/btn/$value",
+            "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
+          }
+        ],
+        "resolutionPath": [
+          {
+            "pointer": "#/motionVar/btn",
+            "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
+          }
+        ],
+        "appliedAliases": [],
+        "type": "dimension",
+        "value": {
+          "dimensionType": "custom",
+          "value": 120,
+          "unit": "duration.ms"
+        },
+        "raw": {
+          "dimensionType": "custom",
+          "value": 120,
+          "unit": "duration.ms"
+        },
+        "description": "Primary button transition duration exposed for CSS usage."
+      },
+      "impact": "breaking"
+    },
+    {
       "kind": "changed",
-      "token": "#/component/button/background",
+      "token": "#/clr/brand",
       "changes": [
         "references",
         "resolutionPath"
       ],
       "previous": {
-        "id": "#/component/button/background",
+        "id": "#/clr/brand",
         "path": [
-          "component",
-          "button",
-          "background"
+          "clr",
+          "brand"
+        ],
+        "extensions": {
+          "lapidist.governance": {
+            "owner": "Design Foundations Guild",
+            "reviewCadence": "quarterly",
+            "sla": "5 business days"
+          },
+          "lapidist.accessibility": {
+            "contrastTarget": "AA",
+            "usage": [
+              "btn.primary",
+              "link.default"
+            ]
+          }
+        },
+        "source": {
+          "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json",
+          "line": 17,
+          "column": 14
+        },
+        "references": [
+          {
+            "pointer": "#/clr/brand/$value",
+            "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
+          }
+        ],
+        "resolutionPath": [
+          {
+            "pointer": "#/clr/brand",
+            "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
+          }
+        ],
+        "appliedAliases": [],
+        "type": "color",
+        "value": {
+          "colorSpace": "srgb",
+          "components": [
+            0.054901960784313725,
+            0.3607843137254902,
+            0.6784313725490196
+          ]
+        },
+        "raw": {
+          "colorSpace": "srgb",
+          "components": [
+            0.054901960784313725,
+            0.3607843137254902,
+            0.6784313725490196
+          ]
+        },
+        "description": "Primary brand colour ensuring AA contrast on light backgrounds."
+      },
+      "next": {
+        "id": "#/clr/brand",
+        "path": [
+          "clr",
+          "brand"
+        ],
+        "extensions": {
+          "lapidist.governance": {
+            "owner": "Design Foundations Guild",
+            "reviewCadence": "quarterly",
+            "sla": "5 business days"
+          },
+          "lapidist.accessibility": {
+            "contrastTarget": "AA",
+            "usage": [
+              "btn.primary",
+              "link.default"
+            ]
+          }
+        },
+        "source": {
+          "uri": "file:///workspace/dtifx-example/tokens/catalog.json",
+          "line": 17,
+          "column": 14
+        },
+        "references": [
+          {
+            "pointer": "#/clr/brand/$value",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
+          }
+        ],
+        "resolutionPath": [
+          {
+            "pointer": "#/clr/brand",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
+          }
+        ],
+        "appliedAliases": [],
+        "type": "color",
+        "value": {
+          "colorSpace": "srgb",
+          "components": [
+            0.054901960784313725,
+            0.3607843137254902,
+            0.6784313725490196
+          ]
+        },
+        "raw": {
+          "colorSpace": "srgb",
+          "components": [
+            0.054901960784313725,
+            0.3607843137254902,
+            0.6784313725490196
+          ]
+        },
+        "description": "Primary brand colour ensuring AA contrast on light backgrounds."
+      },
+      "impact": "non-breaking"
+    },
+    {
+      "kind": "changed",
+      "token": "#/clr/bg",
+      "changes": [
+        "references",
+        "resolutionPath"
+      ],
+      "previous": {
+        "id": "#/clr/bg",
+        "path": [
+          "clr",
+          "bg"
+        ],
+        "extensions": {
+          "lapidist.governance": {
+            "owner": "Design Foundations Guild",
+            "reviewCadence": "quarterly",
+            "sla": "5 business days"
+          },
+          "lapidist.context": {
+            "surface": "canvas",
+            "theme": "light"
+          },
+          "lapidist.accessibility": {
+            "contrastTarget": "AA",
+            "usage": [
+              "surface.bg.light"
+            ]
+          }
+        },
+        "source": {
+          "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json",
+          "line": 43,
+          "column": 11
+        },
+        "references": [
+          {
+            "pointer": "#/clr/bg/$value",
+            "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
+          }
+        ],
+        "resolutionPath": [
+          {
+            "pointer": "#/clr/bg",
+            "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
+          }
+        ],
+        "appliedAliases": [],
+        "type": "color",
+        "value": {
+          "colorSpace": "srgb",
+          "components": [
+            1,
+            1,
+            1
+          ]
+        },
+        "raw": {
+          "colorSpace": "srgb",
+          "components": [
+            1,
+            1,
+            1
+          ]
+        },
+        "description": "Base background colour for light theme contexts."
+      },
+      "next": {
+        "id": "#/clr/bg",
+        "path": [
+          "clr",
+          "bg"
+        ],
+        "extensions": {
+          "lapidist.governance": {
+            "owner": "Design Foundations Guild",
+            "reviewCadence": "quarterly",
+            "sla": "5 business days"
+          },
+          "lapidist.context": {
+            "surface": "canvas",
+            "theme": "light"
+          },
+          "lapidist.accessibility": {
+            "contrastTarget": "AA",
+            "usage": [
+              "surface.bg.light"
+            ]
+          }
+        },
+        "source": {
+          "uri": "file:///workspace/dtifx-example/tokens/catalog.json",
+          "line": 43,
+          "column": 11
+        },
+        "references": [
+          {
+            "pointer": "#/clr/bg/$value",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
+          }
+        ],
+        "resolutionPath": [
+          {
+            "pointer": "#/clr/bg",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
+          }
+        ],
+        "appliedAliases": [],
+        "type": "color",
+        "value": {
+          "colorSpace": "srgb",
+          "components": [
+            1,
+            1,
+            1
+          ]
+        },
+        "raw": {
+          "colorSpace": "srgb",
+          "components": [
+            1,
+            1,
+            1
+          ]
+        },
+        "description": "Base background colour for light theme contexts."
+      },
+      "impact": "non-breaking"
+    },
+    {
+      "kind": "changed",
+      "token": "#/weight/semibold",
+      "changes": [
+        "references",
+        "resolutionPath"
+      ],
+      "previous": {
+        "id": "#/weight/semibold",
+        "path": [
+          "weight",
+          "semibold"
+        ],
+        "extensions": {
+          "lapidist.governance": {
+            "owner": "Design Foundations Guild",
+            "reviewCadence": "quarterly",
+            "sla": "5 business days"
+          },
+          "lapidist.accessibility": {
+            "usage": [
+              "weight.semibold",
+              "btn.primary.weight"
+            ]
+          }
+        },
+        "source": {
+          "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json",
+          "line": 124,
+          "column": 17
+        },
+        "references": [
+          {
+            "pointer": "#/weight/semibold/$value",
+            "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
+          }
+        ],
+        "resolutionPath": [
+          {
+            "pointer": "#/weight/semibold",
+            "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
+          }
+        ],
+        "appliedAliases": [],
+        "type": "fontWeight",
+        "value": 600,
+        "raw": 600,
+        "description": "Semibold weight for primary button text."
+      },
+      "next": {
+        "id": "#/weight/semibold",
+        "path": [
+          "weight",
+          "semibold"
+        ],
+        "extensions": {
+          "lapidist.governance": {
+            "owner": "Design Foundations Guild",
+            "reviewCadence": "quarterly",
+            "sla": "5 business days"
+          },
+          "lapidist.accessibility": {
+            "usage": [
+              "weight.semibold",
+              "btn.primary.weight"
+            ]
+          }
+        },
+        "source": {
+          "uri": "file:///workspace/dtifx-example/tokens/catalog.json",
+          "line": 75,
+          "column": 17
+        },
+        "references": [
+          {
+            "pointer": "#/weight/semibold/$value",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
+          }
+        ],
+        "resolutionPath": [
+          {
+            "pointer": "#/weight/semibold",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
+          }
+        ],
+        "appliedAliases": [],
+        "type": "fontWeight",
+        "value": 600,
+        "raw": 600,
+        "description": "Semibold weight for primary button text."
+      },
+      "impact": "non-breaking"
+    },
+    {
+      "kind": "changed",
+      "token": "#/weightVar/semibold",
+      "changes": [
+        "references",
+        "resolutionPath"
+      ],
+      "previous": {
+        "id": "#/weightVar/semibold",
+        "path": [
+          "weightVar",
+          "semibold"
+        ],
+        "extensions": {
+          "lapidist.governance": {
+            "owner": "Design Foundations Guild",
+            "reviewCadence": "quarterly",
+            "sla": "5 business days"
+          },
+          "lapidist.accessibility": {
+            "usage": [
+              "weightVar.semibold",
+              "btn.primary.weight"
+            ]
+          }
+        },
+        "source": {
+          "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json",
+          "line": 145,
+          "column": 17
+        },
+        "references": [
+          {
+            "pointer": "#/weightVar/semibold/$value",
+            "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
+          }
+        ],
+        "resolutionPath": [
+          {
+            "pointer": "#/weightVar/semibold",
+            "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
+          }
+        ],
+        "appliedAliases": [],
+        "type": "dimension",
+        "value": {
+          "dimensionType": "custom",
+          "value": 600,
+          "unit": "scalar.unitless"
+        },
+        "raw": {
+          "dimensionType": "custom",
+          "value": 600,
+          "unit": "scalar.unitless"
+        },
+        "description": "Semibold weight exposed as a unitless CSS variable."
+      },
+      "next": {
+        "id": "#/weightVar/semibold",
+        "path": [
+          "weightVar",
+          "semibold"
+        ],
+        "extensions": {
+          "lapidist.governance": {
+            "owner": "Design Foundations Guild",
+            "reviewCadence": "quarterly",
+            "sla": "5 business days"
+          },
+          "lapidist.accessibility": {
+            "usage": [
+              "weightVar.semibold",
+              "btn.primary.weight"
+            ]
+          }
+        },
+        "source": {
+          "uri": "file:///workspace/dtifx-example/tokens/catalog.json",
+          "line": 96,
+          "column": 17
+        },
+        "references": [
+          {
+            "pointer": "#/weightVar/semibold/$value",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
+          }
+        ],
+        "resolutionPath": [
+          {
+            "pointer": "#/weightVar/semibold",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
+          }
+        ],
+        "appliedAliases": [],
+        "type": "dimension",
+        "value": {
+          "dimensionType": "custom",
+          "value": 600,
+          "unit": "scalar.unitless"
+        },
+        "raw": {
+          "dimensionType": "custom",
+          "value": 600,
+          "unit": "scalar.unitless"
+        },
+        "description": "Semibold weight exposed as a unitless CSS variable."
+      },
+      "impact": "non-breaking"
+    },
+    {
+      "kind": "changed",
+      "token": "#/cmp/btn/bg",
+      "changes": [
+        "references",
+        "resolutionPath"
+      ],
+      "previous": {
+        "id": "#/cmp/btn/bg",
+        "path": [
+          "cmp",
+          "btn",
+          "bg"
         ],
         "extensions": {
           "lapidist.governance": {
@@ -1360,24 +1343,24 @@
           "lapidist.accessibility": {
             "contrastTarget": "AA",
             "usage": [
-              "button.primary.default"
+              "btn.primary.bg"
             ]
           }
         },
         "source": {
           "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json",
           "line": 227,
-          "column": 21
+          "column": 13
         },
         "references": [
           {
-            "pointer": "#/component/button/background/$value",
+            "pointer": "#/cmp/btn/bg/$value",
             "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
           }
         ],
         "resolutionPath": [
           {
-            "pointer": "#/component/button/background",
+            "pointer": "#/cmp/btn/bg",
             "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
           }
         ],
@@ -1402,11 +1385,11 @@
         "description": "Default primary button background colour."
       },
       "next": {
-        "id": "#/component/button/background",
+        "id": "#/cmp/btn/bg",
         "path": [
-          "component",
-          "button",
-          "background"
+          "cmp",
+          "btn",
+          "bg"
         ],
         "extensions": {
           "lapidist.governance": {
@@ -1417,25 +1400,25 @@
           "lapidist.accessibility": {
             "contrastTarget": "AA",
             "usage": [
-              "button.primary.default"
+              "btn.primary.bg"
             ]
           }
         },
         "source": {
-          "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json",
-          "line": 227,
-          "column": 21
+          "uri": "file:///workspace/dtifx-example/tokens/catalog.json",
+          "line": 128,
+          "column": 13
         },
         "references": [
           {
-            "pointer": "#/component/button/background/$value",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
+            "pointer": "#/cmp/btn/bg/$value",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
           }
         ],
         "resolutionPath": [
           {
-            "pointer": "#/component/button/background",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
+            "pointer": "#/cmp/btn/bg",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
           }
         ],
         "appliedAliases": [],
@@ -1462,17 +1445,17 @@
     },
     {
       "kind": "changed",
-      "token": "#/component/button/background-hover",
+      "token": "#/cmp/btn/bg-hover",
       "changes": [
         "references",
         "resolutionPath"
       ],
       "previous": {
-        "id": "#/component/button/background-hover",
+        "id": "#/cmp/btn/bg-hover",
         "path": [
-          "component",
-          "button",
-          "background-hover"
+          "cmp",
+          "btn",
+          "bg-hover"
         ],
         "extensions": {
           "lapidist.governance": {
@@ -1483,24 +1466,24 @@
           "lapidist.accessibility": {
             "contrastTarget": "AAA",
             "usage": [
-              "button.primary.hover"
+              "btn.primary.bg-hover"
             ]
           }
         },
         "source": {
           "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json",
           "line": 252,
-          "column": 27
+          "column": 19
         },
         "references": [
           {
-            "pointer": "#/component/button/background-hover/$value",
+            "pointer": "#/cmp/btn/bg-hover/$value",
             "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
           }
         ],
         "resolutionPath": [
           {
-            "pointer": "#/component/button/background-hover",
+            "pointer": "#/cmp/btn/bg-hover",
             "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
           }
         ],
@@ -1525,11 +1508,11 @@
         "description": "Hover state background colour with elevated contrast."
       },
       "next": {
-        "id": "#/component/button/background-hover",
+        "id": "#/cmp/btn/bg-hover",
         "path": [
-          "component",
-          "button",
-          "background-hover"
+          "cmp",
+          "btn",
+          "bg-hover"
         ],
         "extensions": {
           "lapidist.governance": {
@@ -1540,25 +1523,25 @@
           "lapidist.accessibility": {
             "contrastTarget": "AAA",
             "usage": [
-              "button.primary.hover"
+              "btn.primary.bg-hover"
             ]
           }
         },
         "source": {
-          "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json",
-          "line": 252,
-          "column": 27
+          "uri": "file:///workspace/dtifx-example/tokens/catalog.json",
+          "line": 153,
+          "column": 19
         },
         "references": [
           {
-            "pointer": "#/component/button/background-hover/$value",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
+            "pointer": "#/cmp/btn/bg-hover/$value",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
           }
         ],
         "resolutionPath": [
           {
-            "pointer": "#/component/button/background-hover",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
+            "pointer": "#/cmp/btn/bg-hover",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
           }
         ],
         "appliedAliases": [],
@@ -1585,17 +1568,17 @@
     },
     {
       "kind": "changed",
-      "token": "#/component/button/text",
+      "token": "#/cmp/btn/fg",
       "changes": [
         "references",
         "resolutionPath"
       ],
       "previous": {
-        "id": "#/component/button/text",
+        "id": "#/cmp/btn/fg",
         "path": [
-          "component",
-          "button",
-          "text"
+          "cmp",
+          "btn",
+          "fg"
         ],
         "extensions": {
           "lapidist.governance": {
@@ -1606,24 +1589,24 @@
           "lapidist.accessibility": {
             "contrastTarget": "AA",
             "usage": [
-              "button.primary.text"
+              "btn.primary.fg"
             ]
           }
         },
         "source": {
           "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json",
           "line": 277,
-          "column": 15
+          "column": 13
         },
         "references": [
           {
-            "pointer": "#/component/button/text/$value",
+            "pointer": "#/cmp/btn/fg/$value",
             "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
           }
         ],
         "resolutionPath": [
           {
-            "pointer": "#/component/button/text",
+            "pointer": "#/cmp/btn/fg",
             "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
           }
         ],
@@ -1648,11 +1631,11 @@
         "description": "Primary button label colour ensuring contrast on brand backgrounds."
       },
       "next": {
-        "id": "#/component/button/text",
+        "id": "#/cmp/btn/fg",
         "path": [
-          "component",
-          "button",
-          "text"
+          "cmp",
+          "btn",
+          "fg"
         ],
         "extensions": {
           "lapidist.governance": {
@@ -1663,25 +1646,25 @@
           "lapidist.accessibility": {
             "contrastTarget": "AA",
             "usage": [
-              "button.primary.text"
+              "btn.primary.fg"
             ]
           }
         },
         "source": {
-          "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json",
-          "line": 277,
-          "column": 15
+          "uri": "file:///workspace/dtifx-example/tokens/catalog.json",
+          "line": 178,
+          "column": 13
         },
         "references": [
           {
-            "pointer": "#/component/button/text/$value",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
+            "pointer": "#/cmp/btn/fg/$value",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
           }
         ],
         "resolutionPath": [
           {
-            "pointer": "#/component/button/text",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
+            "pointer": "#/cmp/btn/fg",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
           }
         ],
         "appliedAliases": [],
@@ -1708,17 +1691,17 @@
     },
     {
       "kind": "changed",
-      "token": "#/component/button/padding",
+      "token": "#/cmp/btn/pad",
       "changes": [
         "references",
         "resolutionPath"
       ],
       "previous": {
-        "id": "#/component/button/padding",
+        "id": "#/cmp/btn/pad",
         "path": [
-          "component",
-          "button",
-          "padding"
+          "cmp",
+          "btn",
+          "pad"
         ],
         "extensions": {
           "lapidist.governance": {
@@ -1729,24 +1712,24 @@
           "lapidist.accessibility": {
             "touchTarget": "Supports minimum 44px hit area when combined with layout spacing",
             "usage": [
-              "button.primary.padding"
+              "btn.primary.pad"
             ]
           }
         },
         "source": {
           "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json",
           "line": 302,
-          "column": 18
+          "column": 14
         },
         "references": [
           {
-            "pointer": "#/component/button/padding/$value",
+            "pointer": "#/cmp/btn/pad/$value",
             "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
           }
         ],
         "resolutionPath": [
           {
-            "pointer": "#/component/button/padding",
+            "pointer": "#/cmp/btn/pad",
             "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
           }
         ],
@@ -1765,11 +1748,11 @@
         "description": "Button horizontal padding derived from spacing scale."
       },
       "next": {
-        "id": "#/component/button/padding",
+        "id": "#/cmp/btn/pad",
         "path": [
-          "component",
-          "button",
-          "padding"
+          "cmp",
+          "btn",
+          "pad"
         ],
         "extensions": {
           "lapidist.governance": {
@@ -1780,25 +1763,25 @@
           "lapidist.accessibility": {
             "touchTarget": "Supports minimum 44px hit area when combined with layout spacing",
             "usage": [
-              "button.primary.padding"
+              "btn.primary.pad"
             ]
           }
         },
         "source": {
-          "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json",
-          "line": 302,
-          "column": 18
+          "uri": "file:///workspace/dtifx-example/tokens/catalog.json",
+          "line": 203,
+          "column": 14
         },
         "references": [
           {
-            "pointer": "#/component/button/padding/$value",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
+            "pointer": "#/cmp/btn/pad/$value",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
           }
         ],
         "resolutionPath": [
           {
-            "pointer": "#/component/button/padding",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
+            "pointer": "#/cmp/btn/pad",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
           }
         ],
         "appliedAliases": [],

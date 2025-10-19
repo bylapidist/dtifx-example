@@ -1,4 +1,4 @@
-const tokens = require('./tokens/index.dtif.json');
+const tokens = require('./tokens/catalog.json');
 
 module.exports = {
   patterns: ['src/**/*.{css,js,jsx,ts,tsx}'],

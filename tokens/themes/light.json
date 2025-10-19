@@ -4,7 +4,7 @@
   "$description": "Light theme overrides with high-contrast accessibility adjustments.",
   "$overrides": [
     {
-      "$token": "#/component/button/background",
+      "$token": "#/cmp/btn/bg",
       "$when": {
         "theme": "light",
         "accessibility": "high-contrast"
@@ -19,7 +19,7 @@
       }
     },
     {
-      "$token": "#/component/button/text",
+      "$token": "#/cmp/btn/fg",
       "$when": {
         "theme": "light",
         "accessibility": "high-contrast"

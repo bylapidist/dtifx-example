@@ -2,16 +2,16 @@
   "$schema": "https://dtif.lapidist.net/schema/core.json",
   "$version": "1.0.0",
   "$description": "Button component tokens for the DTIFx minimal stack example.",
-  "component": {
+  "cmp": {
     "$description": "Component abstraction tokens",
-    "button": {
+    "btn": {
       "$description": "Primary button styling primitives.",
       "$extensions": {
         "lapidist.accessibility": {
           "intent": "Ensures minimum AA contrast in default theme contexts"
         }
       },
-      "background": {
+      "bg": {
         "$type": "color",
         "$description": "Default primary button background colour.",
         "$value": {
@@ -31,12 +31,12 @@
           "lapidist.accessibility": {
             "contrastTarget": "AA",
             "usage": [
-              "button.primary.default"
+              "btn.primary.bg"
             ]
           }
         }
       },
-      "background-hover": {
+      "bg-hover": {
         "$type": "color",
         "$description": "Hover state background colour with elevated contrast.",
         "$value": {
@@ -56,12 +56,12 @@
           "lapidist.accessibility": {
             "contrastTarget": "AAA",
             "usage": [
-              "button.primary.hover"
+              "btn.primary.bg-hover"
             ]
           }
         }
       },
-      "text": {
+      "fg": {
         "$type": "color",
         "$description": "Primary button label colour ensuring contrast on brand backgrounds.",
         "$value": {
@@ -81,12 +81,12 @@
           "lapidist.accessibility": {
             "contrastTarget": "AA",
             "usage": [
-              "button.primary.text"
+              "btn.primary.fg"
             ]
           }
         }
       },
-      "padding": {
+      "pad": {
         "$type": "dimension",
         "$description": "Button horizontal padding derived from spacing scale.",
         "$value": {
@@ -103,7 +103,7 @@
           "lapidist.accessibility": {
             "touchTarget": "Supports minimum 44px hit area when combined with layout spacing",
             "usage": [
-              "button.primary.padding"
+              "btn.primary.pad"
             ]
           }
         }

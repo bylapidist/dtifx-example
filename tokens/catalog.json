@@ -5,14 +5,14 @@
   "$extensions": {
     "lapidist.catalog": {
       "sources": [
-        "./foundations.dtif.json",
-        "./components/button.dtif.json",
-        "./themes/light.dtif.json",
-        "./themes/dark.dtif.json"
+        "./foundations.json",
+        "./components/button.json",
+        "./themes/light.json",
+        "./themes/dark.json"
       ]
     }
   },
-  "color": {
+  "clr": {
     "$description": "Canonical colour definitions",
     "brand": {
       "$type": "color",
@@ -34,13 +34,13 @@
         "lapidist.accessibility": {
           "contrastTarget": "AA",
           "usage": [
-            "button.primary",
+            "btn.primary",
             "link.default"
           ]
         }
       }
     },
-    "background": {
+    "bg": {
       "$type": "color",
       "$description": "Base background colour for light theme contexts.",
       "$value": {
@@ -64,12 +64,226 @@
         "lapidist.accessibility": {
           "contrastTarget": "AA",
           "usage": [
-            "surface.background.light"
+            "surface.bg.light"
           ]
         }
       }
     }
   },
+  "weight": {
+    "$description": "Font weight scale",
+    "semibold": {
+      "$type": "fontWeight",
+      "$description": "Semibold weight for primary button text.",
+      "$value": 600,
+      "$extensions": {
+        "lapidist.governance": {
+          "owner": "Design Foundations Guild",
+          "reviewCadence": "quarterly",
+          "sla": "5 business days"
+        },
+        "lapidist.accessibility": {
+          "usage": [
+            "weight.semibold",
+            "btn.primary.weight"
+          ]
+        }
+      }
+    }
+  },
+  "weightVar": {
+    "$description": "CSS-compatible font weight variables",
+    "semibold": {
+      "$type": "dimension",
+      "$description": "Semibold weight exposed as a unitless CSS variable.",
+      "$value": {
+        "dimensionType": "custom",
+        "value": 600,
+        "unit": "scalar.unitless"
+      },
+      "$extensions": {
+        "lapidist.governance": {
+          "owner": "Design Foundations Guild",
+          "reviewCadence": "quarterly",
+          "sla": "5 business days"
+        },
+        "lapidist.accessibility": {
+          "usage": [
+            "weightVar.semibold",
+            "btn.primary.weight"
+          ]
+        }
+      }
+    }
+  },
+  "cmp": {
+    "$description": "Component abstraction tokens",
+    "btn": {
+      "$description": "Primary button styling primitives.",
+      "$extensions": {
+        "lapidist.accessibility": {
+          "intent": "Ensures minimum AA contrast in default theme contexts"
+        }
+      },
+      "bg": {
+        "$type": "color",
+        "$description": "Default primary button background colour.",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            0.054901960784313725,
+            0.3607843137254902,
+            0.6784313725490196
+          ]
+        },
+        "$extensions": {
+          "lapidist.governance": {
+            "owner": "Design Systems Guild",
+            "reviewCadence": "monthly",
+            "sla": "3 business days"
+          },
+          "lapidist.accessibility": {
+            "contrastTarget": "AA",
+            "usage": [
+              "btn.primary.bg"
+            ]
+          }
+        }
+      },
+      "bg-hover": {
+        "$type": "color",
+        "$description": "Hover state background colour with elevated contrast.",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            0.047058823529411764,
+            0.3215686274509804,
+            0.6039215686274509
+          ]
+        },
+        "$extensions": {
+          "lapidist.governance": {
+            "owner": "Design Systems Guild",
+            "reviewCadence": "monthly",
+            "sla": "3 business days"
+          },
+          "lapidist.accessibility": {
+            "contrastTarget": "AAA",
+            "usage": [
+              "btn.primary.bg-hover"
+            ]
+          }
+        }
+      },
+      "fg": {
+        "$type": "color",
+        "$description": "Primary button label colour ensuring contrast on brand backgrounds.",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            1,
+            1,
+            1
+          ]
+        },
+        "$extensions": {
+          "lapidist.governance": {
+            "owner": "Design Systems Guild",
+            "reviewCadence": "monthly",
+            "sla": "3 business days"
+          },
+          "lapidist.accessibility": {
+            "contrastTarget": "AA",
+            "usage": [
+              "btn.primary.fg"
+            ]
+          }
+        }
+      },
+      "pad": {
+        "$type": "dimension",
+        "$description": "Button horizontal padding derived from spacing scale.",
+        "$value": {
+          "dimensionType": "length",
+          "value": 16,
+          "unit": "px"
+        },
+        "$extensions": {
+          "lapidist.governance": {
+            "owner": "Design Systems Guild",
+            "reviewCadence": "monthly",
+            "sla": "3 business days"
+          },
+          "lapidist.accessibility": {
+            "touchTarget": "Supports minimum 44px hit area when combined with layout spacing",
+            "usage": [
+              "btn.primary.pad"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "$overrides": [
+    {
+      "$token": "#/cmp/btn/bg",
+      "$when": {
+        "theme": "dark"
+      },
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.8392156862745098,
+          0.8705882352941177,
+          0.9254901960784314
+        ]
+      }
+    },
+    {
+      "$token": "#/cmp/btn/fg",
+      "$when": {
+        "theme": "dark"
+      },
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.058823529411764705,
+          0.09411764705882353,
+          0.14901960784313725
+        ]
+      }
+    },
+    {
+      "$token": "#/cmp/btn/bg",
+      "$when": {
+        "theme": "light",
+        "accessibility": "high-contrast"
+      },
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.027450980392156862,
+          0.2235294117647059,
+          0.4588235294117647
+        ]
+      }
+    },
+    {
+      "$token": "#/cmp/btn/fg",
+      "$when": {
+        "theme": "light",
+        "accessibility": "high-contrast"
+      },
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          1,
+          1
+        ]
+      }
+    }
+  ],
   "spacing": {
     "$description": "Spacing scale tokens",
     "md": {
@@ -90,7 +304,7 @@
           "touchTarget": "Ensures minimum primary control padding",
           "usage": [
             "spacing.md",
-            "button.primary.padding"
+            "btn.primary.pad"
           ]
         }
       }
@@ -113,53 +327,7 @@
           "touchTarget": "Supports elevated hit area targets for large components",
           "usage": [
             "spacing.lg",
-            "button.primary.padding"
-          ]
-        }
-      }
-    }
-  },
-  "fontWeights": {
-    "$description": "Font weight scale",
-    "semibold": {
-      "$type": "fontWeight",
-      "$description": "Semibold weight for primary button text.",
-      "$value": 600,
-      "$extensions": {
-        "lapidist.governance": {
-          "owner": "Design Foundations Guild",
-          "reviewCadence": "quarterly",
-          "sla": "5 business days"
-        },
-        "lapidist.accessibility": {
-          "usage": [
-            "fontWeights.semibold",
-            "button.primary.fontWeight"
-          ]
-        }
-      }
-    }
-  },
-  "fontWeightVariables": {
-    "$description": "CSS-compatible font weight variables",
-    "semibold": {
-      "$type": "dimension",
-      "$description": "Semibold weight exposed as a unitless CSS variable.",
-      "$value": {
-        "dimensionType": "custom",
-        "value": 600,
-        "unit": "scalar.unitless"
-      },
-      "$extensions": {
-        "lapidist.governance": {
-          "owner": "Design Foundations Guild",
-          "reviewCadence": "quarterly",
-          "sla": "5 business days"
-        },
-        "lapidist.accessibility": {
-          "usage": [
-            "fontWeightVariables.semibold",
-            "button.primary.fontWeight"
+            "btn.primary.pad"
           ]
         }
       }
@@ -167,7 +335,7 @@
   },
   "durations": {
     "$description": "Timing durations for interactive components",
-    "button": {
+    "btn": {
       "$type": "duration",
       "$description": "Primary button background transition duration.",
       "$value": {
@@ -183,16 +351,16 @@
         },
         "lapidist.accessibility": {
           "usage": [
-            "durations.button",
-            "button.primary.transition"
+            "durations.btn",
+            "btn.primary.motion"
           ]
         }
       }
     }
   },
-  "durationVariables": {
-    "$description": "CSS-compatible motion variables",
-    "button": {
+  "durationVars": {
+    "$description": "CSS-compatible duration variables",
+    "btn": {
       "$type": "dimension",
       "$description": "Primary button transition duration exposed for CSS usage.",
       "$value": {
@@ -208,179 +376,11 @@
         },
         "lapidist.accessibility": {
           "usage": [
-            "durationVariables.button",
-            "button.primary.transition"
+            "durationVars.btn",
+            "btn.primary.motion"
           ]
         }
       }
     }
-  },
-  "component": {
-    "$description": "Component abstraction tokens",
-    "button": {
-      "$description": "Primary button styling primitives.",
-      "$extensions": {
-        "lapidist.accessibility": {
-          "intent": "Ensures minimum AA contrast in default theme contexts"
-        }
-      },
-      "background": {
-        "$type": "color",
-        "$description": "Default primary button background colour.",
-        "$value": {
-          "colorSpace": "srgb",
-          "components": [
-            0.054901960784313725,
-            0.3607843137254902,
-            0.6784313725490196
-          ]
-        },
-        "$extensions": {
-          "lapidist.governance": {
-            "owner": "Design Systems Guild",
-            "reviewCadence": "monthly",
-            "sla": "3 business days"
-          },
-          "lapidist.accessibility": {
-            "contrastTarget": "AA",
-            "usage": [
-              "button.primary.default"
-            ]
-          }
-        }
-      },
-      "background-hover": {
-        "$type": "color",
-        "$description": "Hover state background colour with elevated contrast.",
-        "$value": {
-          "colorSpace": "srgb",
-          "components": [
-            0.047058823529411764,
-            0.3215686274509804,
-            0.6039215686274509
-          ]
-        },
-        "$extensions": {
-          "lapidist.governance": {
-            "owner": "Design Systems Guild",
-            "reviewCadence": "monthly",
-            "sla": "3 business days"
-          },
-          "lapidist.accessibility": {
-            "contrastTarget": "AAA",
-            "usage": [
-              "button.primary.hover"
-            ]
-          }
-        }
-      },
-      "text": {
-        "$type": "color",
-        "$description": "Primary button label colour ensuring contrast on brand backgrounds.",
-        "$value": {
-          "colorSpace": "srgb",
-          "components": [
-            1,
-            1,
-            1
-          ]
-        },
-        "$extensions": {
-          "lapidist.governance": {
-            "owner": "Design Systems Guild",
-            "reviewCadence": "monthly",
-            "sla": "3 business days"
-          },
-          "lapidist.accessibility": {
-            "contrastTarget": "AA",
-            "usage": [
-              "button.primary.text"
-            ]
-          }
-        }
-      },
-      "padding": {
-        "$type": "dimension",
-        "$description": "Button horizontal padding derived from spacing scale.",
-        "$value": {
-          "dimensionType": "length",
-          "value": 16,
-          "unit": "px"
-        },
-        "$extensions": {
-          "lapidist.governance": {
-            "owner": "Design Systems Guild",
-            "reviewCadence": "monthly",
-            "sla": "3 business days"
-          },
-          "lapidist.accessibility": {
-            "touchTarget": "Supports minimum 44px hit area when combined with layout spacing",
-            "usage": [
-              "button.primary.padding"
-            ]
-          }
-        }
-      }
-    }
-  },
-  "$overrides": [
-    {
-      "$token": "#/component/button/background",
-      "$when": {
-        "theme": "dark"
-      },
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.8392156862745098,
-          0.8705882352941177,
-          0.9254901960784314
-        ]
-      }
-    },
-    {
-      "$token": "#/component/button/text",
-      "$when": {
-        "theme": "dark"
-      },
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.058823529411764705,
-          0.09411764705882353,
-          0.14901960784313725
-        ]
-      }
-    },
-    {
-      "$token": "#/component/button/background",
-      "$when": {
-        "theme": "light",
-        "accessibility": "high-contrast"
-      },
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.027450980392156862,
-          0.2235294117647059,
-          0.4588235294117647
-        ]
-      }
-    },
-    {
-      "$token": "#/component/button/text",
-      "$when": {
-        "theme": "light",
-        "accessibility": "high-contrast"
-      },
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          1,
-          1,
-          1
-        ]
-      }
-    }
-  ]
+  }
 }

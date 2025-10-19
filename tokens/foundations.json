@@ -2,7 +2,7 @@
   "$schema": "https://dtif.lapidist.net/schema/core.json",
   "$version": "1.0.0",
   "$description": "Foundational design tokens for the DTIFx minimal stack example covering color and spacing primitives.",
-  "color": {
+  "clr": {
     "$description": "Canonical colour definitions",
     "brand": {
       "$type": "color",
@@ -24,13 +24,13 @@
         "lapidist.accessibility": {
           "contrastTarget": "AA",
           "usage": [
-            "button.primary",
+            "btn.primary",
             "link.default"
           ]
         }
       }
     },
-    "background": {
+    "bg": {
       "$type": "color",
       "$description": "Base background colour for light theme contexts.",
       "$value": {
@@ -54,7 +54,53 @@
         "lapidist.accessibility": {
           "contrastTarget": "AA",
           "usage": [
-            "surface.background.light"
+            "surface.bg.light"
+          ]
+        }
+      }
+    }
+  },
+  "weight": {
+    "$description": "Font weight scale",
+    "semibold": {
+      "$type": "fontWeight",
+      "$description": "Semibold weight for primary button text.",
+      "$value": 600,
+      "$extensions": {
+        "lapidist.governance": {
+          "owner": "Design Foundations Guild",
+          "reviewCadence": "quarterly",
+          "sla": "5 business days"
+        },
+        "lapidist.accessibility": {
+          "usage": [
+            "weight.semibold",
+            "btn.primary.weight"
+          ]
+        }
+      }
+    }
+  },
+  "weightVar": {
+    "$description": "CSS-compatible font weight variables",
+    "semibold": {
+      "$type": "dimension",
+      "$description": "Semibold weight exposed as a unitless CSS variable.",
+      "$value": {
+        "dimensionType": "custom",
+        "value": 600,
+        "unit": "scalar.unitless"
+      },
+      "$extensions": {
+        "lapidist.governance": {
+          "owner": "Design Foundations Guild",
+          "reviewCadence": "quarterly",
+          "sla": "5 business days"
+        },
+        "lapidist.accessibility": {
+          "usage": [
+            "weightVar.semibold",
+            "btn.primary.weight"
           ]
         }
       }
@@ -80,7 +126,7 @@
           "touchTarget": "Ensures minimum primary control padding",
           "usage": [
             "spacing.md",
-            "button.primary.padding"
+            "btn.primary.pad"
           ]
         }
       }
@@ -103,53 +149,7 @@
           "touchTarget": "Supports elevated hit area targets for large components",
           "usage": [
             "spacing.lg",
-            "button.primary.padding"
-          ]
-        }
-      }
-    }
-  },
-  "fontWeights": {
-    "$description": "Font weight scale",
-    "semibold": {
-      "$type": "fontWeight",
-      "$description": "Semibold weight for primary button text.",
-      "$value": 600,
-      "$extensions": {
-        "lapidist.governance": {
-          "owner": "Design Foundations Guild",
-          "reviewCadence": "quarterly",
-          "sla": "5 business days"
-        },
-        "lapidist.accessibility": {
-          "usage": [
-            "fontWeights.semibold",
-            "button.primary.fontWeight"
-          ]
-        }
-      }
-    }
-  },
-  "fontWeightVariables": {
-    "$description": "CSS-compatible font weight variables",
-    "semibold": {
-      "$type": "dimension",
-      "$description": "Semibold weight exposed as a unitless CSS variable.",
-      "$value": {
-        "dimensionType": "custom",
-        "value": 600,
-        "unit": "scalar.unitless"
-      },
-      "$extensions": {
-        "lapidist.governance": {
-          "owner": "Design Foundations Guild",
-          "reviewCadence": "quarterly",
-          "sla": "5 business days"
-        },
-        "lapidist.accessibility": {
-          "usage": [
-            "fontWeightVariables.semibold",
-            "button.primary.fontWeight"
+            "btn.primary.pad"
           ]
         }
       }
@@ -157,7 +157,7 @@
   },
   "durations": {
     "$description": "Timing durations for interactive components",
-    "button": {
+    "btn": {
       "$type": "duration",
       "$description": "Primary button background transition duration.",
       "$value": {
@@ -173,16 +173,16 @@
         },
         "lapidist.accessibility": {
           "usage": [
-            "durations.button",
-            "button.primary.transition"
+            "durations.btn",
+            "btn.primary.motion"
           ]
         }
       }
     }
   },
-  "durationVariables": {
-    "$description": "CSS-compatible motion variables",
-    "button": {
+  "durationVars": {
+    "$description": "CSS-compatible duration variables",
+    "btn": {
       "$type": "dimension",
       "$description": "Primary button transition duration exposed for CSS usage.",
       "$value": {
@@ -198,8 +198,8 @@
         },
         "lapidist.accessibility": {
           "usage": [
-            "durationVariables.button",
-            "button.primary.transition"
+            "durationVars.btn",
+            "btn.primary.motion"
           ]
         }
       }

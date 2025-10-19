@@ -1,18 +1,18 @@
 :root {
-  --tokens-components-button-dtif-json-component-button-background: oklch(0.4782 0.1470 254.5941);
-  --tokens-components-button-dtif-json-component-button-background-hover: oklch(0.4409 0.1339 254.3327);
-  --tokens-components-button-dtif-json-component-button-padding: 16px;
-  --tokens-components-button-dtif-json-component-button-text: oklch(1.0000 0.0000 89.8756);
-  --tokens-foundations-dtif-json-color-background: oklch(1.0000 0.0000 89.8756);
-  --tokens-foundations-dtif-json-color-brand: oklch(0.4782 0.1470 254.5941);
-  --tokens-foundations-dtif-json-spacing-lg: 24px;
-  --tokens-foundations-dtif-json-spacing-md: 16px;
-  --tokens-index-dtif-json-color-background: oklch(1.0000 0.0000 89.8756);
-  --tokens-index-dtif-json-color-brand: oklch(0.4782 0.1470 254.5941);
-  --tokens-index-dtif-json-component-button-background: oklch(0.4782 0.1470 254.5941);
-  --tokens-index-dtif-json-component-button-background-hover: oklch(0.4409 0.1339 254.3327);
-  --tokens-index-dtif-json-component-button-padding: 16px;
-  --tokens-index-dtif-json-component-button-text: oklch(1.0000 0.0000 89.8756);
-  --tokens-index-dtif-json-spacing-lg: 24px;
-  --tokens-index-dtif-json-spacing-md: 16px;
+  --button-cmp-btn-bg: oklch(0.4782 0.1470 254.5941);
+  --button-cmp-btn-bg-hover: oklch(0.4409 0.1339 254.3327);
+  --button-cmp-btn-fg: oklch(1.0000 0.0000 89.8756);
+  --button-cmp-btn-pad: 16px;
+  --catalog-clr-bg: oklch(1.0000 0.0000 89.8756);
+  --catalog-clr-brand: oklch(0.4782 0.1470 254.5941);
+  --catalog-cmp-btn-bg: oklch(0.4782 0.1470 254.5941);
+  --catalog-cmp-btn-bg-hover: oklch(0.4409 0.1339 254.3327);
+  --catalog-cmp-btn-fg: oklch(1.0000 0.0000 89.8756);
+  --catalog-cmp-btn-pad: 16px;
+  --catalog-spacing-lg: 24px;
+  --catalog-spacing-md: 16px;
+  --foundations-clr-bg: oklch(1.0000 0.0000 89.8756);
+  --foundations-clr-brand: oklch(0.4782 0.1470 254.5941);
+  --foundations-spacing-lg: 24px;
+  --foundations-spacing-md: 16px;
 }

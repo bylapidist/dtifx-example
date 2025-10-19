@@ -1,10 +1,10 @@
 {
   "$schema": "https://dtif.lapidist.net/schema/core.json",
   "$version": "1.0.0",
-  "$description": "Dark theme overrides ensuring accessible contrast for key primitives.",
+  "$description": "Dark theme overrides with accessible text contrast.",
   "$overrides": [
     {
-      "$token": "#/component/button/background",
+      "$token": "#/cmp/btn/bg",
       "$when": {
         "theme": "dark"
       },
@@ -18,7 +18,7 @@
       }
     },
     {
-      "$token": "#/component/button/text",
+      "$token": "#/cmp/btn/fg",
       "$when": {
         "theme": "dark"
       },

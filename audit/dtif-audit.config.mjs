@@ -17,8 +17,8 @@ export default defineConfig({
       kind: 'file',
       layer: 'default',
       rootDir: resolve(repositoryRoot, 'tokens'),
-      patterns: ['index.dtif.json'],
-      pointerTemplate: pointerTemplate('tokens', placeholder('relative')),
+      patterns: ['catalog.json'],
+      pointerTemplate: pointerTemplate(placeholder('stem')),
     },
   ],
   audit: {

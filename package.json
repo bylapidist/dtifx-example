@@ -14,14 +14,14 @@
     "format:write": "prettier . --write",
     "design-lint": "design-lint lint \"src/**/*.{css,js,jsx,ts,tsx}\" --config design-lint.config.cjs",
     "dtif:validate": "dtifx build validate --config build/dtif-build.config.mjs",
-    "dtif:build": "dtifx build generate --config build/dtif-build.config.mjs",
-    "dtif:diff": "dtifx diff compare ops/artifacts/diff/baseline.dtif.json tokens/index.dtif.json --format json --output ops/artifacts/diff/report.json && dtifx diff compare ops/artifacts/diff/baseline.dtif.json tokens/index.dtif.json --format markdown --output ops/artifacts/diff/report.md",
+    "dtif:build": "dtifx build generate --config build/dtif-build.config.mjs && node scripts/update-build-metadata.mjs",
+    "dtif:diff": "node scripts/dtif-diff-normalized.mjs",
     "dtif:audit": "dtifx audit run --config audit/dtif-audit.config.mjs --reporter json --reporter markdown --out-dir ops/artifacts/audit",
     "verify": "npm run lint && npm run design-lint"
   },
   "dependencies": {
-    "react": "18.3.1",
-    "react-dom": "18.3.1"
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
   },
   "devDependencies": {
     "@dtifx/audit": "2.0.0",

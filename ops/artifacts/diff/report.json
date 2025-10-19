@@ -2,7 +2,7 @@
   "reportSchemaVersion": 3,
   "generatedAt": "2025-10-19T15:17:43.648Z",
   "run": {
-    "previous": "ops/artifacts/diff/baseline.dtif.json",
+    "previous": "ops/artifacts/diff/baseline.dtif.json (normalized)",
     "next": "tokens/index.dtif.json",
     "startedAt": "2025-10-19T15:17:42.866Z",
     "durationMs": 776.024812
@@ -28,12 +28,12 @@
         "added": 0,
         "removed": 0,
         "renamed": 0,
-        "changed": 5,
-        "unchanged": 0,
+        "changed": 0,
+        "unchanged": 5,
         "breaking": 0,
-        "nonBreaking": 5,
+        "nonBreaking": 0,
         "valueChanged": 0,
-        "metadataChanged": 5
+        "metadataChanged": 0
       },
       {
         "type": "dimension",
@@ -86,12 +86,12 @@
         "added": 0,
         "removed": 0,
         "renamed": 0,
-        "changed": 2,
-        "unchanged": 0,
+        "changed": 0,
+        "unchanged": 2,
         "breaking": 0,
-        "nonBreaking": 2,
+        "nonBreaking": 0,
         "valueChanged": 0,
-        "metadataChanged": 2
+        "metadataChanged": 0
       },
       {
         "group": "component",
@@ -100,12 +100,12 @@
         "added": 0,
         "removed": 0,
         "renamed": 0,
-        "changed": 4,
-        "unchanged": 0,
+        "changed": 0,
+        "unchanged": 4,
         "breaking": 0,
-        "nonBreaking": 4,
+        "nonBreaking": 0,
         "valueChanged": 0,
-        "metadataChanged": 4
+        "metadataChanged": 0
       },
       {
         "group": "component/button",
@@ -114,12 +114,68 @@
         "added": 0,
         "removed": 0,
         "renamed": 0,
-        "changed": 4,
-        "unchanged": 0,
+        "changed": 0,
+        "unchanged": 4,
         "breaking": 0,
-        "nonBreaking": 4,
+        "nonBreaking": 0,
         "valueChanged": 0,
-        "metadataChanged": 4
+        "metadataChanged": 0
+      },
+      {
+        "group": "durations",
+        "totalPrevious": 1,
+        "totalNext": 1,
+        "added": 0,
+        "removed": 0,
+        "renamed": 0,
+        "changed": 0,
+        "unchanged": 1,
+        "breaking": 0,
+        "nonBreaking": 0,
+        "valueChanged": 0,
+        "metadataChanged": 0
+      },
+      {
+        "group": "durationvariables",
+        "totalPrevious": 1,
+        "totalNext": 1,
+        "added": 0,
+        "removed": 0,
+        "renamed": 0,
+        "changed": 0,
+        "unchanged": 1,
+        "breaking": 0,
+        "nonBreaking": 0,
+        "valueChanged": 0,
+        "metadataChanged": 0
+      },
+      {
+        "group": "fontweights",
+        "totalPrevious": 1,
+        "totalNext": 1,
+        "added": 0,
+        "removed": 0,
+        "renamed": 0,
+        "changed": 0,
+        "unchanged": 1,
+        "breaking": 0,
+        "nonBreaking": 0,
+        "valueChanged": 0,
+        "metadataChanged": 0
+      },
+      {
+        "group": "fontweightvariables",
+        "totalPrevious": 1,
+        "totalNext": 1,
+        "added": 0,
+        "removed": 0,
+        "renamed": 0,
+        "changed": 0,
+        "unchanged": 1,
+        "breaking": 0,
+        "nonBreaking": 0,
+        "valueChanged": 0,
+        "metadataChanged": 0
       },
       {
         "group": "durations",
@@ -184,12 +240,12 @@
         "added": 0,
         "removed": 0,
         "renamed": 0,
-        "changed": 2,
-        "unchanged": 0,
+        "changed": 0,
+        "unchanged": 2,
         "breaking": 0,
-        "nonBreaking": 2,
+        "nonBreaking": 0,
         "valueChanged": 0,
-        "metadataChanged": 2
+        "metadataChanged": 0
       }
     ]
   },

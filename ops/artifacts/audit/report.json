@@ -1,0 +1,32 @@
+{
+  "event": "audit.completed",
+  "status": "ok",
+  "summary": {
+    "policyCount": 1,
+    "violationCount": 0,
+    "severity": {
+      "error": 0,
+      "warning": 0,
+      "info": 0
+    },
+    "tokenCount": 16
+  },
+  "policies": [
+    {
+      "name": "governance.requireOwner",
+      "violationCount": 0,
+      "violations": []
+    }
+  ],
+  "timings": {
+    "planMs": 15.94899399999997,
+    "parseMs": 0,
+    "resolveMs": 0,
+    "transformMs": 0,
+    "formatMs": 0,
+    "dependencyMs": 0,
+    "totalMs": 15.94899399999997,
+    "auditMs": 7.202476000000047,
+    "totalWithAuditMs": 23.151470000000018
+  }
+}

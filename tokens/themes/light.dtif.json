@@ -1,0 +1,31 @@
+{
+  "$schema": "https://dtif.lapidist.net/schema/core.json",
+  "$version": "1.0.0",
+  "$description": "Light theme overrides with high-contrast accessibility adjustments.",
+  "$overrides": [
+    {
+      "$token": "#/component/button/background",
+      "$when": {
+        "theme": "light",
+        "accessibility": "high-contrast"
+      },
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [0.027450980392156862, 0.2235294117647059, 0.4588235294117647],
+        "hex": "#073992"
+      }
+    },
+    {
+      "$token": "#/component/button/text",
+      "$when": {
+        "theme": "light",
+        "accessibility": "high-contrast"
+      },
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [1, 1, 1],
+        "hex": "#FFFFFF"
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "dtifx-example",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Minimal production-ready DTIFx stack example",
+  "engines": {
+    "node": "^22.20.0",
+    "npm": ">=10"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier . --check",
+    "format:write": "prettier . --write",
+    "design-lint": "design-lint lint \"src/**/*.{css,js,jsx,ts,tsx}\" --config design-lint.config.cjs",
+    "dtif:validate": "dtifx build validate --config build/dtif-build.config.mjs",
+    "dtif:build": "dtifx build generate --config build/dtif-build.config.mjs",
+    "dtif:diff": "dtifx diff compare ops/artifacts/diff/baseline.dtif.json tokens/index.dtif.json --format json --output ops/artifacts/diff/report.json && dtifx diff compare ops/artifacts/diff/baseline.dtif.json tokens/index.dtif.json --format markdown --output ops/artifacts/diff/report.md",
+    "dtif:audit": "node scripts/run-dtif-audit.mjs",
+    "verify": "npm run lint && npm run design-lint"
+  },
+  "dependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@dtifx/audit": "2.0.0",
+    "@dtifx/build": "2.0.0",
+    "@dtifx/cli": "2.0.0",
+    "@dtifx/diff": "2.0.0",
+    "@eslint/js": "9.8.0",
+    "@lapidist/design-lint": "6.0.5",
+    "ajv": "^8.17.1",
+    "eslint": "9.8.0",
+    "prettier": "3.3.3"
+  },
+  "type": "module"
+}

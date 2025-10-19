@@ -1,0 +1,29 @@
+{
+  "$schema": "https://dtif.lapidist.net/schema/core.json",
+  "$version": "1.0.0",
+  "$description": "Dark theme overrides ensuring accessible contrast for key primitives.",
+  "$overrides": [
+    {
+      "$token": "#/component/button/background",
+      "$when": {
+        "theme": "dark"
+      },
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [0.8392156862745098, 0.8705882352941177, 0.9254901960784314],
+        "hex": "#D6DEECCE"
+      }
+    },
+    {
+      "$token": "#/component/button/text",
+      "$when": {
+        "theme": "dark"
+      },
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [0.058823529411764705, 0.09411764705882353, 0.14901960784313725],
+        "hex": "#0F1826"
+      }
+    }
+  ]
+}

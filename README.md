@@ -3,7 +3,7 @@
 This repository demonstrates a streamlined, production-ready DTIFx Toolkit setup focused on token authoring, validation, build, diff, and audit workflows with minimal glue code.
 
 - Roadmap: `ROADMAP.md` captures the phased delivery plan tailored to this slim implementation.
-- Tokens: `tokens/index.dtif.json` contains the consolidated DTIF bundle consumed by the DTIF CLI.
+- Tokens: `tokens/` hosts the canonical DTIF documents (`foundations.dtif.json`, `components/*.dtif.json`, `themes/*.dtif.json`) alongside the consolidated `index.dtif.json` consumed by the DTIF CLI.
 - Artefacts: `ops/artifacts/` stores build outputs, diff evidence, validation logs, and audit reports created by the official tooling.
 
 ## Getting Started
@@ -14,7 +14,7 @@ This repository demonstrates a streamlined, production-ready DTIFx Toolkit setup
 4. Execute `npm run dtif:build` to generate CSS and JSON outputs under `ops/artifacts/build/`.
 5. Capture or refresh the baseline registry with `npm run dtif:diff` after reviewing the generated build output.
 6. Evaluate governance policies using `npm run dtif:audit`; the helper script shells out to the DTIF CLI, filters runtime logs, and writes JSON/Markdown reports into `ops/artifacts/audit/`.
-7. Run `npm run verify` to execute ESLint and the `design-lint lint` pass in one step, ensuring the configuration and tokens remain compliant.
+7. Run `npm run verify` to execute ESLint and the `design-lint lint "tokens/**/*.dtif.json"` pass in one step, ensuring the configuration and every DTIF document remain compliant.
 
 Refer to the DTIFx documentation at https://dtifx.lapidist.net/ and the design-lint guidance at https://design-lint.lapidist.net/ for full CLI usage details.
 

@@ -1,0 +1,96 @@
+{
+  "$schema": "https://dtif.lapidist.net/schema/core.json",
+  "$version": "1.0.0",
+  "$description": "Button component tokens for the DTIFx minimal stack example.",
+  "component": {
+    "$description": "Component abstraction tokens",
+    "button": {
+      "$description": "Primary button styling primitives.",
+      "$extensions": {
+        "lapidist.accessibility": {
+          "intent": "Ensures minimum AA contrast in default theme contexts"
+        }
+      },
+      "background": {
+        "$type": "color",
+        "$description": "Default primary button background colour.",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.054901960784313725, 0.3607843137254902, 0.6784313725490196],
+          "hex": "#0E5CAD"
+        },
+        "$extensions": {
+          "lapidist.governance": {
+            "owner": "Design Systems Guild",
+            "reviewCadence": "monthly",
+            "sla": "3 business days"
+          },
+          "lapidist.accessibility": {
+            "contrastTarget": "AA",
+            "usage": ["button.primary.default"]
+          }
+        }
+      },
+      "background-hover": {
+        "$type": "color",
+        "$description": "Hover state background colour with elevated contrast.",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.047058823529411764, 0.3215686274509804, 0.6039215686274509],
+          "hex": "#0C529A"
+        },
+        "$extensions": {
+          "lapidist.governance": {
+            "owner": "Design Systems Guild",
+            "reviewCadence": "monthly",
+            "sla": "3 business days"
+          },
+          "lapidist.accessibility": {
+            "contrastTarget": "AAA",
+            "usage": ["button.primary.hover"]
+          }
+        }
+      },
+      "text": {
+        "$type": "color",
+        "$description": "Primary button label colour ensuring contrast on brand backgrounds.",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [1, 1, 1],
+          "hex": "#FFFFFF"
+        },
+        "$extensions": {
+          "lapidist.governance": {
+            "owner": "Design Systems Guild",
+            "reviewCadence": "monthly",
+            "sla": "3 business days"
+          },
+          "lapidist.accessibility": {
+            "contrastTarget": "AA",
+            "usage": ["button.primary.text"]
+          }
+        }
+      },
+      "padding": {
+        "$type": "dimension",
+        "$description": "Button horizontal padding derived from spacing scale.",
+        "$value": {
+          "dimensionType": "length",
+          "value": 16,
+          "unit": "px"
+        },
+        "$extensions": {
+          "lapidist.governance": {
+            "owner": "Design Systems Guild",
+            "reviewCadence": "monthly",
+            "sla": "3 business days"
+          },
+          "lapidist.accessibility": {
+            "touchTarget": "Supports minimum 44px hit area when combined with layout spacing",
+            "usage": ["button.primary.padding"]
+          }
+        }
+      }
+    }
+  }
+}

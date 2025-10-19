@@ -1,11 +1,11 @@
 {
   "reportSchemaVersion": 3,
-  "generatedAt": "2025-10-19T07:28:27.388Z",
+  "generatedAt": "2025-10-19T07:41:34.803Z",
   "run": {
     "previous": "ops/artifacts/diff/baseline.dtif.json",
     "next": "tokens/index.dtif.json",
-    "startedAt": "2025-10-19T07:28:26.823Z",
-    "durationMs": 561.509366
+    "startedAt": "2025-10-19T07:41:34.213Z",
+    "durationMs": 586.619443
   },
   "summary": {
     "totalPrevious": 8,
@@ -296,7 +296,7 @@
         },
         "source": {
           "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json",
-          "line": 7,
+          "line": 17,
           "column": 14
         },
         "references": [
@@ -355,7 +355,7 @@
         },
         "source": {
           "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json",
-          "line": 7,
+          "line": 17,
           "column": 14
         },
         "references": [
@@ -426,7 +426,7 @@
         },
         "source": {
           "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json",
-          "line": 27,
+          "line": 37,
           "column": 19
         },
         "references": [
@@ -488,7 +488,7 @@
         },
         "source": {
           "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json",
-          "line": 27,
+          "line": 37,
           "column": 19
         },
         "references": [
@@ -556,7 +556,7 @@
         },
         "source": {
           "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json",
-          "line": 54,
+          "line": 64,
           "column": 11
         },
         "references": [
@@ -607,7 +607,7 @@
         },
         "source": {
           "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json",
-          "line": 54,
+          "line": 64,
           "column": 11
         },
         "references": [
@@ -667,7 +667,7 @@
         },
         "source": {
           "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json",
-          "line": 74,
+          "line": 84,
           "column": 11
         },
         "references": [
@@ -718,7 +718,7 @@
         },
         "source": {
           "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json",
-          "line": 74,
+          "line": 84,
           "column": 11
         },
         "references": [
@@ -778,7 +778,7 @@
         },
         "source": {
           "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json",
-          "line": 104,
+          "line": 114,
           "column": 21
         },
         "references": [
@@ -837,7 +837,7 @@
         },
         "source": {
           "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json",
-          "line": 104,
+          "line": 114,
           "column": 21
         },
         "references": [
@@ -905,7 +905,7 @@
         },
         "source": {
           "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json",
-          "line": 124,
+          "line": 134,
           "column": 27
         },
         "references": [
@@ -964,7 +964,7 @@
         },
         "source": {
           "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json",
-          "line": 124,
+          "line": 134,
           "column": 27
         },
         "references": [
@@ -1032,7 +1032,7 @@
         },
         "source": {
           "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json",
-          "line": 144,
+          "line": 154,
           "column": 15
         },
         "references": [
@@ -1091,7 +1091,7 @@
         },
         "source": {
           "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json",
-          "line": 144,
+          "line": 154,
           "column": 15
         },
         "references": [
@@ -1159,7 +1159,7 @@
         },
         "source": {
           "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json",
-          "line": 164,
+          "line": 174,
           "column": 18
         },
         "references": [
@@ -1210,7 +1210,7 @@
         },
         "source": {
           "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json",
-          "line": 164,
+          "line": 174,
           "column": 18
         },
         "references": [

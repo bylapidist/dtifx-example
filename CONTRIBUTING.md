@@ -3,7 +3,7 @@
 ## Workflow
 
 - Follow the phases outlined in `ROADMAP.md`; keep pull requests scoped to one roadmap item whenever possible.
-- Run `npm install` followed by `npm run verify` before opening a pull request to ensure linting and design-lint succeed.
+- Run `npm install` followed by `npm run verify` before opening a pull request so ESLint and `design-lint lint "tokens/**/*.dtif.json"` both succeed.
 - Include the results of `npm run dtif:build`, `npm run dtif:diff`, and `npm run dtif:audit` in your PR description when tokens change so reviewers can inspect artefacts under `ops/artifacts/`; the audit script already captures sanitized JSON and Markdown output from the CLI.
 - The GitHub Actions workflow `.github/workflows/ci.yml` runs the verify, validate, build, diff, and audit commands on every push and pull request; ensure your branch passes the pipeline before requesting review.
 

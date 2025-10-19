@@ -2,6 +2,16 @@
   "$schema": "https://dtif.lapidist.net/schema/core.json",
   "$version": "1.0.0",
   "$description": "Consolidated DTIF token bundle for the DTIFx minimal stack example covering foundations, components, and theme overrides.",
+  "$extensions": {
+    "lapidist.catalog": {
+      "sources": [
+        "./foundations.dtif.json",
+        "./components/button.dtif.json",
+        "./themes/light.dtif.json",
+        "./themes/dark.dtif.json"
+      ]
+    }
+  },
   "color": {
     "$description": "Canonical colour definitions",
     "brand": {

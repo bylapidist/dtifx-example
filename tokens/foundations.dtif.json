@@ -1,0 +1,95 @@
+{
+  "$schema": "https://dtif.lapidist.net/schema/core.json",
+  "$version": "1.0.0",
+  "$description": "Foundational design tokens for the DTIFx minimal stack example covering color and spacing primitives.",
+  "color": {
+    "$description": "Canonical colour definitions",
+    "brand": {
+      "$type": "color",
+      "$description": "Primary brand colour ensuring AA contrast on light backgrounds.",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [0.054901960784313725, 0.3607843137254902, 0.6784313725490196],
+        "hex": "#0E5CAD"
+      },
+      "$extensions": {
+        "lapidist.governance": {
+          "owner": "Design Foundations Guild",
+          "reviewCadence": "quarterly",
+          "sla": "5 business days"
+        },
+        "lapidist.accessibility": {
+          "contrastTarget": "AA",
+          "usage": ["button.primary", "link.default"]
+        }
+      }
+    },
+    "background": {
+      "$type": "color",
+      "$description": "Base background colour for light theme contexts.",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [1, 1, 1],
+        "hex": "#FFFFFF"
+      },
+      "$extensions": {
+        "lapidist.governance": {
+          "owner": "Design Foundations Guild",
+          "reviewCadence": "quarterly",
+          "sla": "5 business days"
+        },
+        "lapidist.context": {
+          "surface": "canvas",
+          "theme": "light"
+        },
+        "lapidist.accessibility": {
+          "contrastTarget": "AA",
+          "usage": ["surface.background.light"]
+        }
+      }
+    }
+  },
+  "spacing": {
+    "$description": "Spacing scale tokens",
+    "md": {
+      "$type": "dimension",
+      "$description": "Default medium spacing unit for layout and component padding.",
+      "$value": {
+        "dimensionType": "length",
+        "value": 16,
+        "unit": "px"
+      },
+      "$extensions": {
+        "lapidist.governance": {
+          "owner": "Design Foundations Guild",
+          "reviewCadence": "quarterly",
+          "sla": "5 business days"
+        },
+        "lapidist.accessibility": {
+          "touchTarget": "Ensures minimum primary control padding",
+          "usage": ["spacing.md", "button.primary.padding"]
+        }
+      }
+    },
+    "lg": {
+      "$type": "dimension",
+      "$description": "Large spacing unit for generous component padding.",
+      "$value": {
+        "dimensionType": "length",
+        "value": 24,
+        "unit": "px"
+      },
+      "$extensions": {
+        "lapidist.governance": {
+          "owner": "Design Foundations Guild",
+          "reviewCadence": "quarterly",
+          "sla": "5 business days"
+        },
+        "lapidist.accessibility": {
+          "touchTarget": "Supports elevated hit area targets for large components",
+          "usage": ["spacing.lg", "button.primary.padding"]
+        }
+      }
+    }
+  }
+}

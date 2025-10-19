@@ -1,9 +1,5 @@
 @import '../../ops/artifacts/build/tokens.css';
 
-:root {
-  color-scheme: light;
-}
-
 .button-primary {
   display: inline-flex;
   align-items: center;
@@ -11,12 +7,12 @@
   gap: var(--tokens-foundations-dtif-json-spacing-md);
   padding-block: var(--tokens-components-button-dtif-json-component-button-padding);
   padding-inline: var(--tokens-foundations-dtif-json-spacing-lg);
-  font-weight: var(--tokens-foundations-dtif-json-font-weight-variables-semibold);
+  font-weight: var(--tokens-foundations-dtif-json-font-weight-variables-semibold, 600);
   border: none;
   cursor: pointer;
   background-color: var(--tokens-components-button-dtif-json-component-button-background);
   color: var(--tokens-components-button-dtif-json-component-button-text);
-  transition: background-color var(--tokens-foundations-dtif-json-duration-variables-button) ease-in-out;
+  transition: background-color var(--tokens-foundations-dtif-json-duration-variables-button, 120ms) ease-in-out;
 }
 
 .button-primary:hover,

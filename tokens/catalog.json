@@ -5,14 +5,14 @@
   "$extensions": {
     "lapidist.catalog": {
       "sources": [
-        "./foundations.dtif.json",
-        "./components/button.dtif.json",
-        "./themes/light.dtif.json",
-        "./themes/dark.dtif.json"
+        "./foundations.json",
+        "./components/button.json",
+        "./themes/light.json",
+        "./themes/dark.json"
       ]
     }
   },
-  "color": {
+  "clr": {
     "$description": "Canonical colour definitions",
     "brand": {
       "$type": "color",
@@ -34,13 +34,13 @@
         "lapidist.accessibility": {
           "contrastTarget": "AA",
           "usage": [
-            "button.primary",
+            "btn.primary",
             "link.default"
           ]
         }
       }
     },
-    "background": {
+    "bg": {
       "$type": "color",
       "$description": "Base background colour for light theme contexts.",
       "$value": {
@@ -64,13 +64,13 @@
         "lapidist.accessibility": {
           "contrastTarget": "AA",
           "usage": [
-            "surface.background.light"
+            "surface.bg.light"
           ]
         }
       }
     }
   },
-  "spacing": {
+  "space": {
     "$description": "Spacing scale tokens",
     "md": {
       "$type": "dimension",
@@ -89,8 +89,8 @@
         "lapidist.accessibility": {
           "touchTarget": "Ensures minimum primary control padding",
           "usage": [
-            "spacing.md",
-            "button.primary.padding"
+            "space.md",
+            "btn.primary.pad"
           ]
         }
       }
@@ -112,14 +112,14 @@
         "lapidist.accessibility": {
           "touchTarget": "Supports elevated hit area targets for large components",
           "usage": [
-            "spacing.lg",
-            "button.primary.padding"
+            "space.lg",
+            "btn.primary.pad"
           ]
         }
       }
     }
   },
-  "fontWeights": {
+  "weight": {
     "$description": "Font weight scale",
     "semibold": {
       "$type": "fontWeight",
@@ -133,14 +133,14 @@
         },
         "lapidist.accessibility": {
           "usage": [
-            "fontWeights.semibold",
-            "button.primary.fontWeight"
+            "weight.semibold",
+            "btn.primary.weight"
           ]
         }
       }
     }
   },
-  "fontWeightVariables": {
+  "weightVar": {
     "$description": "CSS-compatible font weight variables",
     "semibold": {
       "$type": "dimension",
@@ -158,16 +158,16 @@
         },
         "lapidist.accessibility": {
           "usage": [
-            "fontWeightVariables.semibold",
-            "button.primary.fontWeight"
+            "weightVar.semibold",
+            "btn.primary.weight"
           ]
         }
       }
     }
   },
-  "durations": {
+  "motion": {
     "$description": "Timing durations for interactive components",
-    "button": {
+    "btn": {
       "$type": "duration",
       "$description": "Primary button background transition duration.",
       "$value": {
@@ -183,16 +183,16 @@
         },
         "lapidist.accessibility": {
           "usage": [
-            "durations.button",
-            "button.primary.transition"
+            "motion.btn",
+            "btn.primary.motion"
           ]
         }
       }
     }
   },
-  "durationVariables": {
+  "motionVar": {
     "$description": "CSS-compatible motion variables",
-    "button": {
+    "btn": {
       "$type": "dimension",
       "$description": "Primary button transition duration exposed for CSS usage.",
       "$value": {
@@ -208,23 +208,23 @@
         },
         "lapidist.accessibility": {
           "usage": [
-            "durationVariables.button",
-            "button.primary.transition"
+            "motionVar.btn",
+            "btn.primary.motion"
           ]
         }
       }
     }
   },
-  "component": {
+  "cmp": {
     "$description": "Component abstraction tokens",
-    "button": {
+    "btn": {
       "$description": "Primary button styling primitives.",
       "$extensions": {
         "lapidist.accessibility": {
           "intent": "Ensures minimum AA contrast in default theme contexts"
         }
       },
-      "background": {
+      "bg": {
         "$type": "color",
         "$description": "Default primary button background colour.",
         "$value": {
@@ -244,12 +244,12 @@
           "lapidist.accessibility": {
             "contrastTarget": "AA",
             "usage": [
-              "button.primary.default"
+              "btn.primary.bg"
             ]
           }
         }
       },
-      "background-hover": {
+      "bg-hover": {
         "$type": "color",
         "$description": "Hover state background colour with elevated contrast.",
         "$value": {
@@ -269,12 +269,12 @@
           "lapidist.accessibility": {
             "contrastTarget": "AAA",
             "usage": [
-              "button.primary.hover"
+              "btn.primary.bg-hover"
             ]
           }
         }
       },
-      "text": {
+      "fg": {
         "$type": "color",
         "$description": "Primary button label colour ensuring contrast on brand backgrounds.",
         "$value": {
@@ -294,12 +294,12 @@
           "lapidist.accessibility": {
             "contrastTarget": "AA",
             "usage": [
-              "button.primary.text"
+              "btn.primary.fg"
             ]
           }
         }
       },
-      "padding": {
+      "pad": {
         "$type": "dimension",
         "$description": "Button horizontal padding derived from spacing scale.",
         "$value": {
@@ -316,7 +316,7 @@
           "lapidist.accessibility": {
             "touchTarget": "Supports minimum 44px hit area when combined with layout spacing",
             "usage": [
-              "button.primary.padding"
+              "btn.primary.pad"
             ]
           }
         }
@@ -325,7 +325,7 @@
   },
   "$overrides": [
     {
-      "$token": "#/component/button/background",
+      "$token": "#/cmp/btn/bg",
       "$when": {
         "theme": "dark"
       },
@@ -339,7 +339,7 @@
       }
     },
     {
-      "$token": "#/component/button/text",
+      "$token": "#/cmp/btn/fg",
       "$when": {
         "theme": "dark"
       },
@@ -353,7 +353,7 @@
       }
     },
     {
-      "$token": "#/component/button/background",
+      "$token": "#/cmp/btn/bg",
       "$when": {
         "theme": "light",
         "accessibility": "high-contrast"
@@ -368,7 +368,7 @@
       }
     },
     {
-      "$token": "#/component/button/text",
+      "$token": "#/cmp/btn/fg",
       "$when": {
         "theme": "light",
         "accessibility": "high-contrast"

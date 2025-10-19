@@ -1,11 +1,11 @@
 {
   "reportSchemaVersion": 3,
-  "generatedAt": "2025-10-19T15:17:43.648Z",
+  "generatedAt": "2025-10-19T16:30:52.909Z",
   "run": {
-    "previous": "ops/artifacts/diff/baseline.dtif.json (normalized)",
-    "next": "tokens/index.dtif.json",
-    "startedAt": "2025-10-19T15:17:42.866Z",
-    "durationMs": 776.024812
+    "previous": "ops/artifacts/diff/baseline.dtif.json",
+    "next": "tokens/catalog.json",
+    "startedAt": "2025-10-19T16:30:52.464Z",
+    "durationMs": 441.198165
   },
   "summary": {
     "totalPrevious": 12,
@@ -28,12 +28,12 @@
         "added": 0,
         "removed": 0,
         "renamed": 0,
-        "changed": 0,
-        "unchanged": 5,
+        "changed": 5,
+        "unchanged": 0,
         "breaking": 0,
-        "nonBreaking": 0,
+        "nonBreaking": 5,
         "valueChanged": 0,
-        "metadataChanged": 0
+        "metadataChanged": 5
       },
       {
         "type": "dimension",
@@ -80,105 +80,49 @@
     ],
     "groups": [
       {
-        "group": "color",
+        "group": "clr",
         "totalPrevious": 2,
         "totalNext": 2,
         "added": 0,
         "removed": 0,
         "renamed": 0,
-        "changed": 0,
-        "unchanged": 2,
+        "changed": 2,
+        "unchanged": 0,
         "breaking": 0,
-        "nonBreaking": 0,
+        "nonBreaking": 2,
         "valueChanged": 0,
-        "metadataChanged": 0
+        "metadataChanged": 2
       },
       {
-        "group": "component",
+        "group": "cmp",
         "totalPrevious": 4,
         "totalNext": 4,
         "added": 0,
         "removed": 0,
         "renamed": 0,
-        "changed": 0,
-        "unchanged": 4,
+        "changed": 4,
+        "unchanged": 0,
         "breaking": 0,
-        "nonBreaking": 0,
+        "nonBreaking": 4,
         "valueChanged": 0,
-        "metadataChanged": 0
+        "metadataChanged": 4
       },
       {
-        "group": "component/button",
+        "group": "cmp/btn",
         "totalPrevious": 4,
         "totalNext": 4,
         "added": 0,
         "removed": 0,
         "renamed": 0,
-        "changed": 0,
-        "unchanged": 4,
+        "changed": 4,
+        "unchanged": 0,
         "breaking": 0,
-        "nonBreaking": 0,
+        "nonBreaking": 4,
         "valueChanged": 0,
-        "metadataChanged": 0
+        "metadataChanged": 4
       },
       {
-        "group": "durations",
-        "totalPrevious": 1,
-        "totalNext": 1,
-        "added": 0,
-        "removed": 0,
-        "renamed": 0,
-        "changed": 0,
-        "unchanged": 1,
-        "breaking": 0,
-        "nonBreaking": 0,
-        "valueChanged": 0,
-        "metadataChanged": 0
-      },
-      {
-        "group": "durationvariables",
-        "totalPrevious": 1,
-        "totalNext": 1,
-        "added": 0,
-        "removed": 0,
-        "renamed": 0,
-        "changed": 0,
-        "unchanged": 1,
-        "breaking": 0,
-        "nonBreaking": 0,
-        "valueChanged": 0,
-        "metadataChanged": 0
-      },
-      {
-        "group": "fontweights",
-        "totalPrevious": 1,
-        "totalNext": 1,
-        "added": 0,
-        "removed": 0,
-        "renamed": 0,
-        "changed": 0,
-        "unchanged": 1,
-        "breaking": 0,
-        "nonBreaking": 0,
-        "valueChanged": 0,
-        "metadataChanged": 0
-      },
-      {
-        "group": "fontweightvariables",
-        "totalPrevious": 1,
-        "totalNext": 1,
-        "added": 0,
-        "removed": 0,
-        "renamed": 0,
-        "changed": 0,
-        "unchanged": 1,
-        "breaking": 0,
-        "nonBreaking": 0,
-        "valueChanged": 0,
-        "metadataChanged": 0
-      },
-      {
-        "group": "durations",
+        "group": "motion",
         "totalPrevious": 1,
         "totalNext": 1,
         "added": 0,
@@ -192,7 +136,7 @@
         "metadataChanged": 1
       },
       {
-        "group": "durationvariables",
+        "group": "motionvar",
         "totalPrevious": 1,
         "totalNext": 1,
         "added": 0,
@@ -206,46 +150,46 @@
         "metadataChanged": 1
       },
       {
-        "group": "fontweights",
-        "totalPrevious": 1,
-        "totalNext": 1,
-        "added": 0,
-        "removed": 0,
-        "renamed": 0,
-        "changed": 1,
-        "unchanged": 0,
-        "breaking": 0,
-        "nonBreaking": 1,
-        "valueChanged": 0,
-        "metadataChanged": 1
-      },
-      {
-        "group": "fontweightvariables",
-        "totalPrevious": 1,
-        "totalNext": 1,
-        "added": 0,
-        "removed": 0,
-        "renamed": 0,
-        "changed": 1,
-        "unchanged": 0,
-        "breaking": 0,
-        "nonBreaking": 1,
-        "valueChanged": 0,
-        "metadataChanged": 1
-      },
-      {
-        "group": "spacing",
+        "group": "space",
         "totalPrevious": 2,
         "totalNext": 2,
         "added": 0,
         "removed": 0,
         "renamed": 0,
-        "changed": 0,
-        "unchanged": 2,
+        "changed": 2,
+        "unchanged": 0,
         "breaking": 0,
-        "nonBreaking": 0,
+        "nonBreaking": 2,
         "valueChanged": 0,
-        "metadataChanged": 0
+        "metadataChanged": 2
+      },
+      {
+        "group": "weight",
+        "totalPrevious": 1,
+        "totalNext": 1,
+        "added": 0,
+        "removed": 0,
+        "renamed": 0,
+        "changed": 1,
+        "unchanged": 0,
+        "breaking": 0,
+        "nonBreaking": 1,
+        "valueChanged": 0,
+        "metadataChanged": 1
+      },
+      {
+        "group": "weightvar",
+        "totalPrevious": 1,
+        "totalNext": 1,
+        "added": 0,
+        "removed": 0,
+        "renamed": 0,
+        "changed": 1,
+        "unchanged": 0,
+        "breaking": 0,
+        "nonBreaking": 1,
+        "valueChanged": 0,
+        "metadataChanged": 1
       }
     ]
   },
@@ -296,49 +240,49 @@
     ],
     "groupHotspots": [
       {
-        "label": "component",
+        "label": "cmp",
         "changes": 4,
         "breaking": 0,
         "nonBreaking": 4
       },
       {
-        "label": "component/button",
+        "label": "cmp/btn",
         "changes": 4,
         "breaking": 0,
         "nonBreaking": 4
       },
       {
-        "label": "color",
+        "label": "clr",
         "changes": 2,
         "breaking": 0,
         "nonBreaking": 2
       },
       {
-        "label": "spacing",
+        "label": "space",
         "changes": 2,
         "breaking": 0,
         "nonBreaking": 2
       },
       {
-        "label": "durations",
+        "label": "motion",
         "changes": 1,
         "breaking": 0,
         "nonBreaking": 1
       },
       {
-        "label": "durationvariables",
+        "label": "motionvar",
         "changes": 1,
         "breaking": 0,
         "nonBreaking": 1
       },
       {
-        "label": "fontweights",
+        "label": "weight",
         "changes": 1,
         "breaking": 0,
         "nonBreaking": 1
       },
       {
-        "label": "fontweightvariables",
+        "label": "weightvar",
         "changes": 1,
         "breaking": 0,
         "nonBreaking": 1
@@ -348,16 +292,16 @@
       {
         "kind": "changed",
         "impact": "non-breaking",
-        "labelPath": "#/color/background",
+        "labelPath": "#/clr/bg",
         "typeLabel": "color",
         "title": "Metadata updated",
         "why": "Changed fields: references and resolution path",
         "impactSummary": "Non-breaking update: confirm expected outcomes and visuals.",
-        "nextStep": "Spot-check #/color/background in consuming products.",
+        "nextStep": "Spot-check #/clr/bg in consuming products.",
         "score": 112,
         "tokens": {
-          "previous": "#/color/background",
-          "next": "#/color/background"
+          "previous": "#/clr/bg",
+          "next": "#/clr/bg"
         },
         "changedFields": [
           "references",
@@ -367,16 +311,16 @@
       {
         "kind": "changed",
         "impact": "non-breaking",
-        "labelPath": "#/color/brand",
+        "labelPath": "#/clr/brand",
         "typeLabel": "color",
         "title": "Metadata updated",
         "why": "Changed fields: references and resolution path",
         "impactSummary": "Non-breaking update: confirm expected outcomes and visuals.",
-        "nextStep": "Spot-check #/color/brand in consuming products.",
+        "nextStep": "Spot-check #/clr/brand in consuming products.",
         "score": 112,
         "tokens": {
-          "previous": "#/color/brand",
-          "next": "#/color/brand"
+          "previous": "#/clr/brand",
+          "next": "#/clr/brand"
         },
         "changedFields": [
           "references",
@@ -386,16 +330,16 @@
       {
         "kind": "changed",
         "impact": "non-breaking",
-        "labelPath": "#/component/button/background",
+        "labelPath": "#/cmp/btn/bg",
         "typeLabel": "color",
         "title": "Metadata updated",
         "why": "Changed fields: references and resolution path",
         "impactSummary": "Non-breaking update: confirm expected outcomes and visuals.",
-        "nextStep": "Spot-check #/component/button/background in consuming products.",
+        "nextStep": "Spot-check #/cmp/btn/bg in consuming products.",
         "score": 112,
         "tokens": {
-          "previous": "#/component/button/background",
-          "next": "#/component/button/background"
+          "previous": "#/cmp/btn/bg",
+          "next": "#/cmp/btn/bg"
         },
         "changedFields": [
           "references",
@@ -405,16 +349,16 @@
       {
         "kind": "changed",
         "impact": "non-breaking",
-        "labelPath": "#/component/button/background-hover",
+        "labelPath": "#/cmp/btn/bg-hover",
         "typeLabel": "color",
         "title": "Metadata updated",
         "why": "Changed fields: references and resolution path",
         "impactSummary": "Non-breaking update: confirm expected outcomes and visuals.",
-        "nextStep": "Spot-check #/component/button/background-hover in consuming products.",
+        "nextStep": "Spot-check #/cmp/btn/bg-hover in consuming products.",
         "score": 112,
         "tokens": {
-          "previous": "#/component/button/background-hover",
-          "next": "#/component/button/background-hover"
+          "previous": "#/cmp/btn/bg-hover",
+          "next": "#/cmp/btn/bg-hover"
         },
         "changedFields": [
           "references",
@@ -424,16 +368,16 @@
       {
         "kind": "changed",
         "impact": "non-breaking",
-        "labelPath": "#/component/button/padding",
-        "typeLabel": "dimension",
+        "labelPath": "#/cmp/btn/fg",
+        "typeLabel": "color",
         "title": "Metadata updated",
         "why": "Changed fields: references and resolution path",
         "impactSummary": "Non-breaking update: confirm expected outcomes and visuals.",
-        "nextStep": "Spot-check #/component/button/padding in consuming products.",
+        "nextStep": "Spot-check #/cmp/btn/fg in consuming products.",
         "score": 112,
         "tokens": {
-          "previous": "#/component/button/padding",
-          "next": "#/component/button/padding"
+          "previous": "#/cmp/btn/fg",
+          "next": "#/cmp/btn/fg"
         },
         "changedFields": [
           "references",
@@ -445,15 +389,15 @@
   "changes": [
     {
       "kind": "changed",
-      "token": "#/color/brand",
+      "token": "#/clr/brand",
       "changes": [
         "references",
         "resolutionPath"
       ],
       "previous": {
-        "id": "#/color/brand",
+        "id": "#/clr/brand",
         "path": [
-          "color",
+          "clr",
           "brand"
         ],
         "extensions": {
@@ -465,7 +409,7 @@
           "lapidist.accessibility": {
             "contrastTarget": "AA",
             "usage": [
-              "button.primary",
+              "btn.primary",
               "link.default"
             ]
           }
@@ -477,13 +421,13 @@
         },
         "references": [
           {
-            "pointer": "#/color/brand/$value",
+            "pointer": "#/clr/brand/$value",
             "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
           }
         ],
         "resolutionPath": [
           {
-            "pointer": "#/color/brand",
+            "pointer": "#/clr/brand",
             "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
           }
         ],
@@ -508,9 +452,9 @@
         "description": "Primary brand colour ensuring AA contrast on light backgrounds."
       },
       "next": {
-        "id": "#/color/brand",
+        "id": "#/clr/brand",
         "path": [
-          "color",
+          "clr",
           "brand"
         ],
         "extensions": {
@@ -522,26 +466,26 @@
           "lapidist.accessibility": {
             "contrastTarget": "AA",
             "usage": [
-              "button.primary",
+              "btn.primary",
               "link.default"
             ]
           }
         },
         "source": {
-          "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json",
+          "uri": "file:///workspace/dtifx-example/tokens/catalog.json",
           "line": 17,
           "column": 14
         },
         "references": [
           {
-            "pointer": "#/color/brand/$value",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
+            "pointer": "#/clr/brand/$value",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
           }
         ],
         "resolutionPath": [
           {
-            "pointer": "#/color/brand",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
+            "pointer": "#/clr/brand",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
           }
         ],
         "appliedAliases": [],
@@ -568,16 +512,16 @@
     },
     {
       "kind": "changed",
-      "token": "#/color/background",
+      "token": "#/clr/bg",
       "changes": [
         "references",
         "resolutionPath"
       ],
       "previous": {
-        "id": "#/color/background",
+        "id": "#/clr/bg",
         "path": [
-          "color",
-          "background"
+          "clr",
+          "bg"
         ],
         "extensions": {
           "lapidist.governance": {
@@ -592,24 +536,24 @@
           "lapidist.accessibility": {
             "contrastTarget": "AA",
             "usage": [
-              "surface.background.light"
+              "surface.bg.light"
             ]
           }
         },
         "source": {
           "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json",
           "line": 43,
-          "column": 19
+          "column": 11
         },
         "references": [
           {
-            "pointer": "#/color/background/$value",
+            "pointer": "#/clr/bg/$value",
             "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
           }
         ],
         "resolutionPath": [
           {
-            "pointer": "#/color/background",
+            "pointer": "#/clr/bg",
             "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
           }
         ],
@@ -634,10 +578,10 @@
         "description": "Base background colour for light theme contexts."
       },
       "next": {
-        "id": "#/color/background",
+        "id": "#/clr/bg",
         "path": [
-          "color",
-          "background"
+          "clr",
+          "bg"
         ],
         "extensions": {
           "lapidist.governance": {
@@ -652,25 +596,25 @@
           "lapidist.accessibility": {
             "contrastTarget": "AA",
             "usage": [
-              "surface.background.light"
+              "surface.bg.light"
             ]
           }
         },
         "source": {
-          "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json",
+          "uri": "file:///workspace/dtifx-example/tokens/catalog.json",
           "line": 43,
-          "column": 19
+          "column": 11
         },
         "references": [
           {
-            "pointer": "#/color/background/$value",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
+            "pointer": "#/clr/bg/$value",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
           }
         ],
         "resolutionPath": [
           {
-            "pointer": "#/color/background",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
+            "pointer": "#/clr/bg",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
           }
         ],
         "appliedAliases": [],
@@ -697,15 +641,15 @@
     },
     {
       "kind": "changed",
-      "token": "#/spacing/md",
+      "token": "#/space/md",
       "changes": [
         "references",
         "resolutionPath"
       ],
       "previous": {
-        "id": "#/spacing/md",
+        "id": "#/space/md",
         "path": [
-          "spacing",
+          "space",
           "md"
         ],
         "extensions": {
@@ -717,8 +661,8 @@
           "lapidist.accessibility": {
             "touchTarget": "Ensures minimum primary control padding",
             "usage": [
-              "spacing.md",
-              "button.primary.padding"
+              "space.md",
+              "btn.primary.pad"
             ]
           }
         },
@@ -729,13 +673,13 @@
         },
         "references": [
           {
-            "pointer": "#/spacing/md/$value",
+            "pointer": "#/space/md/$value",
             "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
           }
         ],
         "resolutionPath": [
           {
-            "pointer": "#/spacing/md",
+            "pointer": "#/space/md",
             "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
           }
         ],
@@ -754,9 +698,9 @@
         "description": "Default medium spacing unit for layout and component padding."
       },
       "next": {
-        "id": "#/spacing/md",
+        "id": "#/space/md",
         "path": [
-          "spacing",
+          "space",
           "md"
         ],
         "extensions": {
@@ -768,26 +712,26 @@
           "lapidist.accessibility": {
             "touchTarget": "Ensures minimum primary control padding",
             "usage": [
-              "spacing.md",
-              "button.primary.padding"
+              "space.md",
+              "btn.primary.pad"
             ]
           }
         },
         "source": {
-          "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json",
+          "uri": "file:///workspace/dtifx-example/tokens/catalog.json",
           "line": 75,
           "column": 11
         },
         "references": [
           {
-            "pointer": "#/spacing/md/$value",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
+            "pointer": "#/space/md/$value",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
           }
         ],
         "resolutionPath": [
           {
-            "pointer": "#/spacing/md",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
+            "pointer": "#/space/md",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
           }
         ],
         "appliedAliases": [],
@@ -808,15 +752,15 @@
     },
     {
       "kind": "changed",
-      "token": "#/spacing/lg",
+      "token": "#/space/lg",
       "changes": [
         "references",
         "resolutionPath"
       ],
       "previous": {
-        "id": "#/spacing/lg",
+        "id": "#/space/lg",
         "path": [
-          "spacing",
+          "space",
           "lg"
         ],
         "extensions": {
@@ -828,8 +772,8 @@
           "lapidist.accessibility": {
             "touchTarget": "Supports elevated hit area targets for large components",
             "usage": [
-              "spacing.lg",
-              "button.primary.padding"
+              "space.lg",
+              "btn.primary.pad"
             ]
           }
         },
@@ -840,13 +784,13 @@
         },
         "references": [
           {
-            "pointer": "#/spacing/lg/$value",
+            "pointer": "#/space/lg/$value",
             "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
           }
         ],
         "resolutionPath": [
           {
-            "pointer": "#/spacing/lg",
+            "pointer": "#/space/lg",
             "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
           }
         ],
@@ -865,9 +809,9 @@
         "description": "Large spacing unit for generous component padding."
       },
       "next": {
-        "id": "#/spacing/lg",
+        "id": "#/space/lg",
         "path": [
-          "spacing",
+          "space",
           "lg"
         ],
         "extensions": {
@@ -879,26 +823,26 @@
           "lapidist.accessibility": {
             "touchTarget": "Supports elevated hit area targets for large components",
             "usage": [
-              "spacing.lg",
-              "button.primary.padding"
+              "space.lg",
+              "btn.primary.pad"
             ]
           }
         },
         "source": {
-          "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json",
+          "uri": "file:///workspace/dtifx-example/tokens/catalog.json",
           "line": 98,
           "column": 11
         },
         "references": [
           {
-            "pointer": "#/spacing/lg/$value",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
+            "pointer": "#/space/lg/$value",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
           }
         ],
         "resolutionPath": [
           {
-            "pointer": "#/spacing/lg",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
+            "pointer": "#/space/lg",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
           }
         ],
         "appliedAliases": [],
@@ -919,15 +863,15 @@
     },
     {
       "kind": "changed",
-      "token": "#/fontWeights/semibold",
+      "token": "#/weight/semibold",
       "changes": [
         "references",
         "resolutionPath"
       ],
       "previous": {
-        "id": "#/fontWeights/semibold",
+        "id": "#/weight/semibold",
         "path": [
-          "fontWeights",
+          "weight",
           "semibold"
         ],
         "extensions": {
@@ -938,8 +882,8 @@
           },
           "lapidist.accessibility": {
             "usage": [
-              "fontWeights.semibold",
-              "button.primary.fontWeight"
+              "weight.semibold",
+              "btn.primary.weight"
             ]
           }
         },
@@ -950,13 +894,13 @@
         },
         "references": [
           {
-            "pointer": "#/fontWeights/semibold/$value",
+            "pointer": "#/weight/semibold/$value",
             "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
           }
         ],
         "resolutionPath": [
           {
-            "pointer": "#/fontWeights/semibold",
+            "pointer": "#/weight/semibold",
             "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
           }
         ],
@@ -967,9 +911,9 @@
         "description": "Semibold weight for primary button text."
       },
       "next": {
-        "id": "#/fontWeights/semibold",
+        "id": "#/weight/semibold",
         "path": [
-          "fontWeights",
+          "weight",
           "semibold"
         ],
         "extensions": {
@@ -980,26 +924,26 @@
           },
           "lapidist.accessibility": {
             "usage": [
-              "fontWeights.semibold",
-              "button.primary.fontWeight"
+              "weight.semibold",
+              "btn.primary.weight"
             ]
           }
         },
         "source": {
-          "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json",
+          "uri": "file:///workspace/dtifx-example/tokens/catalog.json",
           "line": 124,
           "column": 17
         },
         "references": [
           {
-            "pointer": "#/fontWeights/semibold/$value",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
+            "pointer": "#/weight/semibold/$value",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
           }
         ],
         "resolutionPath": [
           {
-            "pointer": "#/fontWeights/semibold",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
+            "pointer": "#/weight/semibold",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
           }
         ],
         "appliedAliases": [],
@@ -1012,15 +956,15 @@
     },
     {
       "kind": "changed",
-      "token": "#/fontWeightVariables/semibold",
+      "token": "#/weightVar/semibold",
       "changes": [
         "references",
         "resolutionPath"
       ],
       "previous": {
-        "id": "#/fontWeightVariables/semibold",
+        "id": "#/weightVar/semibold",
         "path": [
-          "fontWeightVariables",
+          "weightVar",
           "semibold"
         ],
         "extensions": {
@@ -1031,8 +975,8 @@
           },
           "lapidist.accessibility": {
             "usage": [
-              "fontWeightVariables.semibold",
-              "button.primary.fontWeight"
+              "weightVar.semibold",
+              "btn.primary.weight"
             ]
           }
         },
@@ -1043,13 +987,13 @@
         },
         "references": [
           {
-            "pointer": "#/fontWeightVariables/semibold/$value",
+            "pointer": "#/weightVar/semibold/$value",
             "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
           }
         ],
         "resolutionPath": [
           {
-            "pointer": "#/fontWeightVariables/semibold",
+            "pointer": "#/weightVar/semibold",
             "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
           }
         ],
@@ -1068,9 +1012,9 @@
         "description": "Semibold weight exposed as a unitless CSS variable."
       },
       "next": {
-        "id": "#/fontWeightVariables/semibold",
+        "id": "#/weightVar/semibold",
         "path": [
-          "fontWeightVariables",
+          "weightVar",
           "semibold"
         ],
         "extensions": {
@@ -1081,26 +1025,26 @@
           },
           "lapidist.accessibility": {
             "usage": [
-              "fontWeightVariables.semibold",
-              "button.primary.fontWeight"
+              "weightVar.semibold",
+              "btn.primary.weight"
             ]
           }
         },
         "source": {
-          "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json",
+          "uri": "file:///workspace/dtifx-example/tokens/catalog.json",
           "line": 145,
           "column": 17
         },
         "references": [
           {
-            "pointer": "#/fontWeightVariables/semibold/$value",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
+            "pointer": "#/weightVar/semibold/$value",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
           }
         ],
         "resolutionPath": [
           {
-            "pointer": "#/fontWeightVariables/semibold",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
+            "pointer": "#/weightVar/semibold",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
           }
         ],
         "appliedAliases": [],
@@ -1121,16 +1065,16 @@
     },
     {
       "kind": "changed",
-      "token": "#/durations/button",
+      "token": "#/motion/btn",
       "changes": [
         "references",
         "resolutionPath"
       ],
       "previous": {
-        "id": "#/durations/button",
+        "id": "#/motion/btn",
         "path": [
-          "durations",
-          "button"
+          "motion",
+          "btn"
         ],
         "extensions": {
           "lapidist.governance": {
@@ -1140,25 +1084,25 @@
           },
           "lapidist.accessibility": {
             "usage": [
-              "durations.button",
-              "button.primary.transition"
+              "motion.btn",
+              "btn.primary.motion"
             ]
           }
         },
         "source": {
           "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json",
           "line": 170,
-          "column": 15
+          "column": 12
         },
         "references": [
           {
-            "pointer": "#/durations/button/$value",
+            "pointer": "#/motion/btn/$value",
             "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
           }
         ],
         "resolutionPath": [
           {
-            "pointer": "#/durations/button",
+            "pointer": "#/motion/btn",
             "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
           }
         ],
@@ -1177,10 +1121,10 @@
         "description": "Primary button background transition duration."
       },
       "next": {
-        "id": "#/durations/button",
+        "id": "#/motion/btn",
         "path": [
-          "durations",
-          "button"
+          "motion",
+          "btn"
         ],
         "extensions": {
           "lapidist.governance": {
@@ -1190,26 +1134,26 @@
           },
           "lapidist.accessibility": {
             "usage": [
-              "durations.button",
-              "button.primary.transition"
+              "motion.btn",
+              "btn.primary.motion"
             ]
           }
         },
         "source": {
-          "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json",
+          "uri": "file:///workspace/dtifx-example/tokens/catalog.json",
           "line": 170,
-          "column": 15
+          "column": 12
         },
         "references": [
           {
-            "pointer": "#/durations/button/$value",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
+            "pointer": "#/motion/btn/$value",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
           }
         ],
         "resolutionPath": [
           {
-            "pointer": "#/durations/button",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
+            "pointer": "#/motion/btn",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
           }
         ],
         "appliedAliases": [],
@@ -1230,16 +1174,16 @@
     },
     {
       "kind": "changed",
-      "token": "#/durationVariables/button",
+      "token": "#/motionVar/btn",
       "changes": [
         "references",
         "resolutionPath"
       ],
       "previous": {
-        "id": "#/durationVariables/button",
+        "id": "#/motionVar/btn",
         "path": [
-          "durationVariables",
-          "button"
+          "motionVar",
+          "btn"
         ],
         "extensions": {
           "lapidist.governance": {
@@ -1249,25 +1193,25 @@
           },
           "lapidist.accessibility": {
             "usage": [
-              "durationVariables.button",
-              "button.primary.transition"
+              "motionVar.btn",
+              "btn.primary.motion"
             ]
           }
         },
         "source": {
           "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json",
           "line": 195,
-          "column": 15
+          "column": 12
         },
         "references": [
           {
-            "pointer": "#/durationVariables/button/$value",
+            "pointer": "#/motionVar/btn/$value",
             "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
           }
         ],
         "resolutionPath": [
           {
-            "pointer": "#/durationVariables/button",
+            "pointer": "#/motionVar/btn",
             "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
           }
         ],
@@ -1286,10 +1230,10 @@
         "description": "Primary button transition duration exposed for CSS usage."
       },
       "next": {
-        "id": "#/durationVariables/button",
+        "id": "#/motionVar/btn",
         "path": [
-          "durationVariables",
-          "button"
+          "motionVar",
+          "btn"
         ],
         "extensions": {
           "lapidist.governance": {
@@ -1299,26 +1243,26 @@
           },
           "lapidist.accessibility": {
             "usage": [
-              "durationVariables.button",
-              "button.primary.transition"
+              "motionVar.btn",
+              "btn.primary.motion"
             ]
           }
         },
         "source": {
-          "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json",
+          "uri": "file:///workspace/dtifx-example/tokens/catalog.json",
           "line": 195,
-          "column": 15
+          "column": 12
         },
         "references": [
           {
-            "pointer": "#/durationVariables/button/$value",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
+            "pointer": "#/motionVar/btn/$value",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
           }
         ],
         "resolutionPath": [
           {
-            "pointer": "#/durationVariables/button",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
+            "pointer": "#/motionVar/btn",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
           }
         ],
         "appliedAliases": [],
@@ -1339,17 +1283,17 @@
     },
     {
       "kind": "changed",
-      "token": "#/component/button/background",
+      "token": "#/cmp/btn/bg",
       "changes": [
         "references",
         "resolutionPath"
       ],
       "previous": {
-        "id": "#/component/button/background",
+        "id": "#/cmp/btn/bg",
         "path": [
-          "component",
-          "button",
-          "background"
+          "cmp",
+          "btn",
+          "bg"
         ],
         "extensions": {
           "lapidist.governance": {
@@ -1360,24 +1304,24 @@
           "lapidist.accessibility": {
             "contrastTarget": "AA",
             "usage": [
-              "button.primary.default"
+              "btn.primary.bg"
             ]
           }
         },
         "source": {
           "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json",
           "line": 227,
-          "column": 21
+          "column": 13
         },
         "references": [
           {
-            "pointer": "#/component/button/background/$value",
+            "pointer": "#/cmp/btn/bg/$value",
             "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
           }
         ],
         "resolutionPath": [
           {
-            "pointer": "#/component/button/background",
+            "pointer": "#/cmp/btn/bg",
             "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
           }
         ],
@@ -1402,11 +1346,11 @@
         "description": "Default primary button background colour."
       },
       "next": {
-        "id": "#/component/button/background",
+        "id": "#/cmp/btn/bg",
         "path": [
-          "component",
-          "button",
-          "background"
+          "cmp",
+          "btn",
+          "bg"
         ],
         "extensions": {
           "lapidist.governance": {
@@ -1417,25 +1361,25 @@
           "lapidist.accessibility": {
             "contrastTarget": "AA",
             "usage": [
-              "button.primary.default"
+              "btn.primary.bg"
             ]
           }
         },
         "source": {
-          "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json",
+          "uri": "file:///workspace/dtifx-example/tokens/catalog.json",
           "line": 227,
-          "column": 21
+          "column": 13
         },
         "references": [
           {
-            "pointer": "#/component/button/background/$value",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
+            "pointer": "#/cmp/btn/bg/$value",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
           }
         ],
         "resolutionPath": [
           {
-            "pointer": "#/component/button/background",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
+            "pointer": "#/cmp/btn/bg",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
           }
         ],
         "appliedAliases": [],
@@ -1462,17 +1406,17 @@
     },
     {
       "kind": "changed",
-      "token": "#/component/button/background-hover",
+      "token": "#/cmp/btn/bg-hover",
       "changes": [
         "references",
         "resolutionPath"
       ],
       "previous": {
-        "id": "#/component/button/background-hover",
+        "id": "#/cmp/btn/bg-hover",
         "path": [
-          "component",
-          "button",
-          "background-hover"
+          "cmp",
+          "btn",
+          "bg-hover"
         ],
         "extensions": {
           "lapidist.governance": {
@@ -1483,24 +1427,24 @@
           "lapidist.accessibility": {
             "contrastTarget": "AAA",
             "usage": [
-              "button.primary.hover"
+              "btn.primary.bg-hover"
             ]
           }
         },
         "source": {
           "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json",
           "line": 252,
-          "column": 27
+          "column": 19
         },
         "references": [
           {
-            "pointer": "#/component/button/background-hover/$value",
+            "pointer": "#/cmp/btn/bg-hover/$value",
             "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
           }
         ],
         "resolutionPath": [
           {
-            "pointer": "#/component/button/background-hover",
+            "pointer": "#/cmp/btn/bg-hover",
             "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
           }
         ],
@@ -1525,11 +1469,11 @@
         "description": "Hover state background colour with elevated contrast."
       },
       "next": {
-        "id": "#/component/button/background-hover",
+        "id": "#/cmp/btn/bg-hover",
         "path": [
-          "component",
-          "button",
-          "background-hover"
+          "cmp",
+          "btn",
+          "bg-hover"
         ],
         "extensions": {
           "lapidist.governance": {
@@ -1540,25 +1484,25 @@
           "lapidist.accessibility": {
             "contrastTarget": "AAA",
             "usage": [
-              "button.primary.hover"
+              "btn.primary.bg-hover"
             ]
           }
         },
         "source": {
-          "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json",
+          "uri": "file:///workspace/dtifx-example/tokens/catalog.json",
           "line": 252,
-          "column": 27
+          "column": 19
         },
         "references": [
           {
-            "pointer": "#/component/button/background-hover/$value",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
+            "pointer": "#/cmp/btn/bg-hover/$value",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
           }
         ],
         "resolutionPath": [
           {
-            "pointer": "#/component/button/background-hover",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
+            "pointer": "#/cmp/btn/bg-hover",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
           }
         ],
         "appliedAliases": [],
@@ -1585,17 +1529,17 @@
     },
     {
       "kind": "changed",
-      "token": "#/component/button/text",
+      "token": "#/cmp/btn/fg",
       "changes": [
         "references",
         "resolutionPath"
       ],
       "previous": {
-        "id": "#/component/button/text",
+        "id": "#/cmp/btn/fg",
         "path": [
-          "component",
-          "button",
-          "text"
+          "cmp",
+          "btn",
+          "fg"
         ],
         "extensions": {
           "lapidist.governance": {
@@ -1606,24 +1550,24 @@
           "lapidist.accessibility": {
             "contrastTarget": "AA",
             "usage": [
-              "button.primary.text"
+              "btn.primary.fg"
             ]
           }
         },
         "source": {
           "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json",
           "line": 277,
-          "column": 15
+          "column": 13
         },
         "references": [
           {
-            "pointer": "#/component/button/text/$value",
+            "pointer": "#/cmp/btn/fg/$value",
             "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
           }
         ],
         "resolutionPath": [
           {
-            "pointer": "#/component/button/text",
+            "pointer": "#/cmp/btn/fg",
             "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
           }
         ],
@@ -1648,11 +1592,11 @@
         "description": "Primary button label colour ensuring contrast on brand backgrounds."
       },
       "next": {
-        "id": "#/component/button/text",
+        "id": "#/cmp/btn/fg",
         "path": [
-          "component",
-          "button",
-          "text"
+          "cmp",
+          "btn",
+          "fg"
         ],
         "extensions": {
           "lapidist.governance": {
@@ -1663,25 +1607,25 @@
           "lapidist.accessibility": {
             "contrastTarget": "AA",
             "usage": [
-              "button.primary.text"
+              "btn.primary.fg"
             ]
           }
         },
         "source": {
-          "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json",
+          "uri": "file:///workspace/dtifx-example/tokens/catalog.json",
           "line": 277,
-          "column": 15
+          "column": 13
         },
         "references": [
           {
-            "pointer": "#/component/button/text/$value",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
+            "pointer": "#/cmp/btn/fg/$value",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
           }
         ],
         "resolutionPath": [
           {
-            "pointer": "#/component/button/text",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
+            "pointer": "#/cmp/btn/fg",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
           }
         ],
         "appliedAliases": [],
@@ -1708,17 +1652,17 @@
     },
     {
       "kind": "changed",
-      "token": "#/component/button/padding",
+      "token": "#/cmp/btn/pad",
       "changes": [
         "references",
         "resolutionPath"
       ],
       "previous": {
-        "id": "#/component/button/padding",
+        "id": "#/cmp/btn/pad",
         "path": [
-          "component",
-          "button",
-          "padding"
+          "cmp",
+          "btn",
+          "pad"
         ],
         "extensions": {
           "lapidist.governance": {
@@ -1729,24 +1673,24 @@
           "lapidist.accessibility": {
             "touchTarget": "Supports minimum 44px hit area when combined with layout spacing",
             "usage": [
-              "button.primary.padding"
+              "btn.primary.pad"
             ]
           }
         },
         "source": {
           "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json",
           "line": 302,
-          "column": 18
+          "column": 14
         },
         "references": [
           {
-            "pointer": "#/component/button/padding/$value",
+            "pointer": "#/cmp/btn/pad/$value",
             "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
           }
         ],
         "resolutionPath": [
           {
-            "pointer": "#/component/button/padding",
+            "pointer": "#/cmp/btn/pad",
             "uri": "file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json"
           }
         ],
@@ -1765,11 +1709,11 @@
         "description": "Button horizontal padding derived from spacing scale."
       },
       "next": {
-        "id": "#/component/button/padding",
+        "id": "#/cmp/btn/pad",
         "path": [
-          "component",
-          "button",
-          "padding"
+          "cmp",
+          "btn",
+          "pad"
         ],
         "extensions": {
           "lapidist.governance": {
@@ -1780,25 +1724,25 @@
           "lapidist.accessibility": {
             "touchTarget": "Supports minimum 44px hit area when combined with layout spacing",
             "usage": [
-              "button.primary.padding"
+              "btn.primary.pad"
             ]
           }
         },
         "source": {
-          "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json",
+          "uri": "file:///workspace/dtifx-example/tokens/catalog.json",
           "line": 302,
-          "column": 18
+          "column": 14
         },
         "references": [
           {
-            "pointer": "#/component/button/padding/$value",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
+            "pointer": "#/cmp/btn/pad/$value",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
           }
         ],
         "resolutionPath": [
           {
-            "pointer": "#/component/button/padding",
-            "uri": "file:///workspace/dtifx-example/tokens/index.dtif.json"
+            "pointer": "#/cmp/btn/pad",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
           }
         ],
         "appliedAliases": [],

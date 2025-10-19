@@ -2,15 +2,15 @@
 
 ## Executive summary
 - Recommended version bump: **Patch**
-- Compared: ops/artifacts/diff/baseline.dtif.json → tokens/index.dtif.json
-- Started: 2025-10-19 15:17 UTC
-- Duration: 757ms
+- Compared: ops/artifacts/diff/baseline.dtif.json → tokens/catalog.json
+- Started: 2025-10-19 16:30 UTC
+- Duration: 417ms
 - Impact: 0 breaking · 12 non-breaking
 - Changes: 0 added · 12 changed · 0 removed · 0 renamed
 - Tokens analysed: 12 previous → 12 next
 - Change mix: 0 value changes, 12 metadata changes
 - Type hotspots: color (5 changes, 5 non-breaking), dimension (5 changes, 5 non-breaking), duration (1 change, 1 non-breaking), fontweight (1 change, 1 non-breaking)
-- Group hotspots: component (4 changes, 4 non-breaking), component/button (4 changes, 4 non-breaking), color (2 changes, 2 non-breaking), spacing (2 changes, 2 non-breaking)
+- Group hotspots: cmp (4 changes, 4 non-breaking), cmp/btn (4 changes, 4 non-breaking), clr (2 changes, 2 non-breaking), space (2 changes, 2 non-breaking)
 
 ### Type breakdown
 | Type | Previous | Next | Added | Removed | Renamed | Changed | Value changes | Metadata changes | Unchanged | Breaking | Non-breaking |
@@ -23,108 +23,108 @@
 ### Group breakdown
 | Group | Previous | Next | Added | Removed | Renamed | Changed | Value changes | Metadata changes | Unchanged | Breaking | Non-breaking |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| color | 2 | 2 | 0 | 0 | 0 | 2 | 0 | 2 | 0 | 0 | 2 |
-| component | 4 | 4 | 0 | 0 | 0 | 4 | 0 | 4 | 0 | 0 | 4 |
-| component/button | 4 | 4 | 0 | 0 | 0 | 4 | 0 | 4 | 0 | 0 | 4 |
-| durations | 1 | 1 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 0 | 1 |
-| durationvariables | 1 | 1 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 0 | 1 |
-| fontweights | 1 | 1 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 0 | 1 |
-| fontweightvariables | 1 | 1 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 0 | 1 |
-| spacing | 2 | 2 | 0 | 0 | 0 | 2 | 0 | 2 | 0 | 0 | 2 |
+| clr | 2 | 2 | 0 | 0 | 0 | 2 | 0 | 2 | 0 | 0 | 2 |
+| cmp | 4 | 4 | 0 | 0 | 0 | 4 | 0 | 4 | 0 | 0 | 4 |
+| cmp/btn | 4 | 4 | 0 | 0 | 0 | 4 | 0 | 4 | 0 | 0 | 4 |
+| motion | 1 | 1 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 0 | 1 |
+| motionvar | 1 | 1 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 0 | 1 |
+| space | 2 | 2 | 0 | 0 | 0 | 2 | 0 | 2 | 0 | 0 | 2 |
+| weight | 1 | 1 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 0 | 1 |
+| weightvar | 1 | 1 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 0 | 1 |
 
 ## Grouped detail
 
 ### color (5 changes: 5 changed)
 
-#### color (2 changes: 2 changed)
+#### clr (2 changes: 2 changed)
 ##### Changed (2)
-- ~ `#/color/brand` — Metadata updated <span style="display:inline-block;width:0.75rem;height:0.75rem;border-radius:0.25rem;border:1px solid #d0d7de;vertical-align:middle;margin-left:0.5rem;background:#0E5CAD;" aria-label="#0E5CAD" title="#0E5CAD"></span> (_non-breaking_)
+- ~ `#/clr/brand` — Metadata updated <span style="display:inline-block;width:0.75rem;height:0.75rem;border-radius:0.25rem;border:1px solid #d0d7de;vertical-align:middle;margin-left:0.5rem;background:#0E5CAD;" aria-label="#0E5CAD" title="#0E5CAD"></span> (_non-breaking_)
   - Impact: Non-breaking update: confirm expected outcomes and visuals.
-  - Next: Spot-check #/color/brand in consuming products.
-  - references: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/color/brand/$value' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/index.dtif.json', pointer: '#/color/brand/$value' }]
-  - resolutionPath: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/color/brand' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/index.dtif.json', pointer: '#/color/brand' }]
-- ~ `#/color/background` — Metadata updated <span style="display:inline-block;width:0.75rem;height:0.75rem;border-radius:0.25rem;border:1px solid #d0d7de;vertical-align:middle;margin-left:0.5rem;background:#FFFFFF;" aria-label="#FFFFFF" title="#FFFFFF"></span> (_non-breaking_)
+  - Next: Spot-check #/clr/brand in consuming products.
+  - references: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/clr/brand/$value' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/catalog.json', pointer: '#/clr/brand/$value' }]
+  - resolutionPath: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/clr/brand' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/catalog.json', pointer: '#/clr/brand' }]
+- ~ `#/clr/bg` — Metadata updated <span style="display:inline-block;width:0.75rem;height:0.75rem;border-radius:0.25rem;border:1px solid #d0d7de;vertical-align:middle;margin-left:0.5rem;background:#FFFFFF;" aria-label="#FFFFFF" title="#FFFFFF"></span> (_non-breaking_)
   - Impact: Non-breaking update: confirm expected outcomes and visuals.
-  - Next: Spot-check #/color/background in consuming products.
-  - references: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/color/background/$value' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/index.dtif.json', pointer: '#/color/background/$value' }]
-  - resolutionPath: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/color/background' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/index.dtif.json', pointer: '#/color/background' }]
+  - Next: Spot-check #/clr/bg in consuming products.
+  - references: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/clr/bg/$value' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/catalog.json', pointer: '#/clr/bg/$value' }]
+  - resolutionPath: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/clr/bg' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/catalog.json', pointer: '#/clr/bg' }]
 
-#### component/button (3 changes: 3 changed)
+#### cmp/btn (3 changes: 3 changed)
 ##### Changed (3)
-- ~ `#/component/button/background` — Metadata updated <span style="display:inline-block;width:0.75rem;height:0.75rem;border-radius:0.25rem;border:1px solid #d0d7de;vertical-align:middle;margin-left:0.5rem;background:#0E5CAD;" aria-label="#0E5CAD" title="#0E5CAD"></span> (_non-breaking_)
+- ~ `#/cmp/btn/bg` — Metadata updated <span style="display:inline-block;width:0.75rem;height:0.75rem;border-radius:0.25rem;border:1px solid #d0d7de;vertical-align:middle;margin-left:0.5rem;background:#0E5CAD;" aria-label="#0E5CAD" title="#0E5CAD"></span> (_non-breaking_)
   - Impact: Non-breaking update: confirm expected outcomes and visuals.
-  - Next: Spot-check #/component/button/background in consuming products.
-  - references: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/component/button/background/$value' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/index.dtif.json', pointer: '#/component/button/background/$value' }]
-  - resolutionPath: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/component/button/background' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/index.dtif.json', pointer: '#/component/button/background' }]
-- ~ `#/component/button/background-hover` — Metadata updated <span style="display:inline-block;width:0.75rem;height:0.75rem;border-radius:0.25rem;border:1px solid #d0d7de;vertical-align:middle;margin-left:0.5rem;background:#0C529A;" aria-label="#0C529A" title="#0C529A"></span> (_non-breaking_)
+  - Next: Spot-check #/cmp/btn/bg in consuming products.
+  - references: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/cmp/btn/bg/$value' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/catalog.json', pointer: '#/cmp/btn/bg/$value' }]
+  - resolutionPath: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/cmp/btn/bg' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/catalog.json', pointer: '#/cmp/btn/bg' }]
+- ~ `#/cmp/btn/bg-hover` — Metadata updated <span style="display:inline-block;width:0.75rem;height:0.75rem;border-radius:0.25rem;border:1px solid #d0d7de;vertical-align:middle;margin-left:0.5rem;background:#0C529A;" aria-label="#0C529A" title="#0C529A"></span> (_non-breaking_)
   - Impact: Non-breaking update: confirm expected outcomes and visuals.
-  - Next: Spot-check #/component/button/background-hover in consuming products.
-  - references: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/component/button/background-hover/$value' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/index.dtif.json', pointer: '#/component/button/background-hover/$value' }]
-  - resolutionPath: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/component/button/background-hover' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/index.dtif.json', pointer: '#/component/button/background-hover' }]
-- ~ `#/component/button/text` — Metadata updated <span style="display:inline-block;width:0.75rem;height:0.75rem;border-radius:0.25rem;border:1px solid #d0d7de;vertical-align:middle;margin-left:0.5rem;background:#FFFFFF;" aria-label="#FFFFFF" title="#FFFFFF"></span> (_non-breaking_)
+  - Next: Spot-check #/cmp/btn/bg-hover in consuming products.
+  - references: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/cmp/btn/bg-hover/$value' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/catalog.json', pointer: '#/cmp/btn/bg-hover/$value' }]
+  - resolutionPath: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/cmp/btn/bg-hover' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/catalog.json', pointer: '#/cmp/btn/bg-hover' }]
+- ~ `#/cmp/btn/fg` — Metadata updated <span style="display:inline-block;width:0.75rem;height:0.75rem;border-radius:0.25rem;border:1px solid #d0d7de;vertical-align:middle;margin-left:0.5rem;background:#FFFFFF;" aria-label="#FFFFFF" title="#FFFFFF"></span> (_non-breaking_)
   - Impact: Non-breaking update: confirm expected outcomes and visuals.
-  - Next: Spot-check #/component/button/text in consuming products.
-  - references: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/component/button/text/$value' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/index.dtif.json', pointer: '#/component/button/text/$value' }]
-  - resolutionPath: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/component/button/text' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/index.dtif.json', pointer: '#/component/button/text' }]
+  - Next: Spot-check #/cmp/btn/fg in consuming products.
+  - references: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/cmp/btn/fg/$value' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/catalog.json', pointer: '#/cmp/btn/fg/$value' }]
+  - resolutionPath: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/cmp/btn/fg' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/catalog.json', pointer: '#/cmp/btn/fg' }]
 
 ### dimension (5 changes: 5 changed)
 
-#### component/button (1 change: 1 changed)
+#### cmp/btn (1 change: 1 changed)
 ##### Changed (1)
-- ~ `#/component/button/padding` — Metadata updated (_non-breaking_)
+- ~ `#/cmp/btn/pad` — Metadata updated (_non-breaking_)
   - Impact: Non-breaking update: confirm expected outcomes and visuals.
-  - Next: Spot-check #/component/button/padding in consuming products.
-  - references: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/component/button/padding/$value' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/index.dtif.json', pointer: '#/component/button/padding/$value' }]
-  - resolutionPath: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/component/button/padding' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/index.dtif.json', pointer: '#/component/button/padding' }]
+  - Next: Spot-check #/cmp/btn/pad in consuming products.
+  - references: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/cmp/btn/pad/$value' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/catalog.json', pointer: '#/cmp/btn/pad/$value' }]
+  - resolutionPath: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/cmp/btn/pad' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/catalog.json', pointer: '#/cmp/btn/pad' }]
 
-#### durationVariables (1 change: 1 changed)
+#### motionVar (1 change: 1 changed)
 ##### Changed (1)
-- ~ `#/durationVariables/button` — Metadata updated (_non-breaking_)
+- ~ `#/motionVar/btn` — Metadata updated (_non-breaking_)
   - Impact: Non-breaking update: confirm expected outcomes and visuals.
-  - Next: Spot-check #/durationVariables/button in consuming products.
-  - references: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/durationVariables/button/$value' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/index.dtif.json', pointer: '#/durationVariables/button/$value' }]
-  - resolutionPath: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/durationVariables/button' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/index.dtif.json', pointer: '#/durationVariables/button' }]
+  - Next: Spot-check #/motionVar/btn in consuming products.
+  - references: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/motionVar/btn/$value' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/catalog.json', pointer: '#/motionVar/btn/$value' }]
+  - resolutionPath: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/motionVar/btn' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/catalog.json', pointer: '#/motionVar/btn' }]
 
-#### fontWeightVariables (1 change: 1 changed)
-##### Changed (1)
-- ~ `#/fontWeightVariables/semibold` — Metadata updated (_non-breaking_)
-  - Impact: Non-breaking update: confirm expected outcomes and visuals.
-  - Next: Spot-check #/fontWeightVariables/semibold in consuming products.
-  - references: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/fontWeightVariables/semibold/$value' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/index.dtif.json', pointer: '#/fontWeightVariables/semibold/$value' }]
-  - resolutionPath: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/fontWeightVariables/semibold' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/index.dtif.json', pointer: '#/fontWeightVariables/semibold' }]
-
-#### spacing (2 changes: 2 changed)
+#### space (2 changes: 2 changed)
 ##### Changed (2)
-- ~ `#/spacing/md` — Metadata updated (_non-breaking_)
+- ~ `#/space/md` — Metadata updated (_non-breaking_)
   - Impact: Non-breaking update: confirm expected outcomes and visuals.
-  - Next: Spot-check #/spacing/md in consuming products.
-  - references: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/spacing/md/$value' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/index.dtif.json', pointer: '#/spacing/md/$value' }]
-  - resolutionPath: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/spacing/md' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/index.dtif.json', pointer: '#/spacing/md' }]
-- ~ `#/spacing/lg` — Metadata updated (_non-breaking_)
+  - Next: Spot-check #/space/md in consuming products.
+  - references: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/space/md/$value' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/catalog.json', pointer: '#/space/md/$value' }]
+  - resolutionPath: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/space/md' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/catalog.json', pointer: '#/space/md' }]
+- ~ `#/space/lg` — Metadata updated (_non-breaking_)
   - Impact: Non-breaking update: confirm expected outcomes and visuals.
-  - Next: Spot-check #/spacing/lg in consuming products.
-  - references: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/spacing/lg/$value' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/index.dtif.json', pointer: '#/spacing/lg/$value' }]
-  - resolutionPath: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/spacing/lg' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/index.dtif.json', pointer: '#/spacing/lg' }]
+  - Next: Spot-check #/space/lg in consuming products.
+  - references: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/space/lg/$value' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/catalog.json', pointer: '#/space/lg/$value' }]
+  - resolutionPath: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/space/lg' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/catalog.json', pointer: '#/space/lg' }]
+
+#### weightVar (1 change: 1 changed)
+##### Changed (1)
+- ~ `#/weightVar/semibold` — Metadata updated (_non-breaking_)
+  - Impact: Non-breaking update: confirm expected outcomes and visuals.
+  - Next: Spot-check #/weightVar/semibold in consuming products.
+  - references: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/weightVar/semibold/$value' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/catalog.json', pointer: '#/weightVar/semibold/$value' }]
+  - resolutionPath: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/weightVar/semibold' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/catalog.json', pointer: '#/weightVar/semibold' }]
 
 ### duration (1 change: 1 changed)
 
-#### durations (1 change: 1 changed)
+#### motion (1 change: 1 changed)
 ##### Changed (1)
-- ~ `#/durations/button` — Metadata updated (_non-breaking_)
+- ~ `#/motion/btn` — Metadata updated (_non-breaking_)
   - Impact: Non-breaking update: confirm expected outcomes and visuals.
-  - Next: Spot-check #/durations/button in consuming products.
-  - references: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/durations/button/$value' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/index.dtif.json', pointer: '#/durations/button/$value' }]
-  - resolutionPath: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/durations/button' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/index.dtif.json', pointer: '#/durations/button' }]
+  - Next: Spot-check #/motion/btn in consuming products.
+  - references: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/motion/btn/$value' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/catalog.json', pointer: '#/motion/btn/$value' }]
+  - resolutionPath: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/motion/btn' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/catalog.json', pointer: '#/motion/btn' }]
 
 ### fontweight (1 change: 1 changed)
 
-#### fontWeights (1 change: 1 changed)
+#### weight (1 change: 1 changed)
 ##### Changed (1)
-- ~ `#/fontWeights/semibold` — Metadata updated (_non-breaking_)
+- ~ `#/weight/semibold` — Metadata updated (_non-breaking_)
   - Impact: Non-breaking update: confirm expected outcomes and visuals.
-  - Next: Spot-check #/fontWeights/semibold in consuming products.
-  - references: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/fontWeights/semibold/$value' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/index.dtif.json', pointer: '#/fontWeights/semibold/$value' }]
-  - resolutionPath: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/fontWeights/semibold' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/index.dtif.json', pointer: '#/fontWeights/semibold' }]
+  - Next: Spot-check #/weight/semibold in consuming products.
+  - references: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/weight/semibold/$value' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/catalog.json', pointer: '#/weight/semibold/$value' }]
+  - resolutionPath: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/weight/semibold' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/catalog.json', pointer: '#/weight/semibold' }]
 
 ## Hints
 - Use `--verbose` or `--mode detailed` for full token metadata and links.

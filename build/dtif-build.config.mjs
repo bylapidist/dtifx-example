@@ -18,8 +18,8 @@ export default defineConfig({
       kind: 'file',
       layer: 'default',
       rootDir: resolve(repositoryRoot, 'tokens'),
-      patterns: ['**/*.dtif.json'],
-      pointerTemplate: pointerTemplate('tokens', placeholder('relative')),
+      patterns: ['**/*.json'],
+      pointerTemplate: pointerTemplate(placeholder('stem')),
     },
   ],
   formatters: [

@@ -1,21 +1,12 @@
-import { useMemo } from 'react';
 import './button.css';
 
 export function Button({ children = 'Primary action', emphasize = false, onClick }) {
-  const inlineStyle = useMemo(() => {
-    return emphasize
-      ? {
-          paddingInline: '24px',
-          paddingBlock: '16px',
-        }
-      : undefined;
-  }, [emphasize]);
+  const className = emphasize ? 'button-primary button-primary--emphasize' : 'button-primary';
 
   return (
     <button
       type="button"
-      className="button-primary"
-      style={inlineStyle}
+      className={className}
       onClick={onClick}
     >
       {children}

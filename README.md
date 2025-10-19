@@ -62,15 +62,15 @@ export function Button({ children = 'Primary action', emphasize = false, onClick
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--foundations-space-md);
+  gap: var(--foundations-spacing-md);
   padding-block: var(--catalog-cmp-btn-pad);
-  padding-inline: var(--foundations-space-lg);
+  padding-inline: var(--foundations-spacing-lg);
   font-weight: var(--catalog-weight-var-semibold, 600);
   border: none;
   cursor: pointer;
   background-color: var(--catalog-cmp-btn-bg);
   color: var(--catalog-cmp-btn-fg);
-  transition: background-color var(--catalog-motion-var-btn, 120ms) ease-in-out;
+  transition: background-color var(--catalog-duration-vars-btn, 120ms) ease-in-out;
 }
 
 .button-primary:hover,
@@ -80,7 +80,7 @@ export function Button({ children = 'Primary action', emphasize = false, onClick
 
 .button-primary--emphasize {
   padding-block: var(--catalog-cmp-btn-pad);
-  padding-inline: var(--foundations-space-lg);
+  padding-inline: var(--foundations-spacing-lg);
 }
 ```
 

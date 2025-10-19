@@ -1,23 +1,23 @@
 # DTIFx Diff report
 
 ## Executive summary
-- Recommended version bump: **Patch**
+- Recommended version bump: **Major**
 - Compared: ops/artifacts/diff/baseline.dtif.json → tokens/catalog.json
-- Started: 2025-10-19 16:30 UTC
-- Duration: 417ms
-- Impact: 0 breaking · 12 non-breaking
-- Changes: 0 added · 12 changed · 0 removed · 0 renamed
+- Started: 2025-10-19 16:40 UTC
+- Duration: 445ms
+- Impact: 4 breaking · 12 non-breaking
+- Changes: 4 added · 8 changed · 4 removed · 0 renamed
 - Tokens analysed: 12 previous → 12 next
-- Change mix: 0 value changes, 12 metadata changes
-- Type hotspots: color (5 changes, 5 non-breaking), dimension (5 changes, 5 non-breaking), duration (1 change, 1 non-breaking), fontweight (1 change, 1 non-breaking)
-- Group hotspots: cmp (4 changes, 4 non-breaking), cmp/btn (4 changes, 4 non-breaking), clr (2 changes, 2 non-breaking), space (2 changes, 2 non-breaking)
+- Change mix: 0 value changes, 8 metadata changes
+- Type hotspots: dimension (8 changes, 3 breaking), duration (2 changes, 1 breaking), color (5 changes, 5 non-breaking), fontweight (1 change, 1 non-breaking)
+- Group hotspots: space (2 changes, 2 breaking), motion (1 change, 1 breaking), motionvar (1 change, 1 breaking), cmp (4 changes, 4 non-breaking)
 
 ### Type breakdown
 | Type | Previous | Next | Added | Removed | Renamed | Changed | Value changes | Metadata changes | Unchanged | Breaking | Non-breaking |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | color | 5 | 5 | 0 | 0 | 0 | 5 | 0 | 5 | 0 | 0 | 5 |
-| dimension | 5 | 5 | 0 | 0 | 0 | 5 | 0 | 5 | 0 | 0 | 5 |
-| duration | 1 | 1 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 0 | 1 |
+| dimension | 5 | 5 | 3 | 3 | 0 | 2 | 0 | 2 | 0 | 3 | 5 |
+| duration | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 1 | 1 |
 | fontweight | 1 | 1 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 0 | 1 |
 
 ### Group breakdown
@@ -26,9 +26,12 @@
 | clr | 2 | 2 | 0 | 0 | 0 | 2 | 0 | 2 | 0 | 0 | 2 |
 | cmp | 4 | 4 | 0 | 0 | 0 | 4 | 0 | 4 | 0 | 0 | 4 |
 | cmp/btn | 4 | 4 | 0 | 0 | 0 | 4 | 0 | 4 | 0 | 0 | 4 |
-| motion | 1 | 1 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 0 | 1 |
-| motionvar | 1 | 1 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 0 | 1 |
-| space | 2 | 2 | 0 | 0 | 0 | 2 | 0 | 2 | 0 | 0 | 2 |
+| durations | 0 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 |
+| durationvars | 0 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 |
+| motion | 1 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 1 | 0 |
+| motionvar | 1 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 1 | 0 |
+| space | 2 | 0 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 2 | 0 |
+| spacing | 0 | 2 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 2 |
 | weight | 1 | 1 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 0 | 1 |
 | weightvar | 1 | 1 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 0 | 1 |
 
@@ -67,7 +70,7 @@
   - references: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/cmp/btn/fg/$value' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/catalog.json', pointer: '#/cmp/btn/fg/$value' }]
   - resolutionPath: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/cmp/btn/fg' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/catalog.json', pointer: '#/cmp/btn/fg' }]
 
-### dimension (5 changes: 5 changed)
+### dimension (8 changes: 2 changed · 3 removed · 3 added)
 
 #### cmp/btn (1 change: 1 changed)
 ##### Changed (1)
@@ -77,26 +80,35 @@
   - references: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/cmp/btn/pad/$value' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/catalog.json', pointer: '#/cmp/btn/pad/$value' }]
   - resolutionPath: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/cmp/btn/pad' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/catalog.json', pointer: '#/cmp/btn/pad' }]
 
-#### motionVar (1 change: 1 changed)
-##### Changed (1)
-- ~ `#/motionVar/btn` — Metadata updated (_non-breaking_)
-  - Impact: Non-breaking update: confirm expected outcomes and visuals.
-  - Next: Spot-check #/motionVar/btn in consuming products.
-  - references: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/motionVar/btn/$value' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/catalog.json', pointer: '#/motionVar/btn/$value' }]
-  - resolutionPath: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/motionVar/btn' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/catalog.json', pointer: '#/motionVar/btn' }]
+#### durationVars (1 change: 1 added)
+##### Added (1)
+- + `#/durationVars/btn` = { dimensionType: 'custom', unit: 'duration.ms', value: 120 } (_non-breaking_)
+  - Impact: Non-breaking addition: publicise availability to adopters.
+  - Next: Plan adoption for #/durationVars/btn across consuming teams.
 
-#### space (2 changes: 2 changed)
-##### Changed (2)
-- ~ `#/space/md` — Metadata updated (_non-breaking_)
-  - Impact: Non-breaking update: confirm expected outcomes and visuals.
-  - Next: Spot-check #/space/md in consuming products.
-  - references: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/space/md/$value' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/catalog.json', pointer: '#/space/md/$value' }]
-  - resolutionPath: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/space/md' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/catalog.json', pointer: '#/space/md' }]
-- ~ `#/space/lg` — Metadata updated (_non-breaking_)
-  - Impact: Non-breaking update: confirm expected outcomes and visuals.
-  - Next: Spot-check #/space/lg in consuming products.
-  - references: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/space/lg/$value' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/catalog.json', pointer: '#/space/lg/$value' }]
-  - resolutionPath: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/space/lg' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/catalog.json', pointer: '#/space/lg' }]
+#### motionVar (1 change: 1 removed)
+##### Removed (1)
+- - `#/motionVar/btn` (was { dimensionType: 'custom', unit: 'duration.ms', value: 120 }) (**breaking**)
+  - Impact: Breaking removal: existing references will fail.
+  - Next: Audit consumers of #/motionVar/btn and migrate to replacements.
+
+#### space (2 changes: 2 removed)
+##### Removed (2)
+- - `#/space/md` (was { dimensionType: 'length', unit: 'px', value: 16 }) (**breaking**)
+  - Impact: Breaking removal: existing references will fail.
+  - Next: Audit consumers of #/space/md and migrate to replacements.
+- - `#/space/lg` (was { dimensionType: 'length', unit: 'px', value: 24 }) (**breaking**)
+  - Impact: Breaking removal: existing references will fail.
+  - Next: Audit consumers of #/space/lg and migrate to replacements.
+
+#### spacing (2 changes: 2 added)
+##### Added (2)
+- + `#/spacing/md` = { dimensionType: 'length', unit: 'px', value: 16 } (_non-breaking_)
+  - Impact: Non-breaking addition: publicise availability to adopters.
+  - Next: Plan adoption for #/spacing/md across consuming teams.
+- + `#/spacing/lg` = { dimensionType: 'length', unit: 'px', value: 24 } (_non-breaking_)
+  - Impact: Non-breaking addition: publicise availability to adopters.
+  - Next: Plan adoption for #/spacing/lg across consuming teams.
 
 #### weightVar (1 change: 1 changed)
 ##### Changed (1)
@@ -106,15 +118,19 @@
   - references: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/weightVar/semibold/$value' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/catalog.json', pointer: '#/weightVar/semibold/$value' }]
   - resolutionPath: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/weightVar/semibold' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/catalog.json', pointer: '#/weightVar/semibold' }]
 
-### duration (1 change: 1 changed)
+### duration (2 changes: 1 removed · 1 added)
 
-#### motion (1 change: 1 changed)
-##### Changed (1)
-- ~ `#/motion/btn` — Metadata updated (_non-breaking_)
-  - Impact: Non-breaking update: confirm expected outcomes and visuals.
-  - Next: Spot-check #/motion/btn in consuming products.
-  - references: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/motion/btn/$value' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/catalog.json', pointer: '#/motion/btn/$value' }]
-  - resolutionPath: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/motion/btn' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/catalog.json', pointer: '#/motion/btn' }]
+#### durations (1 change: 1 added)
+##### Added (1)
+- + `#/durations/btn` = { durationType: 'css.transition-duration', unit: 'ms', value: 120 } (_non-breaking_)
+  - Impact: Non-breaking addition: publicise availability to adopters.
+  - Next: Plan adoption for #/durations/btn across consuming teams.
+
+#### motion (1 change: 1 removed)
+##### Removed (1)
+- - `#/motion/btn` (was { durationType: 'css.transition-duration', unit: 'ms', value: 120 }) (**breaking**)
+  - Impact: Breaking removal: existing references will fail.
+  - Next: Audit consumers of #/motion/btn and migrate to replacements.
 
 ### fontweight (1 change: 1 changed)
 

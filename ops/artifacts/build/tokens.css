@@ -9,10 +9,10 @@
   --catalog-cmp-btn-bg-hover: oklch(0.4409 0.1339 254.3327);
   --catalog-cmp-btn-fg: oklch(1.0000 0.0000 89.8756);
   --catalog-cmp-btn-pad: 16px;
-  --catalog-space-lg: 24px;
-  --catalog-space-md: 16px;
+  --catalog-spacing-lg: 24px;
+  --catalog-spacing-md: 16px;
   --foundations-clr-bg: oklch(1.0000 0.0000 89.8756);
   --foundations-clr-brand: oklch(0.4782 0.1470 254.5941);
-  --foundations-space-lg: 24px;
-  --foundations-space-md: 16px;
+  --foundations-spacing-lg: 24px;
+  --foundations-spacing-md: 16px;
 }

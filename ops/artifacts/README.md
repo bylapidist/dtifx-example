@@ -1,6 +1,6 @@
 # Artefact Storage
 
-- `build/` – outputs from `npm run dtif:build` (registry JSON, manifest, CSS variables, telemetry).
-- `diff/` – baseline registry (`baseline.json`) and latest diff reports (`report.json`, `report.md`) produced by `npm run dtif:diff`.
-- `validate/` – validation logs emitted by `dtif validate` when requested.
-- `audit/` – governance reports from `npm run dtif:audit`.
+- `build/` – DTIF build outputs from `npm run dtif:build` (registry.json, tokens.json, tokens.css, telemetry.json).
+- `diff/` – Baseline snapshot and comparison reports created by `npm run dtif:diff`.
+- `audit/` – Governance evidence (report.json, report.md) written by `npm run dtif:audit`.
+- `validate/` – Optional logs saved from `npm run dtif:validate` when CLI output needs to be committed.

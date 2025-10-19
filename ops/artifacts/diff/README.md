@@ -1,5 +1,5 @@
 # Diff Reports
 
-- `baseline.dtif.json` stores the approved DTIF bundle snapshot.
-- `report.json` and `report.md` hold the latest diff output from `npm run dtif:diff` comparing the baseline to the current bundle.
-- Update the baseline intentionally after reviewing diff results and documenting approval in the related pull request.
+- `baseline.dtif.json` stores the approved bundle snapshot used by `npm run dtif:diff`.
+- `report.json` and `report.md` record the latest comparison between the baseline and `tokens/index.dtif.json`.
+- After approving changes, replace the baseline with the new build output and regenerate the reports so history stays accurate.

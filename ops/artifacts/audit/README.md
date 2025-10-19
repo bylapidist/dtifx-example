@@ -1,4 +1,4 @@
 # Audit Reports
 
-- `report.json` and `report.md` capture the latest results from `npm run dtif:audit`, which shells out to the DTIF CLI and filters runtime logs before writing commit-ready evidence.
-- Replace the files after each audit run so reviewers always see the most recent governance evidence.
+- `npm run dtif:audit` invokes the DTIF CLI with `audit/dtif-audit.config.mjs` and writes `report.json` and `report.md` to this folder.
+- Regenerate and commit both files alongside token updates so reviewers can confirm the current governance status.

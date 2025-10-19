@@ -1,4 +1,4 @@
 # Validation Logs
 
-- Capture CLI validation output here when running `npm run dtif:validate` with reporting enabled.
-- Files can be rotated as needed; commit the most relevant report alongside token changes.
+- Run `npm run dtif:validate` to confirm the DTIF documents before committing.
+- Store any CLI output that requires review in this folder and remove stale reports once the related changes land.

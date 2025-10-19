@@ -136,9 +136,9 @@
       "$type": "dimension",
       "$description": "Semibold weight exposed as a unitless CSS variable.",
       "$value": {
-        "dimensionType": "length",
+        "dimensionType": "custom",
         "value": 600,
-        "unit": "unitless"
+        "unit": "scalar.unitless"
       },
       "$extensions": {
         "lapidist.governance": {
@@ -186,9 +186,9 @@
       "$type": "dimension",
       "$description": "Primary button transition duration exposed for CSS usage.",
       "$value": {
-        "dimensionType": "length",
+        "dimensionType": "custom",
         "value": 120,
-        "unit": "ms"
+        "unit": "duration.ms"
       },
       "$extensions": {
         "lapidist.governance": {

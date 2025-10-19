@@ -12,7 +12,7 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier . --check",
     "format:write": "prettier . --write",
-    "design-lint": "design-lint validate --config design-lint.config.cjs",
+    "design-lint": "design-lint lint tokens/index.dtif.json --config design-lint.config.cjs",
     "dtif:validate": "dtifx build validate --config build/dtif-build.config.mjs",
     "dtif:build": "dtifx build generate --config build/dtif-build.config.mjs",
     "dtif:diff": "dtifx diff compare ops/artifacts/diff/baseline.dtif.json tokens/index.dtif.json --format json --output ops/artifacts/diff/report.json && dtifx diff compare ops/artifacts/diff/baseline.dtif.json tokens/index.dtif.json --format markdown --output ops/artifacts/diff/report.md",

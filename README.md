@@ -14,7 +14,7 @@ This repository demonstrates a streamlined, production-ready DTIFx Toolkit setup
 4. Execute `npm run dtif:build` to generate CSS and JSON outputs under `ops/artifacts/build/`.
 5. Capture or refresh the baseline registry with `npm run dtif:diff` after reviewing the generated build output.
 6. Evaluate governance policies using `npm run dtif:audit`; the helper script shells out to the DTIF CLI, filters runtime logs, and writes JSON/Markdown reports into `ops/artifacts/audit/`.
-7. Run `npm run verify` to execute ESLint and the `design-lint validate` check in one step, ensuring the configuration and tokens remain compliant.
+7. Run `npm run verify` to execute ESLint and the `design-lint lint` pass in one step, ensuring the configuration and tokens remain compliant.
 
 Refer to the DTIFx documentation at https://dtifx.lapidist.net/ and the design-lint guidance at https://design-lint.lapidist.net/ for full CLI usage details.
 

@@ -3,14 +3,14 @@
 ## Executive summary
 - Recommended version bump: **Patch**
 - Compared: ops/artifacts/diff/baseline.dtif.json → tokens/index.dtif.json
-- Started: 2025-10-19 07:14 UTC
-- Duration: 572ms
+- Started: 2025-10-19 07:28 UTC
+- Duration: 547ms
 - Impact: 0 breaking · 8 non-breaking
 - Changes: 0 added · 8 changed · 0 removed · 0 renamed
 - Tokens analysed: 8 previous → 8 next
 - Change mix: 0 value changes, 8 metadata changes
 - Type hotspots: color (5 changes, 5 non-breaking), dimension (3 changes, 3 non-breaking)
-- Group hotspots: component (4 changes, 4 non-breaking), component/button (4 changes, 4 non-breaking), color (2 changes, 2 non-breaking), dimension (2 changes, 2 non-breaking)
+- Group hotspots: component (4 changes, 4 non-breaking), component/button (4 changes, 4 non-breaking), color (2 changes, 2 non-breaking), spacing (2 changes, 2 non-breaking)
 
 ### Type breakdown
 | Type | Previous | Next | Added | Removed | Renamed | Changed | Value changes | Metadata changes | Unchanged | Breaking | Non-breaking |
@@ -24,8 +24,7 @@
 | color | 2 | 2 | 0 | 0 | 0 | 2 | 0 | 2 | 0 | 0 | 2 |
 | component | 4 | 4 | 0 | 0 | 0 | 4 | 0 | 4 | 0 | 0 | 4 |
 | component/button | 4 | 4 | 0 | 0 | 0 | 4 | 0 | 4 | 0 | 0 | 4 |
-| dimension | 2 | 2 | 0 | 0 | 0 | 2 | 0 | 2 | 0 | 0 | 2 |
-| dimension/spacing | 2 | 2 | 0 | 0 | 0 | 2 | 0 | 2 | 0 | 0 | 2 |
+| spacing | 2 | 2 | 0 | 0 | 0 | 2 | 0 | 2 | 0 | 0 | 2 |
 
 ## Grouped detail
 
@@ -72,18 +71,18 @@
   - references: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/component/button/padding/$value' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/index.dtif.json', pointer: '#/component/button/padding/$value' }]
   - resolutionPath: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/component/button/padding' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/index.dtif.json', pointer: '#/component/button/padding' }]
 
-#### dimension/spacing (2 changes: 2 changed)
+#### spacing (2 changes: 2 changed)
 ##### Changed (2)
-- ~ `#/dimension/spacing/md` — Metadata updated (_non-breaking_)
+- ~ `#/spacing/md` — Metadata updated (_non-breaking_)
   - Impact: Non-breaking update: confirm expected outcomes and visuals.
-  - Next: Spot-check #/dimension/spacing/md in consuming products.
-  - references: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/dimension/spacing/md/$value' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/index.dtif.json', pointer: '#/dimension/spacing/md/$value' }]
-  - resolutionPath: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/dimension/spacing/md' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/index.dtif.json', pointer: '#/dimension/spacing/md' }]
-- ~ `#/dimension/spacing/lg` — Metadata updated (_non-breaking_)
+  - Next: Spot-check #/spacing/md in consuming products.
+  - references: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/spacing/md/$value' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/index.dtif.json', pointer: '#/spacing/md/$value' }]
+  - resolutionPath: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/spacing/md' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/index.dtif.json', pointer: '#/spacing/md' }]
+- ~ `#/spacing/lg` — Metadata updated (_non-breaking_)
   - Impact: Non-breaking update: confirm expected outcomes and visuals.
-  - Next: Spot-check #/dimension/spacing/lg in consuming products.
-  - references: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/dimension/spacing/lg/$value' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/index.dtif.json', pointer: '#/dimension/spacing/lg/$value' }]
-  - resolutionPath: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/dimension/spacing/lg' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/index.dtif.json', pointer: '#/dimension/spacing/lg' }]
+  - Next: Spot-check #/spacing/lg in consuming products.
+  - references: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/spacing/lg/$value' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/index.dtif.json', pointer: '#/spacing/lg/$value' }]
+  - resolutionPath: [{ uri: 'file:///workspace/dtifx-example/ops/artifacts/diff/baseline.dtif.json', pointer: '#/spacing/lg' }] → [{ uri: 'file:///workspace/dtifx-example/tokens/index.dtif.json', pointer: '#/spacing/lg' }]
 
 ## Hints
 - Use `--verbose` or `--mode detailed` for full token metadata and links.

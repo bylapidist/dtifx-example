@@ -19,14 +19,14 @@
     }
   ],
   "timings": {
-    "planMs": 8.00278800000001,
+    "planMs": 14.298069000000055,
     "parseMs": 0,
     "resolveMs": 0,
     "transformMs": 0,
     "formatMs": 0,
     "dependencyMs": 0,
-    "totalMs": 8.00278800000001,
-    "auditMs": 7.178269999999884,
-    "totalWithAuditMs": 15.181057999999894
+    "totalMs": 14.298069000000055,
+    "auditMs": 6.6065940000000865,
+    "totalWithAuditMs": 20.90466300000014
   }
 }

@@ -49,48 +49,45 @@
       }
     }
   },
-  "dimension": {
+  "spacing": {
     "$description": "Spacing scale tokens",
-    "spacing": {
-      "$description": "Core spacing ramp",
-      "md": {
-        "$type": "dimension",
-        "$description": "Default medium spacing unit for layout and component padding.",
-        "$value": {
-          "dimensionType": "length",
-          "value": 16,
-          "unit": "px"
-        },
-        "$extensions": {
-          "lapidist.governance": {
-            "owner": "Design Foundations Guild",
-            "reviewCadence": "quarterly",
-            "sla": "5 business days"
-          },
-          "lapidist.accessibility": {
-            "touchTarget": "Ensures minimum primary control padding",
-            "usage": ["spacing.md", "button.primary.padding"]
-          }
-        }
+    "md": {
+      "$type": "dimension",
+      "$description": "Default medium spacing unit for layout and component padding.",
+      "$value": {
+        "dimensionType": "length",
+        "value": 16,
+        "unit": "px"
       },
-      "lg": {
-        "$type": "dimension",
-        "$description": "Large spacing unit for generous component padding.",
-        "$value": {
-          "dimensionType": "length",
-          "value": 24,
-          "unit": "px"
+      "$extensions": {
+        "lapidist.governance": {
+          "owner": "Design Foundations Guild",
+          "reviewCadence": "quarterly",
+          "sla": "5 business days"
         },
-        "$extensions": {
-          "lapidist.governance": {
-            "owner": "Design Foundations Guild",
-            "reviewCadence": "quarterly",
-            "sla": "5 business days"
-          },
-          "lapidist.accessibility": {
-            "touchTarget": "Supports elevated hit area targets for large components",
-            "usage": ["spacing.lg", "button.primary.padding"]
-          }
+        "lapidist.accessibility": {
+          "touchTarget": "Ensures minimum primary control padding",
+          "usage": ["spacing.md", "button.primary.padding"]
+        }
+      }
+    },
+    "lg": {
+      "$type": "dimension",
+      "$description": "Large spacing unit for generous component padding.",
+      "$value": {
+        "dimensionType": "length",
+        "value": 24,
+        "unit": "px"
+      },
+      "$extensions": {
+        "lapidist.governance": {
+          "owner": "Design Foundations Guild",
+          "reviewCadence": "quarterly",
+          "sla": "5 business days"
+        },
+        "lapidist.accessibility": {
+          "touchTarget": "Supports elevated hit area targets for large components",
+          "usage": ["spacing.lg", "button.primary.padding"]
         }
       }
     }

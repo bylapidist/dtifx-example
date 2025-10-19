@@ -5,6 +5,6 @@
   --tokens-index-dtif-json-component-button-background-hover: oklch(0.4409 0.1339 254.3327);
   --tokens-index-dtif-json-component-button-padding: 16px;
   --tokens-index-dtif-json-component-button-text: oklch(1.0000 0.0000 89.8756);
-  --tokens-index-dtif-json-dimension-spacing-lg: 24px;
-  --tokens-index-dtif-json-dimension-spacing-md: 16px;
+  --tokens-index-dtif-json-spacing-lg: 24px;
+  --tokens-index-dtif-json-spacing-md: 16px;
 }

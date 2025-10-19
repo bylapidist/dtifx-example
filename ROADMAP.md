@@ -28,7 +28,7 @@
    - Author the consolidated bundle in `tokens/index.dtif.json` with valid metadata and governance annotations aligned to the DTIF specification.
    - Capture component styling and theme overrides inside the same document so a single artifact represents the current design contract.
 2. **Enforce authoring quality**
-   - Run `npm run design-lint` to validate the configuration and tokens with the design-lint CLI, keeping the minimal rule set aligned with the DTIF authoring model.
+   - Run `npm run design-lint` to lint the DTIF bundle with the design-lint CLI, keeping the minimal rule set aligned with the DTIF authoring model.
    - Use `npm run dtif:validate` to confirm schema compliance before committing updates; capture validation logs under `ops/artifacts/validate/`.
 
 ## Phase 2 – Build Pipeline

@@ -24,7 +24,7 @@
     "react-dom": "19.2.0"
   },
   "devDependencies": {
-    "@dtifx/audit": "2.0.0",
+    "@dtifx/audit": "3.0.0",
     "@dtifx/build": "2.0.0",
     "@dtifx/cli": "2.0.0",
     "@dtifx/diff": "2.0.0",

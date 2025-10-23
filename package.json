@@ -4,7 +4,7 @@
   "private": true,
   "description": "Minimal production-ready DTIFx stack example",
   "engines": {
-    "node": "^22.20.0",
+    "node": "^22.21.0",
     "npm": ">=10"
   },
   "scripts": {
@@ -24,10 +24,10 @@
     "react-dom": "19.2.0"
   },
   "devDependencies": {
-    "@dtifx/audit": "2.0.0",
-    "@dtifx/build": "2.0.0",
-    "@dtifx/cli": "2.0.0",
-    "@dtifx/diff": "2.0.0",
+    "@dtifx/audit": "3.0.0",
+    "@dtifx/build": "3.0.0",
+    "@dtifx/cli": "3.0.0",
+    "@dtifx/diff": "3.0.0",
     "@eslint/js": "9.38.0",
     "@lapidist/design-lint": "6.0.5",
     "ajv": "^8.17.1",

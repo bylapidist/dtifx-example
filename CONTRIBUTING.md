@@ -9,7 +9,7 @@
 
 ## Development environment
 
-- Use Node.js 22.20.0 (see `.nvmrc`) and npm 10 or later.
+- Use Node.js 22.21.0 (see `.nvmrc`) and npm 10 or later.
 - The DTIFx CLI is installed locally via `npm install`; use the provided npm scripts instead of global commands.
 - Reference the official documentation at https://dtifx.lapidist.net/ and https://design-lint.lapidist.net/ if you encounter CLI-specific issues.
 

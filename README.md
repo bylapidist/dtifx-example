@@ -11,7 +11,7 @@ This repository demonstrates a canonical, production-ready setup of the DTIFx To
 
 ## Prerequisites
 
-1. Install Node.js 22.20.0 (`nvm use`).
+1. Install Node.js 22.21.0 (`nvm use`).
 2. Run `npm install` to fetch the DTIFx CLI, design-lint, and linting dependencies.
 
 ## Quick start
@@ -113,7 +113,7 @@ For a deeper walkthrough of the artefact structure, read [`ops/artifacts/README.
 
 ## Continuous integration
 
-- GitHub Actions workflow `.github/workflows/ci.yml` installs dependencies with `npm ci` on Node.js 22.20.0 and runs `npm run verify`, `npm run dtif:validate`, `npm run dtif:build`, `npm run dtif:diff`, and `npm run dtif:audit` on every push and pull request.
+- GitHub Actions workflow `.github/workflows/ci.yml` installs dependencies with `npm ci` on Node.js 22.21.0 and runs `npm run verify`, `npm run dtif:validate`, `npm run dtif:build`, `npm run dtif:diff`, and `npm run dtif:audit` on every push and pull request.
 
 ## Reference documentation
 

@@ -8,6 +8,13 @@
       "automerge": true,
       "automergeType": "pr",
       "platformAutomerge": true
+    },
+    {
+      "groupName": "dtifx stack",
+      "groupSlug": "dtifx-stack",
+      "matchPackagePatterns": ["^@dtifx/"],
+      "matchManagers": ["npm"],
+      "matchDepTypes": ["dependencies", "devDependencies"]
     }
   ]
 }

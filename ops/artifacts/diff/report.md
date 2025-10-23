@@ -3,8 +3,8 @@
 ## Executive summary
 - Recommended version bump: **Major**
 - Compared: ops/artifacts/diff/baseline.dtif.json → tokens/catalog.json
-- Started: 2025-10-19 16:40 UTC
-- Duration: 445ms
+- Started: 2025-10-23 19:23 UTC
+- Duration: 650ms
 - Impact: 4 breaking · 12 non-breaking
 - Changes: 4 added · 8 changed · 4 removed · 0 renamed
 - Tokens analysed: 12 previous → 12 next

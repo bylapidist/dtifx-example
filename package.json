@@ -15,7 +15,7 @@
     "design-lint": "design-lint lint \"src/**/*.{css,js,jsx,ts,tsx}\" --config design-lint.config.cjs",
     "dtif:validate": "dtifx build validate --config build/dtif-build.config.mjs",
     "dtif:build": "dtifx build generate --config build/dtif-build.config.mjs",
-    "dtif:diff": "dtifx diff compare ops/artifacts/diff/baseline.dtif.json tokens/catalog.json --format json --output ops/artifacts/diff/report.json && dtifx diff compare ops/artifacts/diff/baseline.dtif.json tokens/catalog.json --format markdown --output ops/artifacts/diff/report.md",
+    "dtif:diff": "dtifx diff compare ops/artifacts/diff/baseline.dtif.json tokens/catalog.json --format json --output ops/artifacts/diff/report.json && dtifx diff compare ops/artifacts/diff/baseline.dtif.json tokens/catalog.json",
     "dtif:audit": "dtifx audit run --config audit/dtif-audit.config.mjs --reporter json --reporter markdown --out-dir ops/artifacts/audit",
     "verify": "npm run lint && npm run design-lint"
   },

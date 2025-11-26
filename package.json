@@ -24,10 +24,10 @@
     "react-dom": "19.2.0"
   },
   "devDependencies": {
-    "@dtifx/audit": "4.1.5",
-    "@dtifx/build": "4.1.5",
-    "@dtifx/cli": "4.1.5",
-    "@dtifx/diff": "4.1.5",
+    "@dtifx/audit": "4.1.6",
+    "@dtifx/build": "4.1.6",
+    "@dtifx/cli": "4.1.6",
+    "@dtifx/diff": "4.1.6",
     "@eslint/js": "9.39.1",
     "@lapidist/design-lint": "6.0.6",
     "ajv": "^8.17.1",

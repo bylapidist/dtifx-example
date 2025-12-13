@@ -28,10 +28,10 @@
     "@dtifx/build": "4.1.6",
     "@dtifx/cli": "4.1.6",
     "@dtifx/diff": "4.1.6",
-    "@eslint/js": "9.39.1",
+    "@eslint/js": "9.39.2",
     "@lapidist/design-lint": "6.0.6",
     "ajv": "^8.17.1",
-    "eslint": "9.39.1",
+    "eslint": "9.39.2",
     "prettier": "3.7.4"
   },
   "type": "module"

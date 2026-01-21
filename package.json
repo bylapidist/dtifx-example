@@ -32,7 +32,7 @@
     "@lapidist/design-lint": "6.0.7",
     "ajv": "^8.17.1",
     "eslint": "9.39.2",
-    "prettier": "3.8.0"
+    "prettier": "3.8.1"
   },
   "type": "module"
 }

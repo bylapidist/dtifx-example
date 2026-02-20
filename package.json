@@ -31,7 +31,7 @@
     "@eslint/js": "10.0.1",
     "@lapidist/design-lint": "6.0.8",
     "ajv": "^8.17.1",
-    "eslint": "10.0.0",
+    "eslint": "10.0.1",
     "prettier": "3.8.1"
   },
   "type": "module"

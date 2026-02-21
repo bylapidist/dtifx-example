@@ -29,7 +29,7 @@
     "@dtifx/cli": "4.1.6",
     "@dtifx/diff": "4.1.6",
     "@eslint/js": "10.0.1",
-    "@lapidist/design-lint": "6.0.8",
+    "@lapidist/design-lint": "6.1.0",
     "ajv": "^8.17.1",
     "eslint": "10.0.1",
     "prettier": "3.8.1"

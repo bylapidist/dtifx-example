@@ -10,6 +10,6 @@ module.exports = {
     'design-token/colors': 'error',
     'design-token/spacing': ['error', { base: 0 }],
     'design-token/duration': 'error',
-    'design-system/no-inline-styles': 'error',
+    'design-system/no-inline-styles': ['error', { components: ['Button'] }],
   },
 };

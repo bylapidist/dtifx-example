@@ -1,11 +1,11 @@
 {
   "reportSchemaVersion": 3,
-  "generatedAt": "2026-02-23T23:43:51.873Z",
+  "generatedAt": "2026-02-23T23:48:21.831Z",
   "run": {
     "previous": "ops/artifacts/diff/baseline.dtif.json",
     "next": "tokens/catalog.json",
-    "startedAt": "2026-02-23T23:43:51.714Z",
-    "durationMs": 157.283125
+    "startedAt": "2026-02-23T23:48:21.630Z",
+    "durationMs": 199.78025
   },
   "summary": {
     "totalPrevious": 12,

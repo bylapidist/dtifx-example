@@ -26,7 +26,7 @@ This repository demonstrates a canonical, production-ready setup of the DTIFx To
 
 ## Core commands
 
-- `dtifx build validate --config build/dtif-build.config.mjs` (surfaced via `npm run dtif:validate`): Ensures all DTIF sources compile.
+- `dtifx build validate --config build/dtif-validate.config.mjs` (surfaced via `npm run dtif:validate`): Ensures all DTIF sources compile, including theme override validation against catalog token targets.
 - `dtifx build generate --config build/dtif-build.config.mjs` (surfaced via `npm run dtif:build`): Refreshes `ops/artifacts/build/tokens.{css,json}` as defined by the config.
 - `dtifx diff compare ops/artifacts/diff/baseline.dtif.json tokens/catalog.json --format json --output ops/artifacts/diff/report.json` followed by `dtifx diff compare ops/artifacts/diff/baseline.dtif.json tokens/catalog.json` (surfaced via `npm run dtif:diff`): Produces JSON evidence, normalizes JSON source URIs to `file:///workspace/dtifx-example`, and streams the console diff reporter so reviewers can inspect changes without relying on Markdown artefacts.
 - `dtifx audit run --reporter json --reporter markdown --config audit/dtif-audit.config.mjs --out-dir ops/artifacts/audit` (surfaced via `npm run dtif:audit`): Evaluates governance policies and commits JSON/Markdown evidence.
@@ -103,7 +103,7 @@ After each workflow, review the committed evidence in `ops/artifacts/` to compar
 | Command | Evidence location | What to inspect |
 | --- | --- | --- |
 | `npm run verify` | Terminal output (ESLint summary followed by design-lint) | Confirm ESLint reports no errors and design-lint flags zero token violations, aligning with the [design-lint documentation](https://github.com/bylapidist/design-lint) and repo gating rules. |
-| `dtifx build validate --config build/dtif-build.config.mjs` / `npm run dtif:validate` | Terminal output (`ops/artifacts/validate/` when logs are captured) | Ensure the validator exits successfully and note any compiler warnings before merging (see the [validation docs](https://github.com/bylapidist/dtifx/blob/main/docs/build/index.md)). |
+| `dtifx build validate --config build/dtif-validate.config.mjs` / `npm run dtif:validate` | Terminal output (`ops/artifacts/validate/` when logs are captured) | Ensure the validator exits successfully and note any compiler warnings before merging (see the [validation docs](https://github.com/bylapidist/dtifx/blob/main/docs/build/index.md)). |
 | `dtifx build generate --config build/dtif-build.config.mjs` / `npm run dtif:build` | `ops/artifacts/build/tokens.css`, `tokens.json` | Verify the regenerated CSS and JSON token bundles align with the source DTIF documents per the [build outputs guide](https://github.com/bylapidist/dtifx/blob/main/docs/build/index.md). |
 | `dtifx diff compare ... --format json --output ops/artifacts/diff/report.json` / `npm run dtif:diff` | `ops/artifacts/diff/report.json` plus console output | Review breaking or additive changes highlighted by the console reporter according to the [diff handbook](https://github.com/bylapidist/dtifx/blob/main/docs/diff/index.md), and confirm JSON `uri` fields remain normalized to `file:///workspace/dtifx-example` before committing. |
 | `dtifx audit run --reporter json --reporter markdown --config audit/dtif-audit.config.mjs --out-dir ops/artifacts/audit` / `npm run dtif:audit` | `ops/artifacts/audit/report.json`, `report.md` | Check pass/fail status for each policy and investigate findings via the [audit command docs](https://github.com/bylapidist/dtifx/blob/main/docs/audit/index.md). |

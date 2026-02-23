@@ -15,7 +15,8 @@ const catalogDocument = readJson('catalog.json');
 const darkThemeDocument = readJson('themes/dark.json');
 const lightThemeDocument = readJson('themes/light.json');
 
-const { $overrides: _catalogOverrides, ...catalogWithoutOverrides } = catalogDocument;
+const catalogWithoutOverrides = { ...catalogDocument };
+delete catalogWithoutOverrides.$overrides;
 
 function buildThemeValidationDocument(themeDocument, description) {
   return {

@@ -1,11 +1,11 @@
 {
   "reportSchemaVersion": 3,
-  "generatedAt": "2026-02-22T16:26:23.949Z",
+  "generatedAt": "2026-02-23T23:00:55.680Z",
   "run": {
     "previous": "ops/artifacts/diff/baseline.dtif.json",
     "next": "tokens/catalog.json",
-    "startedAt": "2026-02-22T16:26:23.776Z",
-    "durationMs": 170.942292
+    "startedAt": "2026-02-23T23:00:55.521Z",
+    "durationMs": 157.96675
   },
   "summary": {
     "totalPrevious": 12,
@@ -424,118 +424,6 @@
   "changes": [
     {
       "kind": "added",
-      "token": "#/spacing/md",
-      "next": {
-        "id": "#/spacing/md",
-        "path": [
-          "spacing",
-          "md"
-        ],
-        "extensions": {
-          "lapidist.governance": {
-            "owner": "Design Foundations Guild",
-            "reviewCadence": "quarterly",
-            "sla": "5 business days"
-          },
-          "lapidist.accessibility": {
-            "touchTarget": "Ensures minimum primary control padding",
-            "usage": [
-              "spacing.md",
-              "btn.primary.pad"
-            ]
-          }
-        },
-        "source": {
-          "uri": "file:///workspace/dtifx-example/tokens/catalog.json",
-          "line": 289,
-          "column": 11
-        },
-        "references": [
-          {
-            "pointer": "#/spacing/md/$value",
-            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
-          }
-        ],
-        "resolutionPath": [
-          {
-            "pointer": "#/spacing/md",
-            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
-          }
-        ],
-        "appliedAliases": [],
-        "type": "dimension",
-        "value": {
-          "dimensionType": "length",
-          "value": 16,
-          "unit": "px"
-        },
-        "raw": {
-          "dimensionType": "length",
-          "value": 16,
-          "unit": "px"
-        },
-        "description": "Default medium spacing unit for layout and component padding."
-      },
-      "impact": "non-breaking"
-    },
-    {
-      "kind": "added",
-      "token": "#/spacing/lg",
-      "next": {
-        "id": "#/spacing/lg",
-        "path": [
-          "spacing",
-          "lg"
-        ],
-        "extensions": {
-          "lapidist.governance": {
-            "owner": "Design Foundations Guild",
-            "reviewCadence": "quarterly",
-            "sla": "5 business days"
-          },
-          "lapidist.accessibility": {
-            "touchTarget": "Supports elevated hit area targets for large components",
-            "usage": [
-              "spacing.lg",
-              "btn.primary.pad"
-            ]
-          }
-        },
-        "source": {
-          "uri": "file:///workspace/dtifx-example/tokens/catalog.json",
-          "line": 312,
-          "column": 11
-        },
-        "references": [
-          {
-            "pointer": "#/spacing/lg/$value",
-            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
-          }
-        ],
-        "resolutionPath": [
-          {
-            "pointer": "#/spacing/lg",
-            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
-          }
-        ],
-        "appliedAliases": [],
-        "type": "dimension",
-        "value": {
-          "dimensionType": "length",
-          "value": 24,
-          "unit": "px"
-        },
-        "raw": {
-          "dimensionType": "length",
-          "value": 24,
-          "unit": "px"
-        },
-        "description": "Large spacing unit for generous component padding."
-      },
-      "impact": "non-breaking"
-    },
-    {
-      "kind": "added",
       "token": "#/durations/btn",
       "next": {
         "id": "#/durations/btn",
@@ -558,7 +446,7 @@
         },
         "source": {
           "uri": "file:///workspace/dtifx-example/tokens/catalog.json",
-          "line": 338,
+          "line": 183,
           "column": 12
         },
         "references": [
@@ -613,7 +501,7 @@
         },
         "source": {
           "uri": "file:///workspace/dtifx-example/tokens/catalog.json",
-          "line": 363,
+          "line": 208,
           "column": 12
         },
         "references": [
@@ -641,6 +529,118 @@
           "unit": "duration.ms"
         },
         "description": "Primary button transition duration exposed for CSS usage."
+      },
+      "impact": "non-breaking"
+    },
+    {
+      "kind": "added",
+      "token": "#/spacing/lg",
+      "next": {
+        "id": "#/spacing/lg",
+        "path": [
+          "spacing",
+          "lg"
+        ],
+        "extensions": {
+          "lapidist.governance": {
+            "owner": "Design Foundations Guild",
+            "reviewCadence": "quarterly",
+            "sla": "5 business days"
+          },
+          "lapidist.accessibility": {
+            "touchTarget": "Supports elevated hit area targets for large components",
+            "usage": [
+              "spacing.lg",
+              "btn.primary.pad"
+            ]
+          }
+        },
+        "source": {
+          "uri": "file:///workspace/dtifx-example/tokens/catalog.json",
+          "line": 293,
+          "column": 11
+        },
+        "references": [
+          {
+            "pointer": "#/spacing/lg/$value",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
+          }
+        ],
+        "resolutionPath": [
+          {
+            "pointer": "#/spacing/lg",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
+          }
+        ],
+        "appliedAliases": [],
+        "type": "dimension",
+        "value": {
+          "dimensionType": "length",
+          "value": 24,
+          "unit": "px"
+        },
+        "raw": {
+          "dimensionType": "length",
+          "value": 24,
+          "unit": "px"
+        },
+        "description": "Large spacing unit for generous component padding."
+      },
+      "impact": "non-breaking"
+    },
+    {
+      "kind": "added",
+      "token": "#/spacing/md",
+      "next": {
+        "id": "#/spacing/md",
+        "path": [
+          "spacing",
+          "md"
+        ],
+        "extensions": {
+          "lapidist.governance": {
+            "owner": "Design Foundations Guild",
+            "reviewCadence": "quarterly",
+            "sla": "5 business days"
+          },
+          "lapidist.accessibility": {
+            "touchTarget": "Ensures minimum primary control padding",
+            "usage": [
+              "spacing.md",
+              "btn.primary.pad"
+            ]
+          }
+        },
+        "source": {
+          "uri": "file:///workspace/dtifx-example/tokens/catalog.json",
+          "line": 316,
+          "column": 11
+        },
+        "references": [
+          {
+            "pointer": "#/spacing/md/$value",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
+          }
+        ],
+        "resolutionPath": [
+          {
+            "pointer": "#/spacing/md",
+            "uri": "file:///workspace/dtifx-example/tokens/catalog.json"
+          }
+        ],
+        "appliedAliases": [],
+        "type": "dimension",
+        "value": {
+          "dimensionType": "length",
+          "value": 16,
+          "unit": "px"
+        },
+        "raw": {
+          "dimensionType": "length",
+          "value": 16,
+          "unit": "px"
+        },
+        "description": "Default medium spacing unit for layout and component padding."
       },
       "impact": "non-breaking"
     },
@@ -952,7 +952,7 @@
         },
         "source": {
           "uri": "file:///workspace/dtifx-example/tokens/catalog.json",
-          "line": 17,
+          "line": 46,
           "column": 14
         },
         "references": [
@@ -1081,7 +1081,7 @@
         },
         "source": {
           "uri": "file:///workspace/dtifx-example/tokens/catalog.json",
-          "line": 43,
+          "line": 17,
           "column": 11
         },
         "references": [
@@ -1188,7 +1188,7 @@
         },
         "source": {
           "uri": "file:///workspace/dtifx-example/tokens/catalog.json",
-          "line": 75,
+          "line": 342,
           "column": 17
         },
         "references": [
@@ -1289,7 +1289,7 @@
         },
         "source": {
           "uri": "file:///workspace/dtifx-example/tokens/catalog.json",
-          "line": 96,
+          "line": 363,
           "column": 17
         },
         "references": [
@@ -1406,7 +1406,7 @@
         },
         "source": {
           "uri": "file:///workspace/dtifx-example/tokens/catalog.json",
-          "line": 128,
+          "line": 82,
           "column": 13
         },
         "references": [
@@ -1529,7 +1529,7 @@
         },
         "source": {
           "uri": "file:///workspace/dtifx-example/tokens/catalog.json",
-          "line": 153,
+          "line": 107,
           "column": 19
         },
         "references": [
@@ -1652,7 +1652,7 @@
         },
         "source": {
           "uri": "file:///workspace/dtifx-example/tokens/catalog.json",
-          "line": 178,
+          "line": 132,
           "column": 13
         },
         "references": [
@@ -1769,7 +1769,7 @@
         },
         "source": {
           "uri": "file:///workspace/dtifx-example/tokens/catalog.json",
-          "line": 203,
+          "line": 157,
           "column": 14
         },
         "references": [

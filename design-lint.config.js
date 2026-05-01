@@ -1,10 +1,8 @@
-const tokens = require('./tokens/catalog.json');
-
-module.exports = {
+export default {
   patterns: ['src/**/*.{css,js,jsx,ts,tsx}'],
   ignoreFiles: ['ops/artifacts/**'],
   tokens: {
-    default: tokens,
+    default: './tokens/catalog.json',
   },
   rules: {
     'design-token/colors': 'error',

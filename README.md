@@ -7,33 +7,39 @@ This repository demonstrates a canonical, production-ready setup of the DTIFx To
 - Tokens: `tokens/` stores the DTIF documents (`foundations.json`, `components/*.json`, `themes/*.json`, `catalog.json`) that feed the CLI.
 - Sample UI usage: `src/components/` contains a React example and stylesheet checked by design-lint to illustrate consuming the generated tokens.
 - Artefacts: `ops/artifacts/` captures outputs from DTIF build, diff, audit, and validation commands committed for review (see [`ops/artifacts/README.md`](ops/artifacts/README.md)).
-- Tooling config: `build/`, `audit/`, `design-lint.config.cjs`, and `eslint.config.js` configure the official CLI workflows without custom wrappers.
+- Tooling config: `build/`, `audit/`, `design-lint.config.js`, and `eslint.config.js` configure the official CLI workflows without custom wrappers.
 
 ## Prerequisites
 
-1. Install Node.js 24.13.1 (`nvm use`).
-2. Run `npm install` to fetch the DTIFx CLI, design-lint, and linting dependencies.
+1. Install Node.js 24 (`nvm use`).
+2. Install [pnpm](https://pnpm.io) ≥ 10.
+3. Run `pnpm install` to fetch the DTIFx CLI, design-lint, and linting dependencies.
 
 ## Quick start
 
-1. Clone the repository and install dependencies: `git clone https://github.com/bylapidist/dtifx-example.git && cd dtifx-example && npm install` (see the [DTIFx setup overview](https://github.com/bylapidist/dtifx/blob/main/docs/overview/index.md)).
-2. Run `npm run verify` to execute ESLint followed by design-lint; expect both tools to exit cleanly, mirroring the default gate enforced in [`CONTRIBUTING.md`](CONTRIBUTING.md).
-3. Validate the DTIF catalogue with `npm run dtif:validate`; expect `dtifx build validate` to finish without errors, and when you need persistent evidence capture the CLI output under `ops/artifacts/validate/` as described in [`ops/artifacts/validate/README.md`](ops/artifacts/validate/README.md) and the [CLI validation guide](https://github.com/bylapidist/dtifx/blob/main/docs/build/index.md).
-4. Generate token outputs with `dtifx build generate --config build/dtif-build.config.mjs` (the command behind `npm run dtif:build`); the CLI writes `tokens.css` and `tokens.json` to `ops/artifacts/build/` for review alongside the [DTIF build reference](https://github.com/bylapidist/dtifx/blob/main/docs/build/index.md).
-5. Run `dtifx diff compare ops/artifacts/diff/baseline.dtif.json tokens/catalog.json --format json --output ops/artifacts/diff/report.json` followed by `dtifx diff compare ops/artifacts/diff/baseline.dtif.json tokens/catalog.json` (mirrored by `npm run dtif:diff`) to compare against the baseline while capturing JSON evidence and streaming the console reporter. The `npm run dtif:diff` script normalizes local absolute file URIs in `ops/artifacts/diff/report.json` to `file:///workspace/dtifx-example` so committed artefacts stay host-agnostic. Replace `baseline.dtif.json` with the newly approved snapshot as described in [`ops/artifacts/diff/README.md`](ops/artifacts/diff/README.md) and the [diff comparison docs](https://github.com/bylapidist/dtifx/blob/main/docs/diff/index.md).
-6. Audit governance policies with `npm run dtif:audit` and inspect the JSON/Markdown reports in `ops/artifacts/audit/` per the [audit command reference](https://github.com/bylapidist/dtifx/blob/main/docs/audit/index.md).
-7. Lint the sample UI with `npm run design-lint`; confirm the terminal reports zero violations and consult the [design-lint usage guide](https://design-lint.lapidist.net/).
+1. Clone the repository and install dependencies: `git clone https://github.com/bylapidist/dtifx-example.git && cd dtifx-example && pnpm install` (see the [DTIFx setup overview](https://github.com/bylapidist/dtifx/blob/main/docs/overview/index.md)).
+2. Start the DSR kernel before linting: `pnpm run kernel:start`. The kernel must be running before `design-lint` can report token violations.
+3. Run `pnpm run verify` to execute ESLint followed by design-lint; expect both tools to exit cleanly, mirroring the default gate enforced in [`CONTRIBUTING.md`](CONTRIBUTING.md).
+4. Validate the DTIF catalogue with `pnpm run dtif:validate`; expect `dtifx build validate` to finish without errors.
+5. Generate token outputs with `pnpm run dtif:build`; the CLI writes `tokens.css` and `tokens.json` to `ops/artifacts/build/`.
+6. Generate the DSCP design system document with `pnpm run dtif:dscp`; the CLI writes `DESIGN_SYSTEM.md` from the built token graph.
+7. Run `pnpm run dtif:diff` to compare against the baseline.
+8. Audit governance policies with `pnpm run dtif:audit`.
+9. Lint the sample UI with `pnpm run design-lint`.
+10. Stop the kernel when done: `pnpm run kernel:stop`.
 
 ## Core commands
 
-- `dtifx build validate --config build/dtif-validate.config.mjs` (surfaced via `npm run dtif:validate`): Ensures all DTIF sources compile, including theme override validation against catalog token targets.
-- `dtifx build generate --config build/dtif-build.config.mjs` (surfaced via `npm run dtif:build`): Refreshes `ops/artifacts/build/tokens.{css,json}` as defined by the config.
-- `dtifx diff compare ops/artifacts/diff/baseline.dtif.json tokens/catalog.json --format json --output ops/artifacts/diff/report.json` followed by `dtifx diff compare ops/artifacts/diff/baseline.dtif.json tokens/catalog.json` (surfaced via `npm run dtif:diff`): Produces JSON evidence, normalizes JSON source URIs to `file:///workspace/dtifx-example`, and streams the console diff reporter so reviewers can inspect changes without relying on Markdown artefacts.
-- `dtifx audit run --reporter json --reporter markdown --config audit/dtif-audit.config.mjs --out-dir ops/artifacts/audit` (surfaced via `npm run dtif:audit`): Evaluates governance policies and commits JSON/Markdown evidence.
-- `design-lint lint "src/**/*.{css,js,jsx,ts,tsx}" --config design-lint.config.cjs` (surfaced via `npm run design-lint`): Verifies the example UI honours the canonical tokens.
-- `npm run verify`: Convenience script that runs ESLint followed by the design-lint command.
-
-Commit refreshed artefacts after DTIF sources change so reviewers can diff the generated evidence alongside code changes.
+- `pnpm run kernel:start`: Start the DSR kernel daemon and seed it with tokens from `design-lint.config.js`.
+- `pnpm run kernel:stop`: Stop the DSR kernel daemon.
+- `pnpm run kernel:status`: Check whether the DSR kernel is running.
+- `pnpm run dtif:validate`: Validates all DTIF sources against the schema.
+- `pnpm run dtif:build`: Regenerates `ops/artifacts/build/tokens.{css,json}`.
+- `pnpm run dtif:dscp`: Generates `DESIGN_SYSTEM.md` from the built token graph via `dtifx dscp generate`.
+- `pnpm run dtif:diff`: Compares catalog against the committed baseline.
+- `pnpm run dtif:audit`: Evaluates governance policies and commits JSON/Markdown evidence.
+- `pnpm run design-lint`: Verifies the example UI honours the canonical tokens.
+- `pnpm run verify`: Runs ESLint followed by design-lint.
 
 ## UI token usage example
 
@@ -84,36 +90,26 @@ export function Button({ children = 'Primary action', emphasize = false, onClick
 }
 ```
 
-The transition definition surfaces the shared duration token, while the hover/focus rule references the variant background colour override so readers can see every token mapping present in [`src/components/button.css`](src/components/button.css).
-
 ## Token bundle topology
 
-[`tokens/catalog.json`](tokens/catalog.json) aggregates the foundational, component, and theme documents through the `lapidist.catalog` extension so the build outputs expose coherent CSS and JSON bundles aligned with the DTIF architecture model described in the [Toolkit architecture overview](https://github.com/bylapidist/dtifx/blob/main/docs/overview/architecture.md). The same bundle is imported in [`design-lint.config.cjs`](design-lint.config.cjs), allowing design-lint to lint React and CSS code against the identical token graph that feeds the CLI. Consult the [build pipeline guide](https://github.com/bylapidist/dtifx/blob/main/docs/guides/build-pipeline.md) for a deeper explanation of how the DTIFx runtime stitches catalog sources together during generation.
-
-### Theme overrides in action
-
-Light, dark, and high-contrast variations live in [`tokens/themes/light.json`](tokens/themes/light.json) and [`tokens/themes/dark.json`](tokens/themes/dark.json). Each file contributes `$overrides` entries that the DTIF bundle resolves during generation; review the source documents alongside the consolidated catalogue in `ops/artifacts/diff/baseline.dtif.json` and the generated CSS variables in `ops/artifacts/build/tokens.css` to see how each condition is captured. The [DTIF theming and overrides specification](https://github.com/bylapidist/dtif/blob/main/docs/spec/theming-overrides.md) explains the registry schema and outlines how to trace overrides across the CLI outputs without introducing bespoke runtime helpers.
-
-Running `npm run dtif:build` keeps those variable references in sync with the latest DTIF catalogue, while `npm run design-lint` verifies that `Button.jsx` and `button.css` comply with the approved token usage patterns documented in the [design-lint repo](https://github.com/bylapidist/design-lint).
+[`tokens/catalog.json`](tokens/catalog.json) aggregates the foundational, component, and theme documents through the `lapidist.catalog` extension so the build outputs expose coherent CSS and JSON bundles aligned with the DTIF architecture model. The same bundle seeds the DSR kernel via `design-lint.config.js`, allowing design-lint to lint React and CSS code against the identical token graph that feeds the CLI.
 
 ## Inspecting artefacts
 
 After each workflow, review the committed evidence in `ops/artifacts/` to compare results against the DTIFx documentation.
 
-| Command | Evidence location | What to inspect |
-| --- | --- | --- |
-| `npm run verify` | Terminal output (ESLint summary followed by design-lint) | Confirm ESLint reports no errors and design-lint flags zero token violations, aligning with the [design-lint documentation](https://github.com/bylapidist/design-lint) and repo gating rules. |
-| `dtifx build validate --config build/dtif-validate.config.mjs` / `npm run dtif:validate` | Terminal output (`ops/artifacts/validate/` when logs are captured) | Ensure the validator exits successfully and note any compiler warnings before merging (see the [validation docs](https://github.com/bylapidist/dtifx/blob/main/docs/build/index.md)). |
-| `dtifx build generate --config build/dtif-build.config.mjs` / `npm run dtif:build` | `ops/artifacts/build/tokens.css`, `tokens.json` | Verify the regenerated CSS and JSON token bundles align with the source DTIF documents per the [build outputs guide](https://github.com/bylapidist/dtifx/blob/main/docs/build/index.md). |
-| `dtifx diff compare ... --format json --output ops/artifacts/diff/report.json` / `npm run dtif:diff` | `ops/artifacts/diff/report.json` plus console output | Review breaking or additive changes highlighted by the console reporter according to the [diff handbook](https://github.com/bylapidist/dtifx/blob/main/docs/diff/index.md), and confirm JSON `uri` fields remain normalized to `file:///workspace/dtifx-example` before committing. |
-| `dtifx audit run --reporter json --reporter markdown --config audit/dtif-audit.config.mjs --out-dir ops/artifacts/audit` / `npm run dtif:audit` | `ops/artifacts/audit/report.json`, `report.md` | Check pass/fail status for each policy and investigate findings via the [audit command docs](https://github.com/bylapidist/dtifx/blob/main/docs/audit/index.md). |
-| `design-lint lint "src/**/*.{css,js,jsx,ts,tsx}" --config design-lint.config.cjs` / `npm run design-lint` | Terminal output (`design-lint-report.json` when using `--output`) | Verify no token violations appear; follow the [design-lint README](https://github.com/bylapidist/design-lint). |
-
-For a deeper walkthrough of the artefact structure, read [`ops/artifacts/README.md`](ops/artifacts/README.md), which maps each CLI output back to the DTIF sources and expected governance checkpoints.
+| Command | Evidence location |
+| --- | --- |
+| `pnpm run verify` | Terminal output |
+| `pnpm run dtif:validate` | Terminal output |
+| `pnpm run dtif:build` | `ops/artifacts/build/tokens.css`, `tokens.json` |
+| `pnpm run dtif:diff` | `ops/artifacts/diff/report.json` plus console output |
+| `pnpm run dtif:audit` | `ops/artifacts/audit/report.json`, `report.md` |
+| `pnpm run design-lint` | Terminal output |
 
 ## Continuous integration
 
-- GitHub Actions workflow `.github/workflows/ci.yml` installs dependencies with `npm ci` on Node.js 24.13.1 and runs `npm run verify`, `npm run dtif:validate`, `npm run dtif:build`, `npm run dtif:diff`, and `npm run dtif:audit` on every push and pull request so the diff stage streams the console reporter instead of Markdown.
+GitHub Actions workflow `.github/workflows/ci.yml` installs dependencies with `pnpm install --frozen-lockfile` on Node.js 24 and runs the verify, validate, build, diff, and audit commands on every push and pull request.
 
 ## Reference documentation
 

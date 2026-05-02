@@ -18,7 +18,7 @@ This repository demonstrates a canonical, production-ready setup of the DTIFx To
 ## Quick start
 
 1. Clone the repository and install dependencies: `git clone https://github.com/bylapidist/dtifx-example.git && cd dtifx-example && pnpm install` (see the [DTIFx setup overview](https://github.com/bylapidist/dtifx/blob/main/docs/overview/index.md)).
-2. Start the DSR kernel before linting: `pnpm run kernel:start`. The kernel must be running before `design-lint` can report token violations.
+2. Start the DSR kernel and seed tokens: `pnpm run kernel:start`. This runs `design-lint kernel start --config-path design-lint.config.js`, which starts the daemon and loads tokens from `tokens/catalog.json` into the kernel's in-memory token graph. The kernel must be running and seeded before `design-lint` can report token violations.
 3. Run `pnpm run verify` to execute ESLint followed by design-lint; expect both tools to exit cleanly, mirroring the default gate enforced in [`CONTRIBUTING.md`](CONTRIBUTING.md).
 4. Validate the DTIF catalogue with `pnpm run dtif:validate`; expect `dtifx build validate` to finish without errors.
 5. Generate token outputs with `pnpm run dtif:build`; the CLI writes `tokens.css` and `tokens.json` to `ops/artifacts/build/`.
@@ -92,7 +92,7 @@ export function Button({ children = 'Primary action', emphasize = false, onClick
 
 ## Token bundle topology
 
-[`tokens/catalog.json`](tokens/catalog.json) aggregates the foundational, component, and theme documents through the `lapidist.catalog` extension so the build outputs expose coherent CSS and JSON bundles aligned with the DTIF architecture model. The same bundle seeds the DSR kernel via `design-lint.config.js`, allowing design-lint to lint React and CSS code against the identical token graph that feeds the CLI.
+[`tokens/catalog.json`](tokens/catalog.json) aggregates the foundational, component, and theme documents through the `lapidist.catalog` extension so the build outputs expose coherent CSS and JSON bundles aligned with the DTIF architecture model. The `tokens.default` path in `design-lint.config.js` points to this catalog; when you run `pnpm run kernel:start`, the kernel daemon reads that path via `--config-path` and seeds its in-memory token graph. The linter then queries tokens from the running kernel via DSQL rather than loading them from config directly.
 
 ## Inspecting artefacts
 

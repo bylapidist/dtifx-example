@@ -12,7 +12,7 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier . --check",
     "format:write": "prettier . --write",
-    "kernel:start": "design-lint kernel start --config design-lint.config.js",
+    "kernel:start": "design-lint kernel start --config-path design-lint.config.js",
     "kernel:stop": "design-lint kernel stop",
     "kernel:status": "design-lint kernel status",
     "design-lint": "design-lint \"src/**/*.{css,js,jsx,ts,tsx}\" --config design-lint.config.js",

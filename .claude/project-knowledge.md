@@ -63,10 +63,10 @@ Pattern: `@import '../../ops/artifacts/build/tokens.css'` followed by `var(--cat
 Edit tokens/*.json → Validate → Build → Diff → Audit → Review → Commit
 ```
 
-1. **Validate**: `npm run dtif:validate` checks DTIF compilation
-2. **Build**: `npm run dtif:build` regenerates CSS/JSON outputs
-3. **Diff**: `npm run dtif:diff` compares against baseline, generates JSON evidence
-4. **Audit**: `npm run dtif:audit` checks governance policies
+1. **Validate**: `pnpm run dtif:validate` checks DTIF compilation
+2. **Build**: `pnpm run dtif:build` regenerates CSS/JSON outputs
+3. **Diff**: `pnpm run dtif:diff` compares against baseline, generates JSON evidence
+4. **Audit**: `pnpm run dtif:audit` checks governance policies
 5. **Review**: Inspect `ops/artifacts/` for changes
 6. **Commit**: Commit sources and artifacts together
 
@@ -77,8 +77,8 @@ Edit src/ → Lint (design-lint) → Verify → Commit
 ```
 
 1. **Edit**: Modify React component or CSS
-2. **Lint**: `npm run design-lint` checks token usage compliance
-3. **Verify**: `npm run verify` runs ESLint + design-lint
+2. **Lint**: `pnpm run design-lint` checks token usage compliance
+3. **Verify**: `pnpm run verify` runs ESLint + design-lint
 4. **Commit**: Push changes if verification passes
 
 ### 3. Documentation Updates
@@ -152,7 +152,7 @@ Key insight: The CLI is the source of truth for token processing. Never create w
 - **Purpose**: Validates that CSS and React code uses approved tokens
 - **Configuration**: `design-lint.config.cjs` imports the catalog
 - **Scope**: Lints `src/**/*.{css,js,jsx,ts,tsx}`
-- **Integration**: Part of `npm run verify` workflow
+- **Integration**: Part of `pnpm run verify` workflow
 
 Key insight: design-lint enforces token discipline by catching hardcoded values that should be tokens.
 
@@ -180,12 +180,12 @@ Key insight: design-lint enforces token discipline by catching hardcoded values 
 
 ## Version Requirements
 
-- **Node.js**: 22.21.0 (see `.nvmrc`)
-- **npm**: 10 or later
-- **DTIFx CLI**: Installed locally via `npm install`
-- **design-lint**: Installed locally via `npm install`
+- **Node.js**: 24 (see `.nvmrc`)
+- **pnpm**: 10 or later
+- **DTIFx CLI**: Installed locally via `pnpm install`
+- **design-lint**: Installed locally via `pnpm install`
 
-Never use global installations; always use local CLI via npm scripts.
+Never use global installations; always use local CLI via pnpm scripts.
 
 ## Documentation References
 
@@ -200,12 +200,12 @@ Never use global installations; always use local CLI via npm scripts.
 **GitHub Actions Workflow**: `.github/workflows/ci.yml`
 
 Runs on every push and pull request:
-1. `npm ci` (clean install with lockfile)
-2. `npm run verify` (ESLint + design-lint)
-3. `npm run dtif:validate` (DTIF compilation)
-4. `npm run dtif:build` (regenerate outputs)
-5. `npm run dtif:diff` (compare against baseline, streams console reporter)
-6. `npm run dtif:audit` (governance checks)
+1. `pnpm install --frozen-lockfile` (clean install with lockfile)
+2. `pnpm run verify` (ESLint + design-lint)
+3. `pnpm run dtif:validate` (DTIF compilation)
+4. `pnpm run dtif:build` (regenerate outputs)
+5. `pnpm run dtif:diff` (compare against baseline, streams console reporter)
+6. `pnpm run dtif:audit` (governance checks)
 
 All steps must pass for CI to succeed. The diff command uses the console reporter instead of Markdown output.
 
@@ -213,7 +213,7 @@ All steps must pass for CI to succeed. The diff command uses the console reporte
 
 Before opening a PR:
 
-- [ ] `npm run verify` passes locally
+- [ ] `pnpm run verify` passes locally
 - [ ] If tokens changed: regenerated artifacts committed
 - [ ] If tokens changed: diff reviewed (breaking changes acceptable?)
 - [ ] If tokens changed: audit passes or violations explained

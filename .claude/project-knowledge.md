@@ -28,7 +28,7 @@ Design tokens are the single source of truth, authored in DTIF format:
 
 - **`build/dtif-build.config.mjs`**: Configuration for the build command (validation and generation).
 - **`audit/dtif-audit.config.mjs`**: Governance policy definitions for the audit command.
-- **`design-lint.config.cjs`**: Configuration for design-lint, imports `tokens/catalog.json` directly.
+- **`design-lint.config.js`**: Configuration for design-lint; the `tokens.default` field is read by the DSR kernel on startup to seed the in-memory token graph.
 - **`eslint.config.js`**: ESLint configuration for JavaScript/JSX linting.
 
 ### Build Artifacts (`ops/artifacts/`)
@@ -150,7 +150,7 @@ Key insight: The CLI is the source of truth for token processing. Never create w
 ### design-lint
 
 - **Purpose**: Validates that CSS and React code uses approved tokens
-- **Configuration**: `design-lint.config.cjs` imports the catalog
+- **Configuration**: `design-lint.config.js` contains the `tokens.default` kernel seeding reference
 - **Scope**: Lints `src/**/*.{css,js,jsx,ts,tsx}`
 - **Integration**: Part of `pnpm run verify` workflow
 

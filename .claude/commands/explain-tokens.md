@@ -23,7 +23,7 @@ Provide a detailed explanation of this repository's design token system:
 
 4. Reference the relevant documentation:
    - Build configuration in `build/dtif-build.config.mjs`
-   - Design-lint configuration in `design-lint.config.js`
+   - Design-lint configuration in `designlint.config.js`
    - Artifact structure in `ops/artifacts/README.md`
 
 Make the explanation accessible to someone new to the DTIFx toolkit.

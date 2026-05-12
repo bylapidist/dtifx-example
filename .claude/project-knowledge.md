@@ -18,7 +18,7 @@ This repository serves as a canonical example of DTIFx in production use.
 
 Design tokens are the single source of truth, authored in DTIF format:
 
-- **`catalog.json`**: Aggregates all token sources using the `lapidist.catalog` extension. This is the entry point for the build system.
+- **`catalog.tokens.json`**: Aggregates all token sources using the `lapidist.catalog` extension. This is the entry point for the build system.
 - **`foundations.json`**: Core design primitives (colors, spacing, typography, etc.) that form the foundation layer.
 - **`components/button.json`**: Component-specific tokens that reference foundation tokens.
 - **`themes/light.json`**: Theme-specific overrides for light mode using `$overrides` entries.
@@ -28,7 +28,7 @@ Design tokens are the single source of truth, authored in DTIF format:
 
 - **`build/dtif-build.config.mjs`**: Configuration for the build command (validation and generation).
 - **`audit/dtif-audit.config.mjs`**: Governance policy definitions for the audit command.
-- **`design-lint.config.js`**: Configuration for design-lint; the `tokens.default` field is read by the DSR kernel on startup to seed the in-memory token graph.
+- **`designlint.config.js`**: Configuration for design-lint; the `tokens.default` field is read by the DSR kernel on startup to seed the in-memory token graph.
 - **`eslint.config.js`**: ESLint configuration for JavaScript/JSX linting.
 
 ### Build Artifacts (`ops/artifacts/`)
@@ -141,7 +141,7 @@ This means:
 ### DTIFx CLI
 
 - **Commands**: `validate`, `build generate`, `diff compare`, `audit run`
-- **Input**: Reads from `tokens/catalog.json` (which aggregates other files)
+- **Input**: Reads from `tokens/catalog.tokens.json` (which aggregates other files)
 - **Output**: Writes to `ops/artifacts/` as configured
 - **Configuration**: Build config in `build/`, audit config in `audit/`
 
@@ -150,7 +150,7 @@ Key insight: The CLI is the source of truth for token processing. Never create w
 ### design-lint
 
 - **Purpose**: Validates that CSS and React code uses approved tokens
-- **Configuration**: `design-lint.config.js` contains the `tokens.default` kernel seeding reference
+- **Configuration**: `designlint.config.js` contains the `tokens.default` kernel seeding reference
 - **Scope**: Lints `src/**/*.{css,js,jsx,ts,tsx}`
 - **Integration**: Part of `pnpm run verify` workflow
 

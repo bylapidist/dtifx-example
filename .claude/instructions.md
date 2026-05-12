@@ -119,8 +119,8 @@ pnpm run kernel:stop
 
 ### design-lint
 
-- Configuration: `design-lint.config.js` at repository root (ESM format)
-- The `tokens.default` field in the config points to `tokens/catalog.json` — read by the DSR
+- Configuration: `designlint.config.js` at repository root (ESM format)
+- The `tokens.default` field in the config points to `tokens/catalog.tokens.json` — read by the DSR
   kernel on startup, not by the linter directly
 - Start the kernel before linting: `pnpm run kernel:start`
 - Lints CSS and JSX files in `src/` for token usage violations via DSQL queries to the kernel
@@ -137,7 +137,7 @@ pnpm run kernel:stop
 
 ### Bundle Topology
 
-- `tokens/catalog.json`: Aggregates all token sources via `lapidist.catalog` extension
+- `tokens/catalog.tokens.json`: Aggregates all token sources via `lapidist.catalog` extension
 - `tokens/foundations.json`: Core tokens (spacing, colors, typography)
 - `tokens/components/*.json`: Component-specific tokens (e.g., button.json)
 - `tokens/themes/*.json`: Theme variations with `$overrides` (light.json, dark.json)
@@ -145,9 +145,9 @@ pnpm run kernel:stop
 ### Usage Pattern
 
 1. Design tokens are authored in `tokens/` as DTIF JSON
-2. `catalog.json` aggregates them into a coherent bundle
+2. `catalog.tokens.json` aggregates them into a coherent bundle
 3. Build command generates `ops/artifacts/build/tokens.css` and `tokens.json`
-4. The DSR kernel seeds its token graph from `tokens/catalog.json` on startup
+4. The DSR kernel seeds its token graph from `tokens/catalog.tokens.json` on startup
 5. UI components import CSS tokens: `@import '../../ops/artifacts/build/tokens.css'`
 6. Components reference tokens via CSS custom properties: `var(--catalog-cmp-btn-bg)`
 

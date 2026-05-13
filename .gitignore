@@ -4,3 +4,4 @@ node_modules/
 .env
 .dtifx-cache/
 ops/artifacts/generated/
+.designlintcache

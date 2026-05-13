@@ -8,11 +8,14 @@
     "pnpm": ">=10"
   },
   "scripts": {
+    "prepare": "node ops/scripts/build-presets.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier . --check",
     "format:write": "prettier . --write",
     "kernel:start": "design-lint kernel start --config-path designlint.config.js",
+    "kernel:start:http": "design-lint kernel start --config-path designlint.config.js --http-port 7341",
+    "kernel:start:no-http": "design-lint kernel start --config-path designlint.config.js --no-http",
     "kernel:stop": "design-lint kernel stop",
     "kernel:status": "design-lint kernel status",
     "design-lint": "design-lint \"src/**/*.{css,scss,less,js,jsx,ts,tsx}\" --config designlint.config.js",
@@ -24,6 +27,7 @@
     "design-lint:summary": "design-lint \"src/**/*.{css,scss,less,js,jsx,ts,tsx}\" --config designlint.config.js --format ./ops/formatters/summary.js",
     "design-lint:fix": "design-lint \"src/**/*.{css,scss,less,js,jsx,ts,tsx}\" --config designlint.config.js --fix",
     "design-lint:cache": "design-lint \"src/**/*.{css,scss,less,js,jsx,ts,tsx}\" --config designlint.config.js --cache",
+    "design-lint:cache-location": "design-lint \"src/**/*.{css,scss,less,js,jsx,ts,tsx}\" --config designlint.config.js --cache --cache-location .designlintcache",
     "design-lint:check": "design-lint \"src/**/*.{css,scss,less,js,jsx,ts,tsx}\" --config designlint.config.js --fail-on-empty --max-warnings 100",
     "design-lint:api-check": "node ops/scripts/lint-check.js",
     "design-lint:generate-tokens": "node ops/scripts/generate-tokens.js",

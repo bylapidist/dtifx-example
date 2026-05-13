@@ -8,7 +8,6 @@
     "pnpm": ">=10"
   },
   "scripts": {
-    "prepare": "node ops/scripts/build-presets.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier . --check",

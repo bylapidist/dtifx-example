@@ -1,14 +1,28 @@
 import { defineConfig } from '@lapidist/design-lint';
-// Preset packages built by ops/scripts/build-presets.js (runs via prepare hook)
-import recommended from '@lapidist/design-lint-config-recommended';
-import aiAgent from '@lapidist/design-lint-config-ai-agent';
 
-// ai-agent preset overrides — loosen rules that conflict with our build-prefixed
-// CSS var naming convention (--catalog-tokens-* vs --* expected by provenance rule)
-const aiAgentOverrides = {
+// Preset rule sets — inlined from source because the preset packages
+// (@lapidist/design-lint-config-recommended, -ai-agent) do not ship
+// compiled dist files. Values are taken verbatim from their src/index.ts.
+const recommended = {
   rules: {
-    ...aiAgent.rules,
-    'design-token/css-var-provenance': 'warn', // warn: build adds stem prefix to var names
+    'design-token/colors': 'warn',
+    'design-token/spacing': 'warn',
+    'design-token/easing': 'warn',
+    'design-token/css-var-provenance': 'warn',
+    'design-token/composite-equivalence': 'warn',
+    'design-system/deprecation': 'warn',
+    'design-system/jsx-style-values': 'warn',
+    'design-system/no-hardcoded-spacing': 'warn',
+  },
+};
+
+const aiAgent = {
+  rules: {
+    'design-token/easing': 'error',
+    // warn (not error): our build prefixes CSS var names with the source-file
+    // stem (e.g. --catalog-tokens-clr-brand), which doesn't match the
+    // pointer-derived name the provenance rule expects (--clr-brand).
+    'design-token/css-var-provenance': 'warn',
     'design-token/composite-equivalence': 'warn',
     'design-system/jsx-style-values': 'error',
     'design-system/no-hardcoded-spacing': 'error',
@@ -27,42 +41,29 @@ export default defineConfig({
   },
   plugins: ['./ops/plugins/dtifx-rules.js'],
   rules: {
-    // Spread recommended preset rules as the base layer
+    // Base: recommended preset
     ...recommended.rules,
-    // Spread ai-agent overrides on top (tightens easing, jsx-style-values, etc.)
-    ...aiAgentOverrides.rules,
+    // Tighten: ai-agent preset (easing → error, jsx-style-values → error, etc.)
+    ...aiAgent.rules,
 
-    // Project overrides on top of presets
-    // Color
+    // Project overrides
     'design-token/colors': 'error',
     'design-token/border-color': 'warn',
-
-    // Spacing & layout
     'design-token/spacing': ['error', { base: 0 }],
-
-    // Motion
     'design-token/duration': 'error',
     'design-token/animation': 'warn',
-
-    // Typography
     'design-token/font-family': 'error',
     'design-token/font-size': 'error',
     'design-token/font-weight': 'error',
     'design-token/line-height': 'warn',
     'design-token/letter-spacing': 'error',
-
-    // Shape & decoration
     'design-token/border-radius': 'error',
     'design-token/border-width': 'warn',
     'design-token/box-shadow': 'error',
     'design-token/outline': 'error',
     'design-token/blur': 'warn',
-
-    // Surface
     'design-token/opacity': 'error',
     'design-token/z-index': 'warn',
-
-    // Component usage
     'design-system/no-inline-styles': ['error', { components: ['Button'] }],
     'design-system/variant-prop': ['warn', {
       prop: 'variant',
@@ -78,8 +79,6 @@ export default defineConfig({
       prefix: 'DS',
       components: ['Button'],
     }],
-
-    // Governance
     'design-system/no-unused-tokens': 'warn',
   },
 });

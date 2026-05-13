@@ -50,6 +50,15 @@ jobs:
           sarif_file: ops/artifacts/lint/report.sarif
         if: always()
 
+      - name: Export raw JSON lint report
+        run: pnpm run design-lint:report
+
+      - name: Export DSCP design-system document with lint results
+        run: pnpm run design-lint:dscp
+
+      - name: Diff kernel snapshot against baseline
+        run: pnpm run design-lint:snapshot-diff
+
       - name: Validate DTIF tokens
         run: pnpm run dtif:validate
 

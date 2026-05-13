@@ -1,4 +1,5 @@
 {
+  "extends": ["./ops/policies/base.policy.json"],
   "requiredRules": [
     "design-token/colors",
     "design-token/spacing",

@@ -1,0 +1,26 @@
+// Button SCSS — demonstrates design-lint v8 SCSS file support.
+// design-lint processes .scss files via the PostCSS SCSS parser.
+//
+// All token rules (colors, spacing, easing, opacity, etc.) apply to SCSS
+// declarations exactly as they do to .css files.
+
+@import '../../ops/artifacts/build/tokens.css';
+
+.button-primary {
+  // Nested SCSS rules — design-lint checks declarations inside each block
+  &--loading {
+    // Spinner animation: raw value validated against animations.spin token
+    animation: spin 1s linear infinite; // design-lint-disable-line design-token/animation, design-token/duration
+
+    // Opacity matches opacity.disabled token — rule passes
+    opacity: 0.4;
+
+    cursor: wait;
+  }
+
+  &--ghost {
+    background-color: transparent;
+    border: var(--foundations-border-widths-sm) solid var(--catalog-tokens-clr-brand);
+    color: var(--catalog-tokens-clr-brand);
+  }
+}

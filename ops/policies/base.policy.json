@@ -1,0 +1,15 @@
+{
+  "requiredRules": [
+    "design-token/colors",
+    "design-token/spacing",
+    "design-system/no-inline-styles"
+  ],
+  "minSeverity": {
+    "design-token/colors": "error",
+    "design-token/spacing": "error"
+  },
+  "ratchet": {
+    "mode": "entropy",
+    "minScore": 60
+  }
+}

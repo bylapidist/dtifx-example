@@ -1,0 +1,22 @@
+// Button Less — demonstrates design-lint v8 Less file support.
+// design-lint processes .less files via the PostCSS Less parser.
+//
+// All token rules apply to Less declarations exactly as they do to .css files.
+
+@import '../../ops/artifacts/build/tokens.css';
+
+.button-primary {
+  // Less mixins and variables alongside CSS custom properties
+
+  &--compact {
+    // Padding matches spacing.md token via CSS var — rule passes
+    padding-block: var(--foundations-spacing-md);
+    padding-inline: var(--foundations-spacing-md);
+    font-size: var(--foundations-font-sizes-sm);
+    border-radius: var(--foundations-radius-sm);
+  }
+
+  &--pill {
+    border-radius: var(--foundations-radius-full);
+  }
+}

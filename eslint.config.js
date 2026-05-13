@@ -2,7 +2,7 @@ import js from '@eslint/js';
 
 export default [
   {
-    ignores: ['node_modules/**', 'package-lock.json'],
+    ignores: ['node_modules/**', 'package-lock.json', 'ops/scripts/**', 'ops/formatters/**', 'ops/plugins/**'],
   },
   js.configs.recommended,
   {
@@ -18,16 +18,6 @@ export default [
       globals: {
         document: 'readonly',
         window: 'readonly',
-      },
-    },
-  },
-  {
-    files: ['design-lint.config.cjs'],
-    languageOptions: {
-      globals: {
-        module: 'readonly',
-        require: 'readonly',
-        process: 'readonly',
       },
     },
   },

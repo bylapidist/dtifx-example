@@ -15,26 +15,62 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v6
 
-      - name: Use Node.js 22.20.0
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v6
+        with:
+          version: 10
+
+      - name: Use Node.js 24.15.0
         uses: actions/setup-node@v6
         with:
           node-version: 24.15.0
-          cache: 'npm'
+          cache: 'pnpm'
 
       - name: Install dependencies
-        run: npm ci
+        run: pnpm install --frozen-lockfile
+
+      - name: Start DSR kernel
+        run: pnpm run kernel:start
+
+      - name: Validate design-lint config and tokens
+        run: pnpm run design-lint:validate
 
       - name: Run lint and design-lint checks
-        run: npm run verify
+        run: pnpm run verify
+
+      - name: Enforce warning budget
+        run: pnpm run design-lint:check
+
+      - name: Export SARIF report
+        run: pnpm run design-lint:sarif
+
+      - name: Upload SARIF to GitHub code scanning
+        uses: github/codeql-action/upload-sarif@v4
+        with:
+          sarif_file: ops/artifacts/lint/report.sarif
+        if: always()
+
+      - name: Export raw JSON lint report
+        run: pnpm run design-lint:report
+
+      - name: Export DSCP design-system document with lint results
+        run: pnpm run design-lint:dscp
+
+      - name: Diff kernel snapshot against baseline
+        run: pnpm run design-lint:snapshot-diff
 
       - name: Validate DTIF tokens
-        run: npm run dtif:validate
+        run: pnpm run dtif:validate
 
       - name: Generate build artefacts
-        run: npm run dtif:build
+        run: pnpm run dtif:build
 
       - name: Compare against diff baseline
-        run: npm run dtif:diff
+        run: pnpm run dtif:diff
 
       - name: Execute audit policies
-        run: npm run dtif:audit
+        run: pnpm run dtif:audit
+
+      - name: Stop DSR kernel
+        run: pnpm run kernel:stop
+        if: always()

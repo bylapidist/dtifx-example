@@ -3,3 +3,7 @@ node_modules/
 .DS_Store
 .env
 .dtifx-cache/
+ops/artifacts/generated/
+.designlintcache
+ops/artifacts/dscp/
+.claude/

@@ -1,5 +1,75 @@
 {
-  "$description": "Foundational design tokens for the DTIFx minimal stack example covering color, spacing, typography, shape, motion, and surface primitives.",
+  "$description": "Consolidated DTIF token bundle for the DTIFx minimal stack example covering foundations, components, and theme overrides.",
+  "$extensions": {
+    "lapidist.catalog": {
+      "sources": [
+        "./components/button.json",
+        "./foundations.json",
+        "./themes/dark.json",
+        "./themes/light.json"
+      ]
+    }
+  },
+  "$overrides": [
+    {
+      "$token": "#/cmp/btn/bg",
+      "$when": {
+        "theme": "dark"
+      },
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.8392156862745098,
+          0.8705882352941177,
+          0.9254901960784314
+        ]
+      }
+    },
+    {
+      "$token": "#/cmp/btn/fg",
+      "$when": {
+        "theme": "dark"
+      },
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.058823529411764705,
+          0.09411764705882353,
+          0.14901960784313725
+        ]
+      }
+    },
+    {
+      "$token": "#/cmp/btn/bg",
+      "$when": {
+        "accessibility": "high-contrast",
+        "theme": "light"
+      },
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.027450980392156862,
+          0.2235294117647059,
+          0.4588235294117647
+        ]
+      }
+    },
+    {
+      "$token": "#/cmp/btn/fg",
+      "$when": {
+        "accessibility": "high-contrast",
+        "theme": "light"
+      },
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          1,
+          1
+        ]
+      }
+    }
+  ],
   "$schema": "https://dtif.lapidist.net/schema/core.json",
   "$version": "1.0.0",
   "animations": {
@@ -151,7 +221,139 @@
       }
     }
   },
-  "cmp": {},
+  "cmp": {
+    "$description": "Component abstraction tokens",
+    "btn": {
+      "$description": "Primary button styling primitives.",
+      "$extensions": {
+        "lapidist.accessibility": {
+          "intent": "Ensures minimum AA contrast in default theme contexts"
+        }
+      },
+      "bg": {
+        "$description": "Default primary button background colour.",
+        "$extensions": {
+          "lapidist.accessibility": {
+            "contrastTarget": "AA",
+            "usage": [
+              "btn.primary.bg"
+            ]
+          },
+          "lapidist.governance": {
+            "owner": "Design Systems Guild",
+            "reviewCadence": "monthly",
+            "sla": "3 business days"
+          }
+        },
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            0.054901960784313725,
+            0.3607843137254902,
+            0.6784313725490196
+          ]
+        }
+      },
+      "bg-hover": {
+        "$description": "Hover state background colour with elevated contrast.",
+        "$extensions": {
+          "lapidist.accessibility": {
+            "contrastTarget": "AAA",
+            "usage": [
+              "btn.primary.bg-hover"
+            ]
+          },
+          "lapidist.governance": {
+            "owner": "Design Systems Guild",
+            "reviewCadence": "monthly",
+            "sla": "3 business days"
+          }
+        },
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            0.047058823529411764,
+            0.3215686274509804,
+            0.6039215686274509
+          ]
+        }
+      },
+      "fg": {
+        "$description": "Primary button label colour ensuring contrast on brand backgrounds.",
+        "$extensions": {
+          "lapidist.accessibility": {
+            "contrastTarget": "AA",
+            "usage": [
+              "btn.primary.fg"
+            ]
+          },
+          "lapidist.governance": {
+            "owner": "Design Systems Guild",
+            "reviewCadence": "monthly",
+            "sla": "3 business days"
+          }
+        },
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "pad": {
+        "$deprecated": {
+          "$replacement": "#/cmp/btn/padding"
+        },
+        "$description": "Button horizontal padding \u2014 deprecated, use cmp.btn.padding.",
+        "$extensions": {
+          "lapidist.accessibility": {
+            "touchTarget": "Supports minimum 44px hit area when combined with layout spacing",
+            "usage": [
+              "btn.primary.pad"
+            ]
+          },
+          "lapidist.governance": {
+            "owner": "Design Systems Guild",
+            "reviewCadence": "monthly",
+            "sla": "3 business days"
+          }
+        },
+        "$type": "dimension",
+        "$value": {
+          "dimensionType": "length",
+          "value": 16,
+          "unit": "px"
+        }
+      },
+      "padding": {
+        "$description": "Button horizontal padding (replaces cmp.btn.pad).",
+        "$extensions": {
+          "lapidist.accessibility": {
+            "touchTarget": "Supports minimum 44px hit area when combined with layout spacing",
+            "usage": [
+              "btn.primary.padding"
+            ]
+          },
+          "lapidist.governance": {
+            "owner": "Design Systems Guild",
+            "reviewCadence": "monthly",
+            "sla": "3 business days"
+          }
+        },
+        "$type": "dimension",
+        "$value": {
+          "dimensionType": "length",
+          "value": 16,
+          "unit": "px"
+        }
+      }
+    }
+  },
   "durations": {
     "$description": "Timing durations for interactive components",
     "btn": {

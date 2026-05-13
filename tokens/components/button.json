@@ -88,7 +88,30 @@
       },
       "pad": {
         "$type": "dimension",
-        "$description": "Button horizontal padding derived from spacing scale.",
+        "$description": "Button horizontal padding — deprecated, use cmp.btn.padding.",
+        "$value": {
+          "dimensionType": "length",
+          "value": 16,
+          "unit": "px"
+        },
+        "$deprecated": { "$replacement": "#/cmp/btn/padding" },
+        "$extensions": {
+          "lapidist.governance": {
+            "owner": "Design Systems Guild",
+            "reviewCadence": "monthly",
+            "sla": "3 business days"
+          },
+          "lapidist.accessibility": {
+            "touchTarget": "Supports minimum 44px hit area when combined with layout spacing",
+            "usage": [
+              "btn.primary.pad"
+            ]
+          }
+        }
+      },
+      "padding": {
+        "$type": "dimension",
+        "$description": "Button horizontal padding (replaces cmp.btn.pad).",
         "$value": {
           "dimensionType": "length",
           "value": 16,
@@ -103,7 +126,7 @@
           "lapidist.accessibility": {
             "touchTarget": "Supports minimum 44px hit area when combined with layout spacing",
             "usage": [
-              "btn.primary.pad"
+              "btn.primary.padding"
             ]
           }
         }

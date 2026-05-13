@@ -11,7 +11,7 @@ function readJson(relativePath) {
   return JSON.parse(readFileSync(resolve(tokensRoot, relativePath), 'utf8'));
 }
 
-const catalogDocument = readJson('catalog.json');
+const catalogDocument = readJson('catalog.tokens.json');
 const darkThemeDocument = readJson('themes/dark.json');
 const lightThemeDocument = readJson('themes/light.json');
 
@@ -38,7 +38,7 @@ export default defineConfig({
       kind: 'file',
       layer: 'default',
       rootDir: tokensRoot,
-      patterns: ['catalog.json', 'foundations.json', 'components/*.json'],
+      patterns: ['catalog.tokens.json', 'foundations.json', 'components/*.json'],
       pointerTemplate: pointerTemplate(placeholder('stem')),
     },
     {

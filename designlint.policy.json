@@ -1,0 +1,38 @@
+{
+  "extends": ["./ops/policies/base.policy.json"],
+  "requiredRules": [
+    "design-token/colors",
+    "design-token/spacing",
+    "design-token/duration",
+    "design-token/easing",
+    "design-token/font-family",
+    "design-token/font-size",
+    "design-token/font-weight",
+    "design-token/border-radius",
+    "design-token/animation",
+    "design-token/blur",
+    "design-token/box-shadow",
+    "design-token/outline",
+    "design-token/opacity",
+    "design-system/no-inline-styles"
+  ],
+  "minSeverity": {
+    "design-token/colors": "error",
+    "design-token/spacing": "error",
+    "design-token/duration": "error",
+    "design-system/deprecation": "warn"
+  },
+  "tokenCoverage": {
+    "color": 0.8,
+    "dimension": 0.6
+  },
+  "ratchet": {
+    "mode": "entropy",
+    "minScore": 80
+  },
+  "agentPolicy": {
+    "maxViolationRate": 20,
+    "requiredConvergence": true,
+    "trustedAgents": ["claude"]
+  }
+}

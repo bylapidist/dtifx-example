@@ -17,7 +17,7 @@ export default defineConfig({
       kind: 'file',
       layer: 'default',
       rootDir: resolve(repositoryRoot, 'tokens'),
-      patterns: ['catalog.json'],
+      patterns: ['catalog.tokens.json'],
       pointerTemplate: pointerTemplate(placeholder('stem')),
     },
   ],

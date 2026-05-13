@@ -29,8 +29,23 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Start DSR kernel
+        run: pnpm run kernel:start
+
+      - name: Validate design-lint config and tokens
+        run: pnpm run design-lint:validate
+
       - name: Run lint and design-lint checks
         run: pnpm run verify
+
+      - name: Export SARIF report
+        run: pnpm run design-lint:sarif
+
+      - name: Upload SARIF to GitHub code scanning
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: ops/artifacts/lint/report.sarif
+        if: always()
 
       - name: Validate DTIF tokens
         run: pnpm run dtif:validate
@@ -43,3 +58,7 @@ jobs:
 
       - name: Execute audit policies
         run: pnpm run dtif:audit
+
+      - name: Stop DSR kernel
+        run: pnpm run kernel:stop
+        if: always()

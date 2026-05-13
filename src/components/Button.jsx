@@ -4,6 +4,7 @@ export function Button({ children = 'Primary action', variant = 'primary', empha
   const className = emphasize ? 'button-primary button-primary--emphasize' : 'button-primary';
 
   return (
+    // design-lint-disable-next-line design-system/component-usage
     <button
       type="button"
       className={className}

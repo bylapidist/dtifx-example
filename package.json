@@ -21,6 +21,7 @@
     "design-lint:snapshot": "design-lint export-runtime-snapshot --out ops/artifacts/build/kernel-snapshot.bin",
     "design-lint:docs": "design-lint docs --config designlint.config.js --out ops/artifacts/docs --site-format markdown",
     "design-lint:sarif": "design-lint \"src/**/*.{css,js,jsx,ts,tsx}\" --config designlint.config.js --format sarif --output ops/artifacts/lint/report.sarif",
+    "design-lint:summary": "design-lint \"src/**/*.{css,js,jsx,ts,tsx}\" --config designlint.config.js --format ./ops/formatters/summary.js",
     "dtif:validate": "dtifx build validate --config build/dtif-validate.config.mjs",
     "dtif:build": "dtifx build generate --config build/dtif-build.config.mjs",
     "dtif:diff": "dtifx diff compare ops/artifacts/diff/baseline.dtif.json tokens/catalog.tokens.json --format json --output ops/artifacts/diff/report.json && node -e \"const fs=require('node:fs');const path=require('node:path');const report='ops/artifacts/diff/report.json';const from='file://'+process.cwd().split(path.sep).join('/');const to='file:///workspace/dtifx-example';fs.writeFileSync(report,fs.readFileSync(report,'utf8').replaceAll(from,to));\" && dtifx diff compare ops/artifacts/diff/baseline.dtif.json tokens/catalog.tokens.json",

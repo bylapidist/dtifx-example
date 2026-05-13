@@ -8,6 +8,8 @@
     "design-token/font-size",
     "design-token/font-weight",
     "design-token/border-radius",
+    "design-token/animation",
+    "design-token/blur",
     "design-token/box-shadow",
     "design-token/outline",
     "design-token/opacity",

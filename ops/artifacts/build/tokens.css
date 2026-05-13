@@ -21,6 +21,8 @@
   --catalog-tokens-radius-full: 9999px;
   --catalog-tokens-radius-md: 6px;
   --catalog-tokens-radius-sm: 4px;
+  --catalog-tokens-shadows-focus-ring: 0 0 0 3px rgba(14, 92, 173, 0.4);
+  --catalog-tokens-shadows-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.102);
   --catalog-tokens-spacing-lg: 24px;
   --catalog-tokens-spacing-md: 16px;
   --foundations-border-widths-md: 2px;
@@ -35,6 +37,8 @@
   --foundations-radius-full: 9999px;
   --foundations-radius-md: 6px;
   --foundations-radius-sm: 4px;
+  --foundations-shadows-focus-ring: 0 0 0 3px rgba(14, 92, 173, 0.4);
+  --foundations-shadows-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.102);
   --foundations-spacing-lg: 24px;
   --foundations-spacing-md: 16px;
 }

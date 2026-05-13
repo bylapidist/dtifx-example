@@ -666,6 +666,101 @@
       }
     }
   },
+  "shadows": {
+    "$description": "Elevation and focus shadow tokens",
+    "focus-ring": {
+      "$type": "shadow",
+      "$description": "Focus ring shadow for keyboard-navigable interactive elements.",
+      "$value": {
+        "blur": {
+          "dimensionType": "length",
+          "value": 0,
+          "unit": "px"
+        },
+        "color": {
+          "colorSpace": "srgb",
+          "components": [
+            0.054901960784313725,
+            0.3607843137254902,
+            0.6784313725490196,
+            0.4
+          ]
+        },
+        "offsetX": {
+          "dimensionType": "length",
+          "value": 0,
+          "unit": "px"
+        },
+        "offsetY": {
+          "dimensionType": "length",
+          "value": 0,
+          "unit": "px"
+        },
+        "shadowType": "css.box-shadow",
+        "spread": {
+          "dimensionType": "length",
+          "value": 3,
+          "unit": "px"
+        }
+      },
+      "$extensions": {
+        "lapidist.governance": {
+          "owner": "Design Foundations Guild",
+          "reviewCadence": "quarterly",
+          "sla": "5 business days"
+        },
+        "lapidist.accessibility": {
+          "contrastTarget": "AA",
+          "usage": [
+            "btn.focus-ring"
+          ]
+        }
+      }
+    },
+    "sm": {
+      "$type": "shadow",
+      "$description": "Subtle drop shadow for low-elevation surfaces.",
+      "$value": {
+        "blur": {
+          "dimensionType": "length",
+          "value": 2,
+          "unit": "px"
+        },
+        "color": {
+          "colorSpace": "srgb",
+          "components": [
+            0,
+            0,
+            0,
+            0.1
+          ]
+        },
+        "offsetX": {
+          "dimensionType": "length",
+          "value": 0,
+          "unit": "px"
+        },
+        "offsetY": {
+          "dimensionType": "length",
+          "value": 1,
+          "unit": "px"
+        },
+        "shadowType": "css.box-shadow",
+        "spread": {
+          "dimensionType": "length",
+          "value": 0,
+          "unit": "px"
+        }
+      },
+      "$extensions": {
+        "lapidist.governance": {
+          "owner": "Design Foundations Guild",
+          "reviewCadence": "quarterly",
+          "sla": "5 business days"
+        }
+      }
+    }
+  },
   "spacing": {
     "$description": "Spacing scale tokens",
     "lg": {

@@ -30,7 +30,7 @@ export default {
     // Shape & decoration
     'design-token/border-radius': 'error',
     'design-token/border-width': 'warn',
-    // design-token/box-shadow omitted: shadow $type is not supported by this dtifx DTIF schema version
+    'design-token/box-shadow': 'error',
     'design-token/outline': 'error',
 
     // Surface

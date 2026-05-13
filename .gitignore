@@ -5,3 +5,4 @@ node_modules/
 .dtifx-cache/
 ops/artifacts/generated/
 .designlintcache
+ops/artifacts/dscp/

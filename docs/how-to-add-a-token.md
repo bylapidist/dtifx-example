@@ -1,49 +1,78 @@
 # How to add, modify, or deprecate a token
 
-This guide walks through the full lifecycle of a design token in this repository.
+---
+
+## Start with the concept — which layer does this belong in?
+
+Use this decision tree before touching any file:
+
+```
+Is the value used by multiple components, or is it a primitive design decision
+(a colour from the palette, a step in the spacing scale, a font size)?
+  YES → Foundation token (tokens/foundations.json)
+
+Is the value specific to one component and only makes sense in that context?
+  YES → Component token (tokens/components/yourcomponent.json)
+
+Is the value the same as an existing token in most contexts but different
+in dark mode, high-contrast mode, or another theme variant?
+  YES → Theme override (tokens/themes/dark.json or light.json)
+```
+
+**Examples:**
+- `clr.brand` → Foundation (the brand colour is used everywhere)
+- `cmp.btn.bg` → Component (the button background is a button concept)
+- `cmp.btn.bg` in dark mode → Theme override (same token, different value in dark context)
 
 ---
 
-## Before you start
+## The governance requirement
 
-Decide which category your token belongs to:
+Every new token **must** include governance metadata. Do not add a token without it — `dtif:audit` will flag it as a missing owner, and CI will warn.
 
-| Category | File | Use when |
-|---|---|---|
-| **Foundation** | `tokens/foundations.json` | Primitive value with no component context: a colour, a spacing scale step, a font weight |
-| **Component** | `tokens/components/button.json` | Value specific to one component: the button's background colour |
-| **Theme override** | `tokens/themes/dark.json` | A value that changes in a particular context (dark mode, high-contrast) |
+Copy this template (adjust for component vs. foundation tier):
 
-Foundation tokens should not reference component concepts. Component tokens may reference foundation values.
+**Foundation tokens** — owned by the Design Foundations Guild:
+```json
+"$extensions": {
+  "lapidist.governance": {
+    "owner": "Design Foundations Guild",
+    "reviewCadence": "quarterly",
+    "sla": "5 business days"
+  }
+}
+```
+
+**Component tokens** — owned by the Design Systems Guild:
+```json
+"$extensions": {
+  "lapidist.governance": {
+    "owner": "Design Systems Guild",
+    "reviewCadence": "monthly",
+    "sla": "3 business days"
+  }
+}
+```
 
 ---
 
-## Adding a new foundation token
+## The sorting requirement
 
-### 1. Choose a group and name
+Keys within a group must be in **case-insensitive alphabetical order**. Place your new token in the correct position before writing any other fields. If you sort incorrectly, `dtif:validate` will catch it — but it's faster to get it right immediately.
 
-Token paths follow the pattern `group.name`. Groups are named after the design concept:
+```json
+"spacing": {
+  "lg": { … },
+  "md": { … },
+  "sm": { … }   ← new token: 'sm' comes after 'md', before nothing. Correct.
+}
+```
 
-| Group | What goes here |
-|---|---|
-| `clr` | Colours |
-| `spacing` | Padding, margin, gap values |
-| `fontSizes` | Type scale sizes |
-| `fontWeights` | Font weight values |
-| `radius` | Border radius values |
-| `durations` | Transition / animation timings |
-| `easing` | Cubic bezier curves |
-| `shadows` | Box shadow definitions |
-| `opacity` | Opacity levels |
-| `outlines` | Outline shorthand strings |
-| `blurs` | Blur filter values |
-| `zIndex` | Stacking order values |
+---
 
-Pick the matching group, or create a new one using the same `$description` pattern.
+## Step 1: Write the token in the source file
 
-### 2. Write the token in `tokens/foundations.json`
-
-Add it inside the appropriate group, sorted alphabetically by key:
+Add the token to `tokens/foundations.json` (or `tokens/components/yourcomponent.json`):
 
 ```json
 "spacing": {
@@ -51,7 +80,7 @@ Add it inside the appropriate group, sorted alphabetically by key:
   "md": { … },
   "sm": {
     "$type": "dimension",
-    "$description": "Small spacing unit for tight layouts.",
+    "$description": "Small spacing unit for compact layouts.",
     "$value": { "dimensionType": "length", "value": 8, "unit": "px" },
     "$extensions": {
       "lapidist.governance": {
@@ -64,71 +93,83 @@ Add it inside the appropriate group, sorted alphabetically by key:
 }
 ```
 
-**Sorting matters** — the DTIF schema requires keys to be in case-insensitive lexicographic order. `sm` comes after `md` because `s` > `m`.
+See the [token type reference](#token-type-reference) below for the correct `$value` shape for each type.
 
-### 3. Mirror it in `tokens/catalog.tokens.json`
+---
 
-`catalog.tokens.json` is the inline aggregation of all sources. Add the same token object in the matching group. The catalog and foundations must stay in sync — if they diverge, the kernel and the build will show different token sets.
+## Step 2: Mirror in `catalog.tokens.json`
 
-### 4. Validate the token files
+Add the identical token object in the same group position in `catalog.tokens.json`. The catalog is the kernel's entry point — if a token is in `foundations.json` but not in the catalog, the linter won't see it.
+
+---
+
+## Step 3: Validate
 
 ```bash
 pnpm run dtif:validate
 ```
 
-This checks the DTIF schema. Fix any errors before continuing.
+Fix any errors before continuing. Common errors: sort order violations, missing `shadowType` in shadow values, unrecognised `$type`.
 
-### 5. Reload the kernel
+---
+
+## Step 4: Reload the kernel
+
+The kernel reads `catalog.tokens.json` at startup and does not watch for changes. Any token you just added won't be enforced until you restart:
 
 ```bash
-pnpm run kernel:stop
-pnpm run kernel:start
+pnpm run kernel:stop && pnpm run kernel:start
 ```
 
-The kernel reads tokens at startup. Changes don't take effect until you restart.
+---
 
-### 6. Build the CSS and JSON artifacts
+## Step 5: Build and use the token
 
 ```bash
 pnpm run dtif:build
 ```
 
-Check `ops/artifacts/build/tokens.css` — your new token should appear as a CSS custom property:
+Check `ops/artifacts/build/tokens.css` — if your token is a `color` or `dimension(length)` type, it will appear as a CSS custom property:
 ```css
 --foundations-spacing-sm: 8px;
+--catalog-tokens-spacing-sm: 8px;
 ```
 
-### 7. Use the token in a component
-
-Reference the generated CSS variable:
+Use it in a component stylesheet:
 ```css
-.some-element {
-  margin: var(--foundations-spacing-sm);
-}
+.compact { padding: var(--foundations-spacing-sm); }
 ```
 
-design-lint validates that `var()` references correspond to registered tokens. A typo in the variable name will be caught.
+For types that don't emit CSS vars (font-weight, line-height, opacity, etc.), use the raw value directly in CSS — design-lint validates it via value-equivalence:
+```css
+.text { font-weight: 600; } /* passes if fontWeights.semibold = 600 */
+```
 
-### 8. Run verify
+---
+
+## Step 6: Verify
 
 ```bash
 pnpm run verify
 ```
 
-Must exit 0 before committing.
+Must exit 0. If a rule fires about the new token value being invalid, check that the CSS value exactly matches the token's resolved value (for dimension types: same number and unit).
 
-### 9. Check the diff
+---
+
+## Step 7: Check the diff
 
 ```bash
 pnpm run dtif:diff
 ```
 
-Review the change report in `ops/artifacts/diff/report.json`. New tokens appear as additions — verify they're correct.
+Your new token should appear as an addition. Review `ops/artifacts/diff/report.json` to confirm only the expected changes are present.
 
-### 10. Commit everything
+---
 
-Commit **both** source files and artifacts in the same PR:
+## Step 8: Commit everything
 
+Commit source files and artifacts in the same commit:
 ```bash
 git add tokens/ ops/artifacts/
 git commit -m "feat(tokens): add spacing.sm (8px)"
@@ -138,17 +179,17 @@ git commit -m "feat(tokens): add spacing.sm (8px)"
 
 ## Modifying an existing token value
 
-Follow the same steps as adding a token, but edit the existing `$value` rather than adding a new entry. Pay attention to:
+Same steps as adding, but edit the existing `$value` instead of adding a new entry. Pay attention to:
 
-- **Type consistency** — you can't change `$type` (e.g., `color` to `dimension`). If the type needs to change, deprecate the old token and add a new one.
-- **Downstream impact** — if the value changes, all components using it will render differently. Run `dtif:diff` and review carefully.
+- **Type consistency** — you cannot change `$type`. If the type needs to change, deprecate the old token and add a new one.
+- **Downstream impact** — any component using this token will render differently. Run `dtif:diff` and review carefully.
+- **Both files** — change the value in both `foundations.json` and `catalog.tokens.json`.
 
 ---
 
 ## Deprecating a token
 
-Mark the token with `$deprecated` pointing to its replacement:
-
+**Step 1: Mark it deprecated**
 ```json
 "pad": {
   "$type": "dimension",
@@ -158,42 +199,48 @@ Mark the token with `$deprecated` pointing to its replacement:
 }
 ```
 
-Add the replacement token alongside it. Leave the deprecated token in place — it will be caught by the `design-system/deprecation` lint rule if any code still references it.
+**Step 2: Add the replacement token** alongside it with the same or updated value.
 
-To mark it deprecated in the running kernel without restarting:
-```bash
-pnpm run kernel:token-deprecate
-# (edit the script in package.json to point to your token's pointer)
-```
+**Step 3: Mirror in catalog** — add `$deprecated` to the catalog copy too.
+
+**Step 4: Let the linter catch usages** — `design-system/deprecation` (warn) flags string literal references to the deprecated pointer.
+
+**Step 5: Remove** in a later PR once all usages are confirmed gone.
 
 ---
 
 ## Token type reference
 
-| `$type` | `$value` shape | CSS output |
+| `$type` | `$value` shape | CSS var emitted? |
 |---|---|---|
-| `color` | `{ colorSpace: "srgb", components: [R, G, B] }` | `oklch(…)` |
-| `dimension` (length) | `{ dimensionType: "length", value: N, unit: "px"\|"rem" }` | `Npx` or `Nrem` |
-| `dimension` (custom) | `{ dimensionType: "custom", value: N, unit: "…" }` | Not emitted as CSS var |
-| `duration` | `{ durationType: "css.transition-duration", value: N, unit: "ms"\|"s" }` | Not emitted as CSS var |
-| `fontWeight` | `400` (number) | Not emitted as CSS var |
-| `fontFamily` | `"Inter"` (string) | Not emitted as CSS var |
-| `cubicBezier` | `"cubic-bezier(0.4, 0, 0.2, 1)"` (string) | Not emitted as CSS var |
-| `number` | `1.25` (number) | Not emitted as CSS var |
-| `string` | `"2px solid transparent"` (string) | Not emitted as CSS var |
-| `shadow` | `{ shadowType, offsetX, offsetY, blur, spread, color }` | Not emitted as CSS var |
+| `color` | `{ colorSpace: "srgb", components: [R, G, B] }` | ✅ as `oklch(…)` |
+| `dimension` (length) | `{ dimensionType: "length", value: N, unit: "px"\|"rem" }` | ✅ as `Npx` or `Nrem` |
+| `dimension` (custom) | `{ dimensionType: "custom", value: N, unit: "…" }` | ❌ |
+| `duration` | `{ durationType: "css.transition-duration", value: N, unit: "ms"\|"s" }` | ❌ |
+| `fontWeight` | `400` (number) | ❌ |
+| `fontFamily` | `"Inter"` (string) | ❌ |
+| `cubicBezier` | `"cubic-bezier(0.4, 0, 0.2, 1)"` (string) | ❌ |
+| `number` | `1.25` (number) | ❌ |
+| `string` | `"2px solid transparent"` (string) | ❌ |
+| `shadow` | `{ blur, color, offsetX, offsetY, shadowType, spread }` (keys alphabetical) | ❌ |
 
-**Which types emit CSS variables?** Only `color` and `dimension` with `dimensionType: "length"`. All other types are available to design-lint rules via the kernel but do not appear in `tokens.css`. Use raw CSS values that match the token (e.g., `font-weight: 600` instead of a var) for these types — design-lint validates them via value-equivalence mode.
+For types that don't emit CSS vars, use raw CSS values that match the token and design-lint validates them via value-equivalence mode.
 
 ---
 
 ## Common errors
 
-**"collection members must be sorted lexicographically"**
-Your new key is out of order. Tokens within a group must be sorted case-insensitively. Move the entry to the right alphabetical position.
+**`collection members must be sorted lexicographically`**
+A key is out of alphabetical order. Move it to the correct position (case-insensitive comparison).
 
-**"Token file paths must be relative and end with .tokens.json"**
-The `tokens.default` field in `designlint.config.js` must point to a `.tokens.json` file. Our catalog is already named `catalog.tokens.json` — check your path.
+**`must have required property 'shadowType'`**
+Shadow `$value` objects require `shadowType: "css.box-shadow"`. Keys must also be in alphabetical order: `blur`, `color`, `offsetX`, `offsetY`, `shadowType`, `spread`.
 
-**Lint rule fires on new token's value in CSS**
-Ensure the CSS value exactly matches the token's value as it would appear in the kernel. For `dimension` types, the match is in pixels (`0.05rem` normalises to `0.8px`). For `number` types, the match is the raw number (`1.25`).
+**`canonical key order violated`**
+Dimension `$value` keys must be in the order `dimensionType`, `value`, `unit` (not alphabetical for this specific type).
+
+**Token passes linting when I expect it to fail**
+The kernel wasn't restarted after you edited the token files. Restart it: `pnpm run kernel:stop && pnpm run kernel:start`.
+
+**design-lint rule fires on raw value**
+The CSS value doesn't exactly match the token's resolved value. For dimension tokens, check both number and unit. For color tokens, compute the sRGB components correctly (0–1 scale, not 0–255).

@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(json.dumps\\(d.get\\('pnpm', {}\\), indent=2\\)\\)\")",
+      "Bash(git -C /Users/brett/Repositories/dtifx-example show HEAD:pnpm-lock.yaml)",
+      "Bash(git *)"
+    ]
+  }
+}

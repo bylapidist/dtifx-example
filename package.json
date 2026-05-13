@@ -44,7 +44,7 @@
     "dtif:validate": "dtifx build validate --config build/dtif-validate.config.mjs",
     "dtif:build": "dtifx build generate --config build/dtif-build.config.mjs",
     "dtif:diff": "dtifx diff compare ops/artifacts/diff/baseline.dtif.json tokens/catalog.tokens.json --format json --output ops/artifacts/diff/report.json && node -e \"const fs=require('node:fs');const path=require('node:path');const report='ops/artifacts/diff/report.json';const from='file://'+process.cwd().split(path.sep).join('/');const to='file:///workspace/dtifx-example';fs.writeFileSync(report,fs.readFileSync(report,'utf8').replaceAll(from,to));\" && dtifx diff compare ops/artifacts/diff/baseline.dtif.json tokens/catalog.tokens.json",
-    "dtif:dscp": "dtifx dscp generate --from ops/artifacts/build/ --out DESIGN_SYSTEM.md",
+    "dtif:dscp": "dtifx build generate --config build/dtif-dscp.config.mjs && dtifx dscp generate --from ops/artifacts/dscp/ --out DESIGN_SYSTEM.md",
     "dtif:audit": "dtifx audit run --config audit/dtif-audit.config.mjs --reporter json --reporter markdown --out-dir ops/artifacts/audit",
     "verify": "pnpm run lint && pnpm run design-lint"
   },

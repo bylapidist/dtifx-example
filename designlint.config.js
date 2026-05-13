@@ -62,9 +62,6 @@ export default {
       components: ['Button'],
     }],
 
-    // Custom plugin rule
-    'dtifx/no-hardcoded-color-values': 'warn',
-
     // Governance
     'design-system/deprecation': 'warn',
     'design-system/no-unused-tokens': 'warn',

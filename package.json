@@ -20,7 +20,7 @@
     "design-lint:tokens": "design-lint tokens --config designlint.config.js --out ops/artifacts/build/design-tokens.json",
     "design-lint:snapshot": "design-lint export-runtime-snapshot --out ops/artifacts/build/kernel-snapshot.bin",
     "design-lint:docs": "design-lint docs --config designlint.config.js --out ops/artifacts/docs --site-format markdown",
-    "design-lint:sarif": "design-lint \"src/**/*.{css,js,jsx,ts,tsx}\" --config designlint.config.js --format sarif --output ops/artifacts/lint/report.sarif",
+    "design-lint:sarif": "mkdir -p ops/artifacts/lint && design-lint \"src/**/*.{css,js,jsx,ts,tsx}\" --config designlint.config.js --format sarif --output ops/artifacts/lint/report.sarif",
     "design-lint:summary": "design-lint \"src/**/*.{css,js,jsx,ts,tsx}\" --config designlint.config.js --format ./ops/formatters/summary.js",
     "dtif:validate": "dtifx build validate --config build/dtif-validate.config.mjs",
     "dtif:build": "dtifx build generate --config build/dtif-build.config.mjs",

@@ -1,0 +1,1019 @@
+{
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "@lapidist/design-lint",
+          "informationUri": "https://github.com/bylapidist/design-lint",
+          "rules": [
+            {
+              "id": "design-system/import-path",
+              "shortDescription": {
+                "text": "ensure design system components are imported from configured packages"
+              },
+              "properties": {
+                "category": "component"
+              }
+            },
+            {
+              "id": "design-system/component-usage",
+              "shortDescription": {
+                "text": "disallow raw HTML elements when design system components exist"
+              },
+              "properties": {
+                "category": "component"
+              }
+            },
+            {
+              "id": "design-system/component-prefix",
+              "shortDescription": {
+                "text": "enforce a prefix for design system components"
+              },
+              "properties": {
+                "category": "component"
+              }
+            },
+            {
+              "id": "design-system/no-unused-tokens",
+              "shortDescription": {
+                "text": "report unused design tokens"
+              },
+              "properties": {
+                "category": "design-token"
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "design-system/import-path",
+          "ruleIndex": 0,
+          "message": {
+            "text": "Design system component \"Button\" must be imported from @dtifx/design-system"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/brett/Repositories/dtifx-example/src/App.jsx"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 10
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "design-system/component-usage",
+          "ruleIndex": 1,
+          "message": {
+            "text": "Use Button instead of <Button>"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/brett/Repositories/dtifx-example/src/App.jsx"
+                },
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 7
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "design-system/component-prefix",
+          "ruleIndex": 2,
+          "message": {
+            "text": "Component \"Button\" should be prefixed with \"DS\""
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/brett/Repositories/dtifx-example/src/App.jsx"
+                },
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 8
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "design-system/component-prefix",
+          "ruleIndex": 2,
+          "message": {
+            "text": "Component \"Button\" should be prefixed with \"DS\""
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/brett/Repositories/dtifx-example/src/App.jsx"
+                },
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 46
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "design-system/component-usage",
+          "ruleIndex": 1,
+          "message": {
+            "text": "Use Button instead of <Button>"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/brett/Repositories/dtifx-example/src/App.jsx"
+                },
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 7
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "design-system/component-prefix",
+          "ruleIndex": 2,
+          "message": {
+            "text": "Component \"Button\" should be prefixed with \"DS\""
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/brett/Repositories/dtifx-example/src/App.jsx"
+                },
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 8
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "design-system/component-prefix",
+          "ruleIndex": 2,
+          "message": {
+            "text": "Component \"Button\" should be prefixed with \"DS\""
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/brett/Repositories/dtifx-example/src/App.jsx"
+                },
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 9
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "design-system/no-unused-tokens",
+          "ruleIndex": 3,
+          "message": {
+            "text": "Token spin 1s linear infinite is defined but never used"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/brett/Repositories/dtifx-example/designlint.config.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "design-system/no-unused-tokens",
+          "ruleIndex": 3,
+          "message": {
+            "text": "Token 4px is defined but never used"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/brett/Repositories/dtifx-example/designlint.config.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "design-system/no-unused-tokens",
+          "ruleIndex": 3,
+          "message": {
+            "text": "Token 2px is defined but never used"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/brett/Repositories/dtifx-example/designlint.config.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "design-system/no-unused-tokens",
+          "ruleIndex": 3,
+          "message": {
+            "text": "Token 1px is defined but never used"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/brett/Repositories/dtifx-example/designlint.config.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "design-system/no-unused-tokens",
+          "ruleIndex": 3,
+          "message": {
+            "text": "Token clr.accent is defined but never used"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/brett/Repositories/dtifx-example/designlint.config.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "design-system/no-unused-tokens",
+          "ruleIndex": 3,
+          "message": {
+            "text": "Token clr.bg is defined but never used"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/brett/Repositories/dtifx-example/designlint.config.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "design-system/no-unused-tokens",
+          "ruleIndex": 3,
+          "message": {
+            "text": "Token clr.brand is defined but never used"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/brett/Repositories/dtifx-example/designlint.config.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "design-system/no-unused-tokens",
+          "ruleIndex": 3,
+          "message": {
+            "text": "Token cmp.btn.bg is defined but never used"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/brett/Repositories/dtifx-example/designlint.config.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "design-system/no-unused-tokens",
+          "ruleIndex": 3,
+          "message": {
+            "text": "Token cmp.btn.bg-hover is defined but never used"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/brett/Repositories/dtifx-example/designlint.config.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "design-system/no-unused-tokens",
+          "ruleIndex": 3,
+          "message": {
+            "text": "Token cmp.btn.fg is defined but never used"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/brett/Repositories/dtifx-example/designlint.config.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "design-system/no-unused-tokens",
+          "ruleIndex": 3,
+          "message": {
+            "text": "Token 16px is defined but never used"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/brett/Repositories/dtifx-example/designlint.config.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "design-system/no-unused-tokens",
+          "ruleIndex": 3,
+          "message": {
+            "text": "Token 16px is defined but never used"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/brett/Repositories/dtifx-example/designlint.config.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "design-system/no-unused-tokens",
+          "ruleIndex": 3,
+          "message": {
+            "text": "Token 120ms is defined but never used"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/brett/Repositories/dtifx-example/designlint.config.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "design-system/no-unused-tokens",
+          "ruleIndex": 3,
+          "message": {
+            "text": "Token 120duration.ms is defined but never used"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/brett/Repositories/dtifx-example/designlint.config.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "design-system/no-unused-tokens",
+          "ruleIndex": 3,
+          "message": {
+            "text": "Token cubic-bezier(0, 0, 0.2, 1) is defined but never used"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/brett/Repositories/dtifx-example/designlint.config.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "design-system/no-unused-tokens",
+          "ruleIndex": 3,
+          "message": {
+            "text": "Token cubic-bezier(0.4, 0, 0.2, 1) is defined but never used"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/brett/Repositories/dtifx-example/designlint.config.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "design-system/no-unused-tokens",
+          "ruleIndex": 3,
+          "message": {
+            "text": "Token JetBrains Mono is defined but never used"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/brett/Repositories/dtifx-example/designlint.config.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "design-system/no-unused-tokens",
+          "ruleIndex": 3,
+          "message": {
+            "text": "Token Inter is defined but never used"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/brett/Repositories/dtifx-example/designlint.config.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "design-system/no-unused-tokens",
+          "ruleIndex": 3,
+          "message": {
+            "text": "Token 1rem is defined but never used"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/brett/Repositories/dtifx-example/designlint.config.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "design-system/no-unused-tokens",
+          "ruleIndex": 3,
+          "message": {
+            "text": "Token 0.875rem is defined but never used"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/brett/Repositories/dtifx-example/designlint.config.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "design-system/no-unused-tokens",
+          "ruleIndex": 3,
+          "message": {
+            "text": "Token 400 is defined but never used"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/brett/Repositories/dtifx-example/designlint.config.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "design-system/no-unused-tokens",
+          "ruleIndex": 3,
+          "message": {
+            "text": "Token 600 is defined but never used"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/brett/Repositories/dtifx-example/designlint.config.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "design-system/no-unused-tokens",
+          "ruleIndex": 3,
+          "message": {
+            "text": "Token 0px is defined but never used"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/brett/Repositories/dtifx-example/designlint.config.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "design-system/no-unused-tokens",
+          "ruleIndex": 3,
+          "message": {
+            "text": "Token 0.05rem is defined but never used"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/brett/Repositories/dtifx-example/designlint.config.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "design-system/no-unused-tokens",
+          "ruleIndex": 3,
+          "message": {
+            "text": "Token 1.5 is defined but never used"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/brett/Repositories/dtifx-example/designlint.config.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "design-system/no-unused-tokens",
+          "ruleIndex": 3,
+          "message": {
+            "text": "Token 1.25 is defined but never used"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/brett/Repositories/dtifx-example/designlint.config.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "design-system/no-unused-tokens",
+          "ruleIndex": 3,
+          "message": {
+            "text": "Token 0.4 is defined but never used"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/brett/Repositories/dtifx-example/designlint.config.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "design-system/no-unused-tokens",
+          "ruleIndex": 3,
+          "message": {
+            "text": "Token 0.9 is defined but never used"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/brett/Repositories/dtifx-example/designlint.config.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "design-system/no-unused-tokens",
+          "ruleIndex": 3,
+          "message": {
+            "text": "Token 2px solid transparent is defined but never used"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/brett/Repositories/dtifx-example/designlint.config.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "design-system/no-unused-tokens",
+          "ruleIndex": 3,
+          "message": {
+            "text": "Token 9999px is defined but never used"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/brett/Repositories/dtifx-example/designlint.config.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "design-system/no-unused-tokens",
+          "ruleIndex": 3,
+          "message": {
+            "text": "Token 6px is defined but never used"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/brett/Repositories/dtifx-example/designlint.config.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "design-system/no-unused-tokens",
+          "ruleIndex": 3,
+          "message": {
+            "text": "Token 4px is defined but never used"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/brett/Repositories/dtifx-example/designlint.config.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "design-system/no-unused-tokens",
+          "ruleIndex": 3,
+          "message": {
+            "text": "Token shadows.focus-ring is defined but never used"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/brett/Repositories/dtifx-example/designlint.config.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "design-system/no-unused-tokens",
+          "ruleIndex": 3,
+          "message": {
+            "text": "Token shadows.sm is defined but never used"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/brett/Repositories/dtifx-example/designlint.config.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "design-system/no-unused-tokens",
+          "ruleIndex": 3,
+          "message": {
+            "text": "Token 24px is defined but never used"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/brett/Repositories/dtifx-example/designlint.config.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "design-system/no-unused-tokens",
+          "ruleIndex": 3,
+          "message": {
+            "text": "Token 16px is defined but never used"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/brett/Repositories/dtifx-example/designlint.config.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "design-system/no-unused-tokens",
+          "ruleIndex": 3,
+          "message": {
+            "text": "Token 1 is defined but never used"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/brett/Repositories/dtifx-example/designlint.config.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "design-system/no-unused-tokens",
+          "ruleIndex": 3,
+          "message": {
+            "text": "Token 100 is defined but never used"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/brett/Repositories/dtifx-example/designlint.config.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "design-system/no-unused-tokens",
+          "ruleIndex": 3,
+          "message": {
+            "text": "Token 200 is defined but never used"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/brett/Repositories/dtifx-example/designlint.config.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

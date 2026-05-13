@@ -1,4 +1,39 @@
-export default {
+import { defineConfig } from '@lapidist/design-lint';
+
+/**
+ * Rule sets inlined from published preset packages (dist not yet shipped):
+ *   @lapidist/design-lint-config-recommended
+ *   @lapidist/design-lint-config-ai-agent
+ *
+ * When the presets ship compiled dist files, replace these objects with:
+ *   import recommended from '@lapidist/design-lint-config-recommended';
+ *   import aiAgent     from '@lapidist/design-lint-config-ai-agent';
+ *   export default defineConfig({ ...recommended, ...aiAgent, rules: { ...recommended.rules, ...aiAgent.rules, /* overrides *\/ } });
+ */
+const recommended = {
+  rules: {
+    'design-token/colors': 'warn',
+    'design-token/spacing': 'warn',
+    'design-token/easing': 'warn',
+    'design-token/css-var-provenance': 'warn',
+    'design-token/composite-equivalence': 'warn',
+    'design-system/deprecation': 'warn',
+    'design-system/jsx-style-values': 'warn',
+    'design-system/no-hardcoded-spacing': 'warn',
+  },
+};
+
+const aiAgent = {
+  rules: {
+    'design-token/easing': 'error',
+    'design-token/css-var-provenance': 'warn', // warn: our CSS vars use build-prefixed names
+    'design-token/composite-equivalence': 'warn',
+    'design-system/jsx-style-values': 'error',
+    'design-system/no-hardcoded-spacing': 'error',
+  },
+};
+
+export default defineConfig({
   patterns: ['src/**/*.{css,js,jsx,ts,tsx,scss,less,vue,svelte}'],
   ignoreFiles: ['ops/artifacts/**'],
   format: 'stylish',
@@ -10,17 +45,21 @@ export default {
   },
   plugins: ['./ops/plugins/dtifx-rules.js'],
   rules: {
+    // Spread recommended preset rules as the base layer
+    ...recommended.rules,
+    // Spread ai-agent preset rules on top (tightens several rules)
+    ...aiAgent.rules,
+
+    // Project overrides on top of presets
     // Color
     'design-token/colors': 'error',
     'design-token/border-color': 'warn',
 
     // Spacing & layout
     'design-token/spacing': ['error', { base: 0 }],
-    'design-system/no-hardcoded-spacing': 'warn',
 
     // Motion
     'design-token/duration': 'error',
-    'design-token/easing': 'error',
     'design-token/animation': 'warn',
 
     // Typography
@@ -41,12 +80,8 @@ export default {
     'design-token/opacity': 'error',
     'design-token/z-index': 'warn',
 
-    // Composite / provenance
-    'design-token/composite-equivalence': 'warn',
-
     // Component usage
     'design-system/no-inline-styles': ['error', { components: ['Button'] }],
-    'design-system/jsx-style-values': 'warn',
     'design-system/variant-prop': ['warn', {
       prop: 'variant',
       components: { Button: ['primary', 'secondary'] },
@@ -63,7 +98,6 @@ export default {
     }],
 
     // Governance
-    'design-system/deprecation': 'warn',
     'design-system/no-unused-tokens': 'warn',
   },
-};
+});

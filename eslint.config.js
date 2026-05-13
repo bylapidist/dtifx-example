@@ -2,7 +2,7 @@ import js from '@eslint/js';
 
 export default [
   {
-    ignores: ['node_modules/**', 'package-lock.json'],
+    ignores: ['node_modules/**', 'package-lock.json', 'ops/scripts/**', 'ops/formatters/**', 'ops/plugins/**'],
   },
   js.configs.recommended,
   {

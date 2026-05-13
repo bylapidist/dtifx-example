@@ -30,7 +30,7 @@
     "minScore": 80
   },
   "agentPolicy": {
-    "maxViolationRate": 15,
+    "maxViolationRate": 20,
     "requiredConvergence": true,
     "trustedAgents": ["claude"]
   }

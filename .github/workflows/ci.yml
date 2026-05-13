@@ -38,6 +38,9 @@ jobs:
       - name: Run lint and design-lint checks
         run: pnpm run verify
 
+      - name: Enforce warning budget
+        run: pnpm run design-lint:check
+
       - name: Export SARIF report
         run: pnpm run design-lint:sarif
 

@@ -42,7 +42,7 @@ jobs:
         run: pnpm run design-lint:sarif
 
       - name: Upload SARIF to GitHub code scanning
-        uses: github/codeql-action/upload-sarif@v3
+        uses: github/codeql-action/upload-sarif@v4
         with:
           sarif_file: ops/artifacts/lint/report.sarif
         if: always()

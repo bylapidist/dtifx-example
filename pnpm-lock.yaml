@@ -4,6 +4,17 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  '@lapidist/design-lint-config-ai-agent':
+    hash: 36559c2637c8480411433f42ca17b86fc7dd2db0e0fd0b2a35f6f95992f57282
+    path: patches/@lapidist__design-lint-config-ai-agent.patch
+  '@lapidist/design-lint-config-recommended':
+    hash: 8e13d5a7a2ee826990317f9ffeb46f90d1a7c0f57ac5460d6ee9b598ce9cdbda
+    path: patches/@lapidist__design-lint-config-recommended.patch
+  '@lapidist/design-lint-config-strict':
+    hash: 1396d728a2a7961a8230e103f59672d4ccecaf096d7f168e670d1d94d5f146cb
+    path: patches/@lapidist__design-lint-config-strict.patch
+
 importers:
 
   .:
@@ -35,13 +46,13 @@ importers:
         version: 8.0.0(@types/node@25.6.0)
       '@lapidist/design-lint-config-ai-agent':
         specifier: ^1.0.0
-        version: 1.0.0(@lapidist/design-lint@8.0.0(@types/node@25.6.0))
+        version: 1.0.0(patch_hash=36559c2637c8480411433f42ca17b86fc7dd2db0e0fd0b2a35f6f95992f57282)(@lapidist/design-lint@8.0.0(@types/node@25.6.0))
       '@lapidist/design-lint-config-recommended':
         specifier: ^1.0.0
-        version: 1.0.0(@lapidist/design-lint@8.0.0(@types/node@25.6.0))
+        version: 1.0.0(patch_hash=8e13d5a7a2ee826990317f9ffeb46f90d1a7c0f57ac5460d6ee9b598ce9cdbda)(@lapidist/design-lint@8.0.0(@types/node@25.6.0))
       '@lapidist/design-lint-config-strict':
         specifier: ^1.0.0
-        version: 1.0.0(@lapidist/design-lint@8.0.0(@types/node@25.6.0))
+        version: 1.0.0(patch_hash=1396d728a2a7961a8230e103f59672d4ccecaf096d7f168e670d1d94d5f146cb)(@lapidist/design-lint@8.0.0(@types/node@25.6.0))
       ajv:
         specifier: ^8.17.1
         version: 8.20.0
@@ -1368,15 +1379,15 @@ snapshots:
 
   '@keyv/serialize@1.1.1': {}
 
-  '@lapidist/design-lint-config-ai-agent@1.0.0(@lapidist/design-lint@8.0.0(@types/node@25.6.0))':
+  '@lapidist/design-lint-config-ai-agent@1.0.0(patch_hash=36559c2637c8480411433f42ca17b86fc7dd2db0e0fd0b2a35f6f95992f57282)(@lapidist/design-lint@8.0.0(@types/node@25.6.0))':
     dependencies:
       '@lapidist/design-lint': 8.0.0(@types/node@25.6.0)
 
-  '@lapidist/design-lint-config-recommended@1.0.0(@lapidist/design-lint@8.0.0(@types/node@25.6.0))':
+  '@lapidist/design-lint-config-recommended@1.0.0(patch_hash=8e13d5a7a2ee826990317f9ffeb46f90d1a7c0f57ac5460d6ee9b598ce9cdbda)(@lapidist/design-lint@8.0.0(@types/node@25.6.0))':
     dependencies:
       '@lapidist/design-lint': 8.0.0(@types/node@25.6.0)
 
-  '@lapidist/design-lint-config-strict@1.0.0(@lapidist/design-lint@8.0.0(@types/node@25.6.0))':
+  '@lapidist/design-lint-config-strict@1.0.0(patch_hash=1396d728a2a7961a8230e103f59672d4ccecaf096d7f168e670d1d94d5f146cb)(@lapidist/design-lint@8.0.0(@types/node@25.6.0))':
     dependencies:
       '@lapidist/design-lint': 8.0.0(@types/node@25.6.0)
 

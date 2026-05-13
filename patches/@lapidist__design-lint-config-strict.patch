@@ -1,0 +1,19 @@
+diff --git a/dist/index.js b/dist/index.js
+new file mode 100644
+index 0000000000000000000000000000000000000000..72ebe377d27559b6185fd76580f9647b3c98495a
+--- /dev/null
++++ b/dist/index.js
+@@ -0,0 +1,13 @@
++const strict = {
++  rules: {
++    'design-token/colors': 'error',
++    'design-token/spacing': 'error',
++    'design-token/easing': 'error',
++    'design-token/css-var-provenance': 'error',
++    'design-token/composite-equivalence': 'error',
++    'design-system/deprecation': 'error',
++    'design-system/jsx-style-values': 'error',
++    'design-system/no-hardcoded-spacing': 'error',
++  },
++};
++export default strict;

@@ -1,0 +1,4 @@
+patchedDependencies:
+  '@lapidist/design-lint-config-ai-agent': patches/@lapidist__design-lint-config-ai-agent.patch
+  '@lapidist/design-lint-config-recommended': patches/@lapidist__design-lint-config-recommended.patch
+  '@lapidist/design-lint-config-strict': patches/@lapidist__design-lint-config-strict.patch

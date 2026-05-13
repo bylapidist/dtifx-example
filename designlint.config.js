@@ -1,33 +1,6 @@
 import { defineConfig } from '@lapidist/design-lint';
-
-// Preset rule sets — inlined from source because the preset packages
-// (@lapidist/design-lint-config-recommended, -ai-agent) do not ship
-// compiled dist files. Values are taken verbatim from their src/index.ts.
-const recommended = {
-  rules: {
-    'design-token/colors': 'warn',
-    'design-token/spacing': 'warn',
-    'design-token/easing': 'warn',
-    'design-token/css-var-provenance': 'warn',
-    'design-token/composite-equivalence': 'warn',
-    'design-system/deprecation': 'warn',
-    'design-system/jsx-style-values': 'warn',
-    'design-system/no-hardcoded-spacing': 'warn',
-  },
-};
-
-const aiAgent = {
-  rules: {
-    'design-token/easing': 'error',
-    // warn (not error): our build prefixes CSS var names with the source-file
-    // stem (e.g. --catalog-tokens-clr-brand), which doesn't match the
-    // pointer-derived name the provenance rule expects (--clr-brand).
-    'design-token/css-var-provenance': 'warn',
-    'design-token/composite-equivalence': 'warn',
-    'design-system/jsx-style-values': 'error',
-    'design-system/no-hardcoded-spacing': 'error',
-  },
-};
+import recommended from '@lapidist/design-lint-config-recommended';
+import aiAgent from '@lapidist/design-lint-config-ai-agent';
 
 export default defineConfig({
   patterns: ['src/**/*.{css,js,jsx,ts,tsx,scss,less,vue,svelte}'],
@@ -43,10 +16,15 @@ export default defineConfig({
   rules: {
     // Base: recommended preset
     ...recommended.rules,
-    // Tighten: ai-agent preset (easing → error, jsx-style-values → error, etc.)
+    // Tighten: ai-agent preset
     ...aiAgent.rules,
 
     // Project overrides
+    // warn (not error): our build prefixes CSS var names with the source-file
+    // stem (e.g. --catalog-tokens-clr-brand) which doesn't match the
+    // pointer-derived name the provenance rule expects (--clr-brand).
+    'design-token/css-var-provenance': 'warn',
+    'design-token/composite-equivalence': 'warn',
     'design-token/colors': 'error',
     'design-token/border-color': 'warn',
     'design-token/spacing': ['error', { base: 0 }],

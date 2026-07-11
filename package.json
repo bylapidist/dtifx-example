@@ -63,7 +63,7 @@
     "@lapidist/design-lint-config-recommended": "^1.0.1",
     "@lapidist/design-lint-config-strict": "^1.0.1",
     "ajv": "^8.17.1",
-    "eslint": "10.6.0",
+    "eslint": "10.7.0",
     "prettier": "3.9.5",
     "zod": "^4.4.3"
   },

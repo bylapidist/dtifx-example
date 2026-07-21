@@ -50,7 +50,7 @@
   },
   "dependencies": {
     "react": "19.2.7",
-    "react-dom": "19.2.7"
+    "react-dom": "19.2.8"
   },
   "devDependencies": {
     "@dtifx/audit": "5.1.0",
